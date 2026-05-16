@@ -4,8 +4,6 @@ import { motion } from 'motion/react';
 export default function CTA() {
   return (
     <section id="cta" className="bg-[#1A56DB] text-center relative overflow-hidden py-28 px-6 md:px-15">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[rgba(213,225,0,0.09)] rounded-full blur-[60px] pointer-events-none" />
-      
       <div className="relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 26 }}

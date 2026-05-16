@@ -35,34 +35,21 @@ export default function SpinnerWheel() {
 
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    // External Glow Ring
+    // External Glow Ring (Flat)
     ctx.beginPath();
     ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
-    const ringGrad = ctx.createRadialGradient(centerX, centerY, radius - 20, centerX, centerY, radius);
-    ringGrad.addColorStop(0, primaryBlue);
-    ringGrad.addColorStop(0.5, accentBlue);
-    ringGrad.addColorStop(1, primaryBlue);
-    ctx.fillStyle = ringGrad;
+    ctx.fillStyle = primaryBlue;
     ctx.fill();
 
     for (let i = 0; i < totalSegments; i++) {
       const startAngle = (i * segmentAngle * Math.PI) / 180;
       const endAngle = ((i + 1) * segmentAngle * Math.PI) / 180;
 
-      // Segment Gradient
-      const grad = ctx.createRadialGradient(centerX, centerY, 50, centerX, centerY, radius - 15);
-      if (i % 2 === 0) {
-        grad.addColorStop(0, colorMain);
-        grad.addColorStop(1, "#c2cd00");
-      } else {
-        grad.addColorStop(0, colorLight);
-        grad.addColorStop(1, colorMain);
-      }
-
+      // Segment Solid Color
       ctx.beginPath();
       ctx.moveTo(centerX, centerY);
       ctx.arc(centerX, centerY, radius - 15, startAngle, endAngle);
-      ctx.fillStyle = grad;
+      ctx.fillStyle = i % 2 === 0 ? colorMain : colorLight;
       ctx.fill();
 
       // Divider Lines
@@ -106,16 +93,17 @@ export default function SpinnerWheel() {
       ctx.fill();
     }
 
-    // Center Hub
-    const hubGrad = ctx.createRadialGradient(centerX, centerY, 0, centerX, centerY, 40);
-    hubGrad.addColorStop(0, white);
-    hubGrad.addColorStop(0.3, accentBlue);
-    hubGrad.addColorStop(1, primaryBlue);
-
+    // Center Hub (Flat)
     ctx.beginPath();
     ctx.arc(centerX, centerY, 40, 0, Math.PI * 2);
-    ctx.fillStyle = hubGrad;
+    ctx.fillStyle = white;
     ctx.fill();
+    
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, 40, 0, Math.PI * 2);
+    ctx.strokeStyle = primaryBlue;
+    ctx.lineWidth = 4;
+    ctx.stroke();
   }, [segmentAngle, totalSegments, colorMain, colorLight, primaryBlue, accentBlue, white]);
 
   useEffect(() => {

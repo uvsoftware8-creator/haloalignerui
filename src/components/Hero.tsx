@@ -23,14 +23,6 @@ const Counter = ({ target, suffix = '', duration = 1800 }: { target: number, suf
 export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen grid grid-cols-1 lg:grid-cols-2 items-center px-6 md:px-15 pt-36 pb-20 gap-15 overflow-hidden">
-      {/* Glow Effects */}
-      <div className="absolute w-[650px] h-[650px] bg-[rgba(255,255,255,0.55)] rounded-full blur-[70px] -top-[180px] -right-[120px] animate-g1 pointer-events-none" />
-      <div className="absolute w-[380px] h-[380px] bg-[rgba(184,201,0,0.45)] rounded-full blur-[70px] -bottom-[80px] left-[80px] animate-g2 pointer-events-none" />
-      <div className="absolute w-[220px] h-[220px] bg-[rgba(255,255,255,0.70)] rounded-full blur-[70px] top-[45%] left-[42%] animate-g3 pointer-events-none" />
-
-      {/* Grid Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(26,86,219,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(26,86,219,0.07)_1px,transparent_1px)] bg-[length:48px_48px] pointer-events-none" />
-
       <div className="relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
