@@ -8,6 +8,7 @@ export default function SpinnerWheel() {
   const [isSpinning, setIsSpinning] = useState(false);
   const [isStopping, setIsStopping] = useState(false);
   const [rotation, setRotation] = useState(0);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
   
   const requestRef = useRef<number>(null);
   const rotationRef = useRef(0);
@@ -129,9 +130,25 @@ export default function SpinnerWheel() {
 
   const handleStartSpin = () => {
     if (isSpinning) return;
+
+    // Check if slot is active (Wednesday 2:00 PM - 5:00 PM)
+    const now = new Date();
+    const day = now.getDay(); // 3 = Wednesday
+    const hours = now.getHours();
+    const isSlotActive = day === 3 && hours >= 14 && hours < 17;
+
+    if (!isSlotActive) {
+      setErrorMsg("Active Slot: Wednesday 2:00 PM - 5:00 PM");
+      setTimeout(() => {
+        setErrorMsg(null);
+      }, 4000);
+      return;
+    }
+
     setIsSpinning(true);
     setIsStopping(false);
     setResult(null);
+    setErrorMsg(null);
     velocityRef.current = 15; // Constant speed
   };
 
@@ -208,32 +225,52 @@ export default function SpinnerWheel() {
         )}
       </AnimatePresence>
 
-      {/* 3D Pointer Overlay */}
-      <div className="absolute top-8 left-1/2 -translate-x-1/2 z-20 pointer-events-none drop-shadow-[0_5px_15px_rgba(0,0,0,0.4)] scale-75 sm:scale-100">
-        <svg width="40" height="60" viewBox="0 0 40 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M20 60L40 0H0L20 60Z" fill="#1a56db" />
-          <path d="M20 50L35 5H5L20 50Z" fill="#3b82f6" fillOpacity="0.5" />
-          <circle cx="20" cy="15" r="5" fill="white" />
-        </svg>
-      </div>
+      {/* Error Alert Banner */}
+      <AnimatePresence>
+        {errorMsg && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8, y: 30 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            className="absolute -top-24 xs:-top-20 z-50 bg-red-500 text-white px-5 py-4 rounded-3xl font-black text-center shadow-[0_15px_35px_rgba(239,68,68,0.25)] border-4 border-white max-w-[280px] xs:max-w-[320px] flex flex-col items-center gap-1.5"
+          >
+            <div className="text-lg font-black leading-none">⚠️ ACCESS DENIED</div>
+            <div className="text-[0.62rem] font-bold bg-white text-red-500 px-3 py-1 rounded-full uppercase tracking-wider mt-1 shrink-0 whitespace-nowrap">
+              {errorMsg}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
-      {/* Wheel Container */}
-      <motion.div 
-        animate={isSpinning ? { scale: [1, 0.98, 1] } : {}}
-        transition={{ repeat: Infinity, duration: 2 }}
-        className="relative w-full aspect-square p-2 bg-[#1a56db] rounded-full shadow-[0_20px_50px_rgba(26,86,219,0.5),inset_0_2px_10px_rgba(255,255,255,0.4)] box-border overflow-hidden mt-6"
-      >
-        <canvas
-          ref={canvasRef}
-          width="800"
-          height="800"
-          className={cn(
-            "w-full h-full rounded-full block bg-white",
-            isStopping ? "transition-transform duration-[3000ms] cubic-bezier(0.15, 0, 0.15, 1)" : ""
-          )}
-          style={{ transform: `rotate(${rotation}deg)` }}
-        />
-      </motion.div>
+      {/* Wheel & Pointer Wrapper */}
+      <div className="relative w-full aspect-square mt-6">
+        {/* 3D Pointer Overlay */}
+        <div className="absolute top-[-16px] left-1/2 -translate-x-1/2 z-20 pointer-events-none drop-shadow-[0_5px_15px_rgba(0,0,0,0.4)] scale-75 sm:scale-100">
+          <svg width="40" height="60" viewBox="0 0 40 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 60L40 0H0L20 60Z" fill="#1a56db" />
+            <path d="M20 50L35 5H5L20 50Z" fill="#3b82f6" fillOpacity="0.5" />
+            <circle cx="20" cy="15" r="5" fill="white" />
+          </svg>
+        </div>
+
+        {/* Wheel Container */}
+        <motion.div 
+          animate={isSpinning ? { scale: [1, 0.98, 1] } : {}}
+          transition={{ repeat: Infinity, duration: 2 }}
+          className="w-full h-full p-2 bg-[#1a56db] rounded-full shadow-[0_20px_50px_rgba(26,86,219,0.5),inset_0_2px_10px_rgba(255,255,255,0.4)] box-border overflow-hidden"
+        >
+          <canvas
+            ref={canvasRef}
+            width="800"
+            height="800"
+            className={cn(
+              "w-full h-full rounded-full block bg-white",
+              isStopping ? "transition-transform duration-[3000ms] cubic-bezier(0.15, 0, 0.15, 1)" : ""
+            )}
+            style={{ transform: `rotate(${rotation}deg)` }}
+          />
+        </motion.div>
+      </div>
 
       {/* Control Panel */}
       <div className="mt-10 w-full flex flex-col items-center">
