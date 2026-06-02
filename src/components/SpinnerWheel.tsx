@@ -185,6 +185,12 @@ export default function SpinnerWheel() {
 
   return (
     <div className="flex flex-col items-center justify-center w-full max-w-[320px] xs:max-w-[380px] sm:max-w-[420px] mx-auto p-2 sm:p-4 relative font-syne text-[#1a56db]">
+      {/* Active Hours Badge (shows by default on screen) */}
+      <div className="mb-6 bg-white border border-[rgba(26,86,219,0.15)] text-[#1a56db] px-4.5 py-2.5 rounded-full text-[0.72rem] font-bold uppercase tracking-wider flex items-center gap-2 shadow-[0_6px_16px_rgba(26,86,219,0.06)] relative z-10 shrink-0 whitespace-nowrap select-none">
+        <span className="w-2.5 h-2.5 bg-green-500 rounded-full animate-pulse shrink-0" />
+        Spin Slot: Wednesday 2:00 PM - 5:00 PM
+      </div>
+
       {/* 3D Result Banner */}
       <AnimatePresence>
         {result && (
@@ -192,15 +198,18 @@ export default function SpinnerWheel() {
             initial={{ opacity: 0, scale: 0.5, y: 50 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.5 }}
-            className="absolute -top-16 xs:-top-12 z-50 bg-[#d5e100] text-[#1a56db] px-4 xs:px-8 py-2 xs:py-3 rounded-2xl font-black text-lg xs:text-2xl shadow-[0_10px_30px_rgba(213,225,0,0.5)] border-4 border-white whitespace-nowrap"
+            className="absolute -top-24 xs:-top-20 z-50 bg-[#d5e100] text-[#1a56db] px-5 py-4 rounded-3xl font-black text-center shadow-[0_15px_35px_rgba(26,86,219,0.25)] border-4 border-white max-w-[280px] xs:max-w-[320px] flex flex-col items-center gap-1.5"
           >
-            WINNER: {result}
+            <div className="text-xl xs:text-2xl font-black leading-none">WINNER: {result}</div>
+            <div className="text-[0.62rem] font-bold bg-[#1a56db] text-[#d5e100] px-3 py-1 rounded-full uppercase tracking-wider mt-1 shrink-0 whitespace-nowrap">
+              Wednesday 2:00 PM - 5:00 PM Slot
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
 
       {/* 3D Pointer Overlay */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 z-20 pointer-events-none drop-shadow-[0_5px_15px_rgba(0,0,0,0.4)] scale-75 sm:scale-100">
+      <div className="absolute top-8 left-1/2 -translate-x-1/2 z-20 pointer-events-none drop-shadow-[0_5px_15px_rgba(0,0,0,0.4)] scale-75 sm:scale-100">
         <svg width="40" height="60" viewBox="0 0 40 60" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M20 60L40 0H0L20 60Z" fill="#1a56db" />
           <path d="M20 50L35 5H5L20 50Z" fill="#3b82f6" fillOpacity="0.5" />
@@ -212,7 +221,7 @@ export default function SpinnerWheel() {
       <motion.div 
         animate={isSpinning ? { scale: [1, 0.98, 1] } : {}}
         transition={{ repeat: Infinity, duration: 2 }}
-        className="relative w-full aspect-square p-2 bg-[#1a56db] rounded-full shadow-[0_20px_50px_rgba(26,86,219,0.5),inset_0_2px_10px_rgba(255,255,255,0.4)] box-border overflow-hidden"
+        className="relative w-full aspect-square p-2 bg-[#1a56db] rounded-full shadow-[0_20px_50px_rgba(26,86,219,0.5),inset_0_2px_10px_rgba(255,255,255,0.4)] box-border overflow-hidden mt-6"
       >
         <canvas
           ref={canvasRef}
@@ -245,8 +254,9 @@ export default function SpinnerWheel() {
           {isStopping ? 'Stopping...' : isSpinning ? 'STOP WHEEL' : 'SPIN WHEEL'}
         </motion.button>
 
-        <div className="mt-8 text-lg font-bold text-[#5B6E99] tracking-widest uppercase opacity-80 text-center">
-          {isSpinning && !isStopping ? 'Click stop whenever you feel lucky!' : 'Ready to win big?'}
+        <div className="mt-8 text-sm font-bold text-[#5B6E99] tracking-wider uppercase opacity-90 text-center flex flex-col gap-1.5">
+          <div>{isSpinning && !isStopping ? 'Click stop whenever you feel lucky!' : 'Ready to win big?'}</div>
+          <div className="text-[#1a56db] font-extrabold text-[0.78rem]">Active Slot: Wednesday 2:00 PM - 5:00 PM</div>
         </div>
       </div>
     </div>
