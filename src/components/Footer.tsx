@@ -5,8 +5,8 @@ export default function Footer() {
     <footer className="bg-[#EFF6FF] border-t border-[rgba(26,86,219,0.12)] py-18 px-6 md:px-15 pb-10">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-15 mb-15">
         <div className="footer-brand">
-          <div className="font-syne font-extrabold text-xl tracking-tighter uppercase text-[#1A56DB]">
-            HALO<span className="text-[#3B82F6] font-medium">ALIGNER</span>
+          <div className="font-syne font-extrabold text-xl tracking-tighter uppercase logo-cement">
+            HALOALIGNER
           </div>
           <p className="text-[#5B6E99] text-[0.87rem] leading-[1.75] mt-3 max-w-[240px]">
             Making perfect smiles accessible, affordable, and effortless for everyone, everywhere.

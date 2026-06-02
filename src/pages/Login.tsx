@@ -38,8 +38,8 @@ export default function Login() {
 
         <div className="text-center mb-10 mt-4">
           <Link to="/" className="inline-block mb-6">
-            <div className="font-syne font-extrabold text-2xl tracking-tighter uppercase text-[#1A56DB]">
-              HALO<span className="text-[#3B82F6] font-medium">ALIGNER</span>
+            <div className="font-syne font-extrabold text-2xl tracking-tighter uppercase logo-cement">
+              HALOALIGNER
             </div>
           </Link>
           <h1 className="font-syne text-2xl font-extrabold text-[#1A56DB] mb-2">Doctor Dashboard</h1>
