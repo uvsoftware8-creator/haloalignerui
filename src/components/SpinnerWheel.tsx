@@ -201,7 +201,7 @@ export default function SpinnerWheel() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center w-full max-w-[280px] xs:max-w-[320px] sm:max-w-[350px] mx-auto p-2 sm:p-4 relative font-syne text-[#1a56db]">
+    <div className="flex flex-col items-center justify-center w-full max-w-[300px] xs:max-w-[350px] sm:max-w-[390px] mx-auto p-2 sm:p-4 relative font-syne text-[#1a56db]">
       {/* Wheel & Pointer Wrapper */}
       <div className="relative w-full aspect-square mt-16">
         {/* 3D Result Banner */}
@@ -268,7 +268,7 @@ export default function SpinnerWheel() {
           onClick={isSpinning && !isStopping ? handleStopSpin : handleStartSpin}
           disabled={isStopping}
           className={cn(
-            "w-full max-w-[240px] px-8 py-4 text-lg font-black rounded-2xl uppercase tracking-[2px] transition-all duration-300",
+            "w-full max-w-[260px] px-9 py-4.5 text-lg font-black rounded-2xl uppercase tracking-[2px] transition-all duration-300",
             isStopping 
               ? 'bg-blue-300 text-blue-700 cursor-not-allowed opacity-50' 
               : isSpinning 
