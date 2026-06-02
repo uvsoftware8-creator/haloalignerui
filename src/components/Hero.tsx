@@ -22,7 +22,7 @@ const Counter = ({ target, suffix = '', duration = 1800 }: { target: number, suf
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen grid grid-cols-1 lg:grid-cols-2 items-center px-6 md:px-15 pt-36 pb-20 gap-15 overflow-hidden">
+    <section id="home" className="relative min-h-screen grid grid-cols-1 lg:grid-cols-2 items-center px-6 md:px-15 pt-24 pb-20 gap-15 overflow-hidden">
       <div className="relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 28 }}

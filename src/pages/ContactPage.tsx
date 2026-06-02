@@ -34,7 +34,7 @@ export default function ContactPage() {
 
       <Navbar />
       
-      <main className="relative z-10 pt-32 pb-20 px-6 md:px-15">
+      <main className="relative z-10 pt-24 pb-20 px-6 md:px-15">
         <div className="max-w-7xl mx-auto">
           {/* Back Button */}
           <Link 
