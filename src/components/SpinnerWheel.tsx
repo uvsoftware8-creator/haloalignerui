@@ -203,7 +203,7 @@ export default function SpinnerWheel() {
   return (
     <div className="flex flex-col items-center justify-center w-full max-w-[300px] xs:max-w-[350px] sm:max-w-[390px] mx-auto p-2 sm:p-4 relative font-syne text-[#1a56db]">
       {/* Wheel & Pointer Wrapper */}
-      <div className="relative w-full aspect-square mt-8">
+      <div className="relative w-full aspect-square mt-4">
         {/* 3D Result Banner */}
         <AnimatePresence>
           {result && (
@@ -261,7 +261,7 @@ export default function SpinnerWheel() {
       </div>
 
       {/* Control Panel */}
-      <div className="mt-5 w-full flex flex-col items-center">
+      <div className="mt-3.5 w-full flex flex-col items-center">
         <motion.button
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
@@ -279,7 +279,7 @@ export default function SpinnerWheel() {
           {isStopping ? 'Stopping...' : isSpinning ? 'STOP WHEEL' : 'SPIN WHEEL'}
         </motion.button>
 
-        <div className="mt-4 text-sm font-bold text-[#5B6E99] tracking-wider uppercase opacity-90 text-center flex flex-col gap-1">
+        <div className="mt-2 text-sm font-bold text-[#5B6E99] tracking-wider uppercase opacity-90 text-center flex flex-col gap-1">
           <div>{isSpinning && !isStopping ? 'Click stop whenever you feel lucky!' : 'Ready to win big?'}</div>
           <div className="text-[#1a56db] font-extrabold text-[0.78rem]">Active Slot: Wednesday 2:00 PM - 5:00 PM</div>
         </div>

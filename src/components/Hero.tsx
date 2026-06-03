@@ -22,8 +22,8 @@ const Counter = ({ target, suffix = '', duration = 1800 }: { target: number, suf
 
 export default function Hero() {
   return (
-    <section id="home" className="relative min-h-screen grid grid-cols-1 lg:grid-cols-2 items-start px-6 md:px-15 pt-24 lg:pt-28 pb-20 gap-15 overflow-hidden">
-      <div className="relative z-10">
+    <section id="home" className="relative min-h-screen grid grid-cols-1 lg:grid-cols-2 items-start px-6 md:px-15 pt-16 lg:pt-20 pb-12 gap-15 overflow-hidden">
+      <div className="relative z-10 font-syne">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
@@ -91,7 +91,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <div className="relative z-10 flex items-center justify-center mt-12 lg:mt-0 px-4">
+      <div className="relative z-10 flex items-center justify-center mt-4 lg:mt-0 px-4">
         <SpinnerWheel />
       </div>
     </section>
