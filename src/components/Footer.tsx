@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="bg-[#EFF6FF] border-t border-[rgba(26,86,219,0.12)] py-18 px-6 md:px-15 pb-10">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-15 mb-15">
         <div className="footer-brand">
-          <div className="font-syne font-extrabold text-xl tracking-tighter uppercase logo-cement">
+          <div className="font-syne font-bold text-xl sm:text-2xl tracking-widest bg-gradient-to-b from-white via-gray-300 to-gray-500 bg-clip-text text-transparent uppercase inline-block select-none">
             HALOALIGNER
           </div>
           <p className="text-[#5B6E99] text-[0.87rem] leading-[1.75] mt-3 max-w-[240px]">
@@ -48,13 +48,19 @@ export default function Footer() {
       <div className="border-t border-[rgba(26,86,219,0.12)] pt-6.5 flex flex-col sm:flex-row justify-between items-center gap-4">
         <p className="text-[#8EA0C0] text-[0.82rem]">© 2026 Halo Aligner. All rights reserved.</p>
         <div className="flex gap-2.5">
-          {['in', 'tw', 'ig'].map((social) => (
+          {[
+            { name: 'in', href: '#' },
+            { name: 'tw', href: '#' },
+            { name: 'ig', href: 'https://www.instagram.com/dentovilla_dental/', target: '_blank', rel: 'noopener noreferrer' },
+          ].map((social) => (
             <a 
-              key={social} 
-              href="#" 
+              key={social.name} 
+              href={social.href}
+              target={social.target}
+              rel={social.rel}
               className="w-9 h-9 bg-[rgba(26,86,219,0.08)] border border-[rgba(26,86,219,0.15)] rounded-[9px] flex items-center justify-center text-[#1A56DB] font-bold text-[0.78rem] transition-all hover:bg-[#D5E100]"
             >
-              {social}
+              {social.name}
             </a>
           ))}
         </div>

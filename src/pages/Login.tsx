@@ -38,7 +38,7 @@ export default function Login() {
 
         <div className="text-center mb-10 mt-4">
           <Link to="/" className="inline-block mb-6">
-            <div className="font-syne font-extrabold text-2xl tracking-tighter uppercase logo-cement">
+            <div className="font-syne font-bold text-2xl sm:text-3xl tracking-widest bg-gradient-to-b from-white via-gray-300 to-gray-500 bg-clip-text text-transparent uppercase inline-block select-none">
               HALOALIGNER
             </div>
           </Link>

@@ -4,13 +4,13 @@ import { motion } from 'motion/react';
 const steps = [
   { 
     num: '01', 
-    title: 'Start your Dental practice', 
+    title: 'Start with your pre treatment records', 
     desc: 'Pre-treatment records: Intra-oral scan, Photography, Radiography.' 
   },
   { 
     num: '02', 
-    title: 'Upload Records', 
-    desc: 'Upload your pre-treatment records on doctor dashboard.' 
+    title: 'Send your prescription', 
+    desc: 'Social 6 plan, upper arch plan, upper arch & lower arch plan.' 
   },
   { 
     num: '03', 

@@ -35,7 +35,7 @@ export default function Navbar() {
           isScrolled ? "py-3 px-6 md:px-15" : "py-4.5 px-6 md:px-15"
         )}
       >
-        <Link to="/" className="font-syne font-extrabold text-xl tracking-tighter uppercase logo-cement">
+        <Link to="/" className="font-syne font-bold text-xl sm:text-2xl tracking-widest bg-gradient-to-b from-white via-gray-300 to-gray-500 bg-clip-text text-transparent uppercase inline-block select-none">
           HALOALIGNER
         </Link>
 
