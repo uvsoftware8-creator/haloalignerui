@@ -10,7 +10,7 @@ const steps = [
   { 
     num: '02', 
     title: 'Send your prescription', 
-    desc: 'Social 6 plan, upper arch plan, upper arch & lower arch plan.' 
+    desc: '• Social 6 plan\n• Upper arch plan\n• Upper & lower arch plan' 
   },
   { 
     num: '03', 
@@ -61,7 +61,7 @@ export default function HowItWorks() {
               <span className="font-syne font-extrabold text-2xl text-[#D5E100]">{step.num}</span>
             </div>
             <h3 className="font-syne text-[1.05rem] font-extrabold text-[#1A56DB] mb-2.5">{step.title}</h3>
-            <p className="text-[#5B6E99] text-[0.88rem] leading-[1.65] font-medium">{step.desc}</p>
+            <p className="text-[#5B6E99] text-[0.88rem] leading-[1.65] font-medium whitespace-pre-line text-left sm:text-center">{step.desc}</p>
           </motion.div>
         ))}
       </div>
