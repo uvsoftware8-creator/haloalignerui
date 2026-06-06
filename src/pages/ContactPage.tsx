@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Mail, Phone, MapPin, Send, MessageCircle, Clock, Globe, ArrowLeft } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, MessageCircle, Clock, Globe, ArrowLeft, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
@@ -88,6 +88,24 @@ export default function ContactPage() {
                       <div className="text-[0.7rem] font-bold text-[#5B6E99] uppercase tracking-wider mb-1">Email Support</div>
                       <div className="text-xl font-extrabold text-[#1A56DB]">mishraom2326@gmail.com</div>
                       <div className="text-sm font-medium text-[#8EA0C0] mt-1">Response within 2 hours</div>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-6">
+                    <div className="w-14 h-14 bg-[#1A56DB] rounded-2xl flex items-center justify-center text-[#D5E100] shrink-0 shadow-[0_8px_20px_rgba(26,86,219,0.2)]">
+                      <Instagram size={24} />
+                    </div>
+                    <div>
+                      <div className="text-[0.7rem] font-bold text-[#5B6E99] uppercase tracking-wider mb-1">Instagram</div>
+                      <a 
+                        href="https://www.instagram.com/dentovilla_dental/" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="text-lg font-extrabold text-[#1A56DB] hover:underline break-all"
+                      >
+                        @dentovilla_dental
+                      </a>
+                      <div className="text-sm font-medium text-[#8EA0C0] mt-1">Direct message or follow us</div>
                     </div>
                   </div>
 

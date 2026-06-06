@@ -20,10 +20,11 @@ export default function Navbar() {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'About', href: '/#features' },
-    { name: 'White-label Manufacturing', href: '/#showcase' },
-    { name: 'FAQs', href: '/#how' },
-    { name: 'Blogs', href: '/#reviews' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Before & After', href: '/before-after' },
+    { name: 'Our Doctors', href: '/doctors' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -35,7 +36,7 @@ export default function Navbar() {
           isScrolled ? "py-3 px-6 md:px-15" : "py-4.5 px-6 md:px-15"
         )}
       >
-        <Link to="/" className="font-syne font-bold text-xl sm:text-2xl tracking-widest bg-gradient-to-b from-white via-gray-300 to-gray-500 bg-clip-text text-transparent uppercase inline-block select-none">
+        <Link to="/" className="font-syne font-bold text-xl sm:text-2xl tracking-widest uppercase inline-block select-none logo-cement">
           HALOALIGNER
         </Link>
 

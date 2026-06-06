@@ -1,11 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
     <footer className="bg-[#EFF6FF] border-t border-[rgba(26,86,219,0.12)] py-18 px-6 md:px-15 pb-10">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-15 mb-15">
         <div className="footer-brand">
-          <div className="font-syne font-bold text-xl sm:text-2xl tracking-widest bg-gradient-to-b from-white via-gray-300 to-gray-500 bg-clip-text text-transparent uppercase inline-block select-none">
+          <div className="font-syne font-bold text-xl sm:text-2xl tracking-widest uppercase inline-block select-none logo-cement">
             HALOALIGNER
           </div>
           <p className="text-[#5B6E99] text-[0.87rem] leading-[1.75] mt-3 max-w-[240px]">
@@ -16,20 +17,20 @@ export default function Footer() {
         <div className="footer-col">
           <h4 className="font-syne text-[0.8rem] font-extrabold tracking-[1.5px] uppercase text-[#2563EB] mb-4.5">Product</h4>
           <ul className="list-none flex flex-col gap-2.5">
-            <li><a href="#how" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">How It Works</a></li>
-            <li><a href="#pricing" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">Pricing</a></li>
-            <li><a href="#reviews" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">Reviews</a></li>
-            <li><a href="#" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">Before & After</a></li>
+            <li><Link to="/#how" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">How It Works</Link></li>
+            <li><Link to="/#pricing" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">Pricing</Link></li>
+            <li><Link to="/#reviews" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">Reviews</Link></li>
+            <li><Link to="/before-after" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">Before & After</Link></li>
           </ul>
         </div>
         
         <div className="footer-col">
           <h4 className="font-syne text-[0.8rem] font-extrabold tracking-[1.5px] uppercase text-[#2563EB] mb-4.5">Company</h4>
           <ul className="list-none flex flex-col gap-2.5">
-            <li><a href="#" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">About Us</a></li>
-            <li><a href="#" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">Our Doctors</a></li>
-            <li><a href="#" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">Blog</a></li>
-            <li><a href="#" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">Careers</a></li>
+            <li><Link to="/about" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">About Us</Link></li>
+            <li><Link to="/doctors" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">Our Doctors</Link></li>
+            <li><Link to="/blog" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">Blog</Link></li>
+            <li><Link to="/careers" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">Careers</Link></li>
           </ul>
         </div>
         
