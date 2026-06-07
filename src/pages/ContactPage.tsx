@@ -15,7 +15,7 @@ export default function ContactPage() {
     
     try {
       await new Promise(resolve => setTimeout(resolve, 1500));
-      console.log('Form submitted to mishraom2326@gmail.com:', formData);
+      console.log('Form submitted to haloaligner@gmail.com:', formData);
       setStatus('sent');
       setFormData({ name: '', email: '', phone: '', message: '' });
     } catch (err) {
@@ -75,7 +75,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <div className="text-[0.7rem] font-bold text-[#5B6E99] uppercase tracking-wider mb-1">Call Us Directly</div>
-                      <div className="text-xl font-extrabold text-[#1A56DB]">7809385726</div>
+                      <div className="text-xl font-extrabold text-[#1A56DB]">8260525238</div>
                       <div className="text-sm font-medium text-[#8EA0C0] mt-1">Mon-Sun, 24/7 Support</div>
                     </div>
                   </div>
@@ -86,7 +86,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <div className="text-[0.7rem] font-bold text-[#5B6E99] uppercase tracking-wider mb-1">Email Support</div>
-                      <div className="text-xl font-extrabold text-[#1A56DB]">mishraom2326@gmail.com</div>
+                      <div className="text-xl font-extrabold text-[#1A56DB]">haloaligner@gmail.com</div>
                       <div className="text-sm font-medium text-[#8EA0C0] mt-1">Response within 2 hours</div>
                     </div>
                   </div>

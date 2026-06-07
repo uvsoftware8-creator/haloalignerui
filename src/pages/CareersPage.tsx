@@ -85,7 +85,7 @@ export default function CareersPage() {
                 </div>
 
                 <a 
-                  href="mailto:mishraom2326@gmail.com?subject=Job Application: Senior 3D Treatment Planner" 
+                  href="mailto:haloaligner@gmail.com?subject=Job Application: Senior 3D Treatment Planner" 
                   className="bg-[#1A56DB] text-[#D5E100] px-6 py-4 rounded-xl font-bold text-sm shadow-[0_4px_12px_rgba(26,86,219,0.2)] transition-all hover:bg-[#2563EB] hover:-translate-y-0.5 inline-flex items-center gap-1.5 self-start lg:self-auto"
                 >
                   Apply Now <ArrowUpRight size={16} />
@@ -109,10 +109,10 @@ export default function CareersPage() {
               We are always looking for passionate orthodontic technicians, software developers, and clinical managers. Drop your resume in our inbox!
             </p>
             <a 
-              href="mailto:mishraom2326@gmail.com" 
+              href="mailto:haloaligner@gmail.com" 
               className="text-[#2563EB] font-bold text-lg hover:underline"
             >
-              mishraom2326@gmail.com
+              haloaligner@gmail.com
             </a>
           </motion.div>
         </div>

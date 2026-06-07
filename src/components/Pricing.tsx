@@ -424,8 +424,8 @@ export default function Pricing() {
               Now Serving Odisha & Gujarat (Bhubaneswar)
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
-              <span>Call: <a href="tel:+919777453388" className="text-[#D5E100] underline hover:text-white transition-colors">+91-9777453388</a></span>
-              <span>Email: <a href="mailto:info@halodentist.com" className="text-[#D5E100] underline hover:text-white transition-colors">info@halodentist.com</a></span>
+              <span>Call: <a href="tel:8260525238" className="text-[#D5E100] underline hover:text-white transition-colors">8260525238</a></span>
+              <span>Email: <a href="mailto:haloaligner@gmail.com" className="text-[#D5E100] underline hover:text-white transition-colors">haloaligner@gmail.com</a></span>
             </div>
           </div>
         </div>

@@ -13,7 +13,7 @@ export default function Contact() {
     // Mock API call
     try {
       await new Promise(resolve => setTimeout(resolve, 1500));
-      console.log('Form submitted to mishraom2326@gmail.com:', formData);
+      console.log('Form submitted to haloaligner@gmail.com:', formData);
       setStatus('sent');
       setFormData({ name: '', email: '', message: '' });
     } catch (err) {
@@ -41,7 +41,7 @@ export default function Contact() {
               </div>
               <div>
                 <div className="text-[0.7rem] font-bold text-[#5B6E99] uppercase tracking-wider">Call Us</div>
-                <div className="text-lg font-bold text-[#1A56DB]">7809385726</div>
+                <div className="text-lg font-bold text-[#1A56DB]">8260525238</div>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -50,7 +50,7 @@ export default function Contact() {
               </div>
               <div>
                 <div className="text-[0.7rem] font-bold text-[#5B6E99] uppercase tracking-wider">Email Us</div>
-                <div className="text-lg font-bold text-[#1A56DB]">mishraom2326@gmail.com</div>
+                <div className="text-lg font-bold text-[#1A56DB]">haloaligner@gmail.com</div>
               </div>
             </div>
           </div>
