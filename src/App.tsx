@@ -12,7 +12,7 @@ import CustomCursor from './components/CustomCursor';
 
 export default function App() {
   return (
-    <BrowserRouter basename="/HALOALIGNER">
+    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
       <CustomCursor />
       <Routes>
         <Route path="/" element={<Home />} />

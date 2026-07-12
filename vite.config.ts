@@ -8,7 +8,7 @@ import { cloudflare } from "@cloudflare/vite-plugin";
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, '.', '');
   return {
-     base: "/HALOALIGNER/", 
+     base: process.env.VITE_BASE_PATH || '/', 
     plugins: [react(), tailwindcss(), cloudflare()],
     define: {
       'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
