@@ -65,12 +65,12 @@ export default function Navbar() {
             </li>
           ))}
           <li>
-            <Link
-              to="/login"
+            <a
+              href="https://haloaligner-smart-dental-aligner-po.vercel.app/"
               className="bg-[#1A56DB] text-[#D5E100] px-5.5 py-2.5 rounded-full font-bold text-[0.88rem] shadow-[0_4px_18px_rgba(26,86,219,0.30)] transition-all hover:bg-[#2563EB] hover:-translate-y-0.5"
             >
-              Dashboard
-            </Link>
+              Signup/Login
+            </a>
           </li>
         </ul>
 
@@ -115,13 +115,13 @@ export default function Navbar() {
                 </Link>
               )
             ))}
-            <Link
-              to="/login"
+            <a
+              href="https://haloaligner-smart-dental-aligner-po.vercel.app/"
               onClick={() => setIsMobileMenuOpen(false)}
               className="mt-6 bg-[#1A56DB] text-[#D5E100] text-center rounded-full py-4 font-bold text-lg shadow-lg"
             >
-              Dashboard
-            </Link>
+              Signup/Login
+            </a>
           </motion.div>
         )}
       </AnimatePresence>
