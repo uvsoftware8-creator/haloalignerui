@@ -28,55 +28,98 @@ export default function Navbar() {
     { name: 'Contact', href: '/contact' },
   ];
 
+  const isActive = (href: string) =>
+    href === '/' ? location.pathname === '/' : location.pathname.startsWith(href);
+
   return (
     <>
       <nav
         className={cn(
-          "fixed top-0 left-0 right-0 z-[1000] flex items-center justify-between transition-all duration-300 bg-[rgba(213,225,0,0.92)] backdrop-blur-xl border-b border-[rgba(255,255,255,0.45)]",
-          isScrolled ? "py-3 px-6 md:px-15" : "py-4.5 px-6 md:px-15"
+          'fixed top-0 left-0 right-0 z-[1000] flex items-center justify-between transition-all duration-300',
+          isScrolled ? 'py-2 px-6 md:px-14' : 'py-2.5 px-6 md:px-14'
         )}
+        style={{
+          background: 'rgba(26, 86, 219, 0.97)',
+          backdropFilter: 'blur(16px)',
+          borderBottom: '1px solid rgba(255,255,255,0.07)',
+        }}
       >
-        <Link to="/" className="font-syne font-bold text-xl sm:text-2xl tracking-widest uppercase inline-block select-none logo-cement">
+        {/* Logo */}
+        <Link
+          to="/"
+          className="font-syne font-extrabold text-xl sm:text-2xl tracking-widest uppercase inline-block select-none"
+          style={{ color: '#D5E100' }}
+        >
           HALOALIGNER
         </Link>
 
         {/* Desktop Links */}
-        <ul className="hidden lg:flex items-center gap-9 list-none">
-          {navLinks.map((link) => (
-            <li key={link.name}>
-              {link.href.includes('#') ? (
-                <HashLink
-                  smooth
-                  to={link.href}
-                  className="relative text-[#1A56DB] text-[0.92rem] font-bold transition-colors hover:text-blue-700 group uppercase tracking-tight"
-                >
-                  {link.name}
-                  <span className="absolute bottom-[-3px] left-0 right-0 h-[2px] bg-[#1A56DB] scale-x-0 group-hover:scale-x-100 transition-transform origin-right group-hover:origin-left duration-300" />
-                </HashLink>
-              ) : (
-                <Link
-                  to={link.href}
-                  className="relative text-[#1A56DB] text-[0.92rem] font-bold transition-colors hover:text-blue-700 group uppercase tracking-tight"
-                >
-                  {link.name}
-                  <span className="absolute bottom-[-3px] left-0 right-0 h-[2px] bg-[#1A56DB] scale-x-0 group-hover:scale-x-100 transition-transform origin-right group-hover:origin-left duration-300" />
-                </Link>
-              )}
-            </li>
-          ))}
+        <ul className="hidden lg:flex items-center gap-8 list-none">
+          {navLinks.map((link) => {
+            const active = isActive(link.href);
+            const linkClass =
+              'relative text-white text-[0.88rem] font-semibold uppercase tracking-wide transition-colors hover:text-[#D5E100] group';
+            return (
+              <li key={link.name}>
+                {link.href.includes('#') ? (
+                  <HashLink smooth to={link.href} className={linkClass}>
+                    {link.name}
+                    <span
+                      className="absolute -bottom-1 left-0 right-0 h-[2.5px] rounded-full transition-all duration-300"
+                      style={{
+                        background: '#D5E100',
+                        transform: active ? 'scaleX(1)' : 'scaleX(0)',
+                        transformOrigin: 'left',
+                      }}
+                    />
+                  </HashLink>
+                ) : (
+                  <Link to={link.href} className={linkClass}>
+                    {link.name}
+                    <span
+                      className="absolute -bottom-1 left-0 right-0 h-[2.5px] rounded-full transition-all duration-300 group-hover:scale-x-100"
+                      style={{
+                        background: '#D5E100',
+                        transform: active ? 'scaleX(1)' : 'scaleX(0)',
+                        transformOrigin: 'left',
+                      }}
+                    />
+                  </Link>
+                )}
+              </li>
+            );
+          })}
+
+          {/* CTA Button — yellow outline matching wireframe */}
           <li>
             <a
-              href="https://haloaligner-smart-dental-aligner-po.vercel.app/"
-              className="bg-[#1A56DB] text-[#D5E100] px-5.5 py-2.5 rounded-full font-bold text-[0.88rem] shadow-[0_4px_18px_rgba(26,86,219,0.30)] transition-all hover:bg-[#2563EB] hover:-translate-y-0.5"
+              href="#cta"
+              className="inline-block font-bold uppercase tracking-wide rounded-full transition-all hover:-translate-y-0.5"
+              style={{
+                padding: '0.52rem 1.25rem',
+                fontSize: '0.84rem',
+                color: '#D5E100',
+                border: '2px solid #D5E100',
+                background: 'transparent',
+              }}
+              onMouseEnter={e => {
+                (e.currentTarget as HTMLAnchorElement).style.background = '#D5E100';
+                (e.currentTarget as HTMLAnchorElement).style.color = '#0F1732';
+              }}
+              onMouseLeave={e => {
+                (e.currentTarget as HTMLAnchorElement).style.background = 'transparent';
+                (e.currentTarget as HTMLAnchorElement).style.color = '#D5E100';
+              }}
             >
-              Signup/Login
+              Book Consultation
             </a>
           </li>
         </ul>
 
         {/* Mobile Toggle */}
         <button
-          className="lg:hidden p-1 text-[#1A56DB]"
+          className="lg:hidden p-1"
+          style={{ color: '#D5E100' }}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -91,16 +134,18 @@ export default function Navbar() {
             animate={{ y: 0 }}
             exit={{ y: '-100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed inset-0 z-[999] bg-[rgba(213,225,0,0.98)] backdrop-blur-xl pt-20 px-6 pb-10 flex flex-col lg:hidden"
+            className="fixed inset-0 z-[999] pt-20 px-6 pb-10 flex flex-col lg:hidden"
+            style={{ background: 'rgba(26, 86, 219, 0.99)', backdropFilter: 'blur(16px)' }}
           >
-            {navLinks.map((link) => (
+            {navLinks.map((link) =>
               link.href.includes('#') ? (
                 <HashLink
                   key={link.name}
                   smooth
                   to={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block py-4 border-b border-[rgba(26,86,219,0.10)] text-[#1A56DB] font-bold text-lg hover:text-[#2563EB]"
+                  className="block py-4 font-bold text-lg hover:text-[#D5E100] transition-colors"
+                  style={{ color: 'white', borderBottom: '1px solid rgba(255,255,255,0.08)' }}
                 >
                   {link.name}
                 </HashLink>
@@ -109,18 +154,20 @@ export default function Navbar() {
                   key={link.name}
                   to={link.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="block py-4 border-b border-[rgba(26,86,219,0.10)] text-[#1A56DB] font-bold text-lg hover:text-[#2563EB]"
+                  className="block py-4 font-bold text-lg hover:text-[#D5E100] transition-colors"
+                  style={{ color: 'white', borderBottom: '1px solid rgba(255,255,255,0.08)' }}
                 >
                   {link.name}
                 </Link>
               )
-            ))}
+            )}
             <a
-              href="https://haloaligner-smart-dental-aligner-po.vercel.app/"
+              href="#cta"
               onClick={() => setIsMobileMenuOpen(false)}
-              className="mt-6 bg-[#1A56DB] text-[#D5E100] text-center rounded-full py-4 font-bold text-lg shadow-lg"
+              className="mt-6 text-center rounded-full py-4 font-bold text-lg uppercase tracking-wide"
+              style={{ color: '#D5E100', border: '2px solid #D5E100', background: 'transparent' }}
             >
-              Signup/Login
+              Book Consultation
             </a>
           </motion.div>
         )}
