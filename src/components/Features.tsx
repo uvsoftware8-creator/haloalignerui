@@ -20,7 +20,7 @@ export default function Features() {
           <div className="relative w-full h-full bg-gradient-to-b from-[rgba(213,225,0,0.18)] to-[rgba(213,225,0,0.03)] border border-[rgba(26,86,219,0.08)] rounded-[32px] overflow-hidden shadow-[0_16px_32px_rgba(26,86,219,0.03)] flex items-end justify-center">
             <div 
               className="w-full h-full"
-              style={{ transform: 'scale(1.85) translateX(-25%)', transformOrigin: 'bottom' }}
+              style={{ transform: 'scale(1.45) translateX(-12%)', transformOrigin: 'bottom' }}
             >
               <motion.img
                 initial={{ opacity: 0, y: 30 }}
