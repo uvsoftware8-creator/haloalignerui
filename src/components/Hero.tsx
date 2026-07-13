@@ -279,7 +279,7 @@ export default function Hero() {
                 src={heroModel} 
                 alt="Happy HaloAligner patient" 
                 className="w-full h-full object-cover" 
-                style={{ objectPosition: '30% 0%' }} 
+                style={{ objectPosition: '50% 0%' }} 
               />
               {/* Gradient blend to yellow on the left edge of the photo */}
               <div
