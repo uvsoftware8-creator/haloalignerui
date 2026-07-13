@@ -16,7 +16,7 @@ export default function Features() {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-stretch max-w-7xl mx-auto">
         {/* LEFT COLUMN: Lady Model Portrait Card */}
-        <div className="lg:col-span-5 flex justify-start items-stretch h-full z-10 self-stretch min-h-[360px] lg:min-h-none">
+        <div className="lg:col-span-5 flex justify-start items-stretch h-full z-10 self-stretch min-h-[250px] h-[280px] lg:h-auto lg:min-h-none">
           <div className="relative w-full h-full bg-gradient-to-b from-[rgba(213,225,0,0.18)] to-[rgba(213,225,0,0.03)] border border-[rgba(26,86,219,0.08)] rounded-[32px] overflow-hidden shadow-[0_16px_32px_rgba(26,86,219,0.03)] flex items-end justify-center">
             <motion.img
               initial={{ opacity: 0, y: 30 }}
@@ -67,54 +67,54 @@ export default function Features() {
             </div>
 
             {/* Phone Mockup on the right */}
-            <div className="md:col-span-4 relative flex items-center justify-center pt-6 md:pt-0">
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7 }}
-                className="w-[180px] h-[360px] bg-[#1A56DB] rounded-[24px] shadow-[0_24px_48px_rgba(26,86,219,0.18),0_0_0_5px_rgba(26,86,219,0.05)] relative overflow-hidden animate-[tilt_6s_ease-in-out_infinite]"
-              >
-                <div className="absolute inset-[4px] bg-[#E6F200] rounded-[20px] overflow-hidden">
-                  <div className="w-[58px] h-[15px] bg-[#1A56DB] rounded-[0_0_9px_9px] mx-auto" />
-                  <div className="p-3 px-2">
-                    <div className="font-syne font-extrabold text-[0.64rem] text-[#1A56DB] mb-2">My Smile Progress 📊</div>
-                    {[
-                      { label: 'Upper Alignment', width: '78%' },
-                      { label: 'Lower Alignment', width: '65%' },
-                      { label: 'Spacing Correction', width: '90%' },
-                    ].map((row) => (
-                      <div key={row.label} className="bg-[rgba(255,255,255,0.65)] rounded-[8px] p-[6px_8px] mb-1.5">
-                        <div className="text-[0.52rem] font-bold text-[#1A56DB] mb-0.5">{row.label}</div>
-                        <div className="h-1 bg-[rgba(26,86,219,0.15)] rounded-[1px] overflow-hidden">
-                          <div className="h-full bg-[#1A56DB] rounded-[1px] " style={{ width: row.width }} />
+            <div className="md:col-span-4 flex items-center justify-center pt-6 md:pt-0">
+              <div className="relative w-[180px] h-[360px]">
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.7 }}
+                  className="w-full h-full bg-[#1A56DB] rounded-[24px] shadow-[0_24px_48px_rgba(26,86,219,0.18),0_0_0_5px_rgba(26,86,219,0.05)] relative overflow-hidden animate-[tilt_6s_ease-in-out_infinite]"
+                >
+                  <div className="absolute inset-[4px] bg-[#E6F200] rounded-[20px] overflow-hidden">
+                    <div className="w-[58px] h-[15px] bg-[#1A56DB] rounded-[0_0_9px_9px] mx-auto" />
+                    <div className="p-3 px-2">
+                      <div className="font-syne font-extrabold text-[0.64rem] text-[#1A56DB] mb-2">My Smile Progress 📊</div>
+                      {[
+                        { label: 'Upper Alignment', width: '78%' },
+                        { label: 'Lower Alignment', width: '65%' },
+                        { label: 'Spacing Correction', width: '90%' },
+                      ].map((row) => (
+                        <div key={row.label} className="bg-[rgba(255,255,255,0.65)] rounded-[8px] p-[6px_8px] mb-1.5">
+                          <div className="text-[0.52rem] font-bold text-[#1A56DB] mb-0.5">{row.label}</div>
+                          <div className="h-1 bg-[rgba(26,86,219,0.15)] rounded-[1px] overflow-hidden">
+                            <div className="h-full bg-[#1A56DB] rounded-[1px] " style={{ width: row.width }} />
+                          </div>
                         </div>
+                      ))}
+                      <div className="bg-[#1A56DB] rounded-[8px] p-[7px_9px] mt-2 flex items-center gap-1">
+                        <span className="text-[#D5E100] font-bold text-[0.62rem]">🦷 Aligner #8 Active</span>
                       </div>
-                    ))}
-                    <div className="bg-[#1A56DB] rounded-[8px] p-[7px_9px] mt-2 flex items-center gap-1">
-                      <span className="text-[#D5E100] font-bold text-[0.62rem]">🦷 Aligner #8 Active</span>
                     </div>
                   </div>
-                </div>
-              </motion.div>
+                </motion.div>
 
-              {/* Badges around phone */}
-              <div className="hidden xl:block">
-                <div className="absolute bg-white rounded-[9px] p-[6px_9px] shadow-[0_6px_18px_rgba(26,86,219,0.08)] text-[0.55rem] font-bold text-[#1A56DB] whitespace-nowrap flex items-center gap-[5px] left-[-64px] top-[18%] animate-flt">
+                {/* Badges around phone - visible on all screens with responsive offsets */}
+                <div className="absolute bg-white rounded-[9px] p-[6px_8px] shadow-[0_6px_18px_rgba(26,86,219,0.08)] text-[0.52rem] font-bold text-[#1A56DB] whitespace-nowrap flex items-center gap-[4px] left-[-42px] xl:left-[-64px] top-[16%] animate-flt scale-[0.88] sm:scale-100 z-30">
                   <span className="text-xs">🏆</span>
                   <div>
                     <div className="font-extrabold text-[0.56rem]">Top Rated</div>
                     <div className="text-[0.5rem] text-[#5B6E99]">4.9 / 5.0 stars</div>
                   </div>
                 </div>
-                <div className="absolute bg-white rounded-[9px] p-[6px_9px] shadow-[0_6px_18px_rgba(26,86,219,0.08)] text-[0.55rem] font-bold text-[#1A56DB] whitespace-nowrap flex items-center gap-[5px] right-[-54px] top-[44%] animate-flt [animation-delay:1.5s]">
+                <div className="absolute bg-white rounded-[9px] p-[6px_8px] shadow-[0_6px_18px_rgba(26,86,219,0.08)] text-[0.52rem] font-bold text-[#1A56DB] whitespace-nowrap flex items-center gap-[4px] right-[-32px] xl:right-[-54px] top-[44%] animate-flt [animation-delay:1.5s] scale-[0.88] sm:scale-100 z-30">
                   <span className="text-xs">📱</span>
                   <div>
                     <div className="font-extrabold text-[0.56rem]">Virtual Check-ins</div>
                     <div className="text-[0.5rem] text-[#5B6E99]">Remote monitoring</div>
                   </div>
                 </div>
-                <div className="absolute bg-white rounded-[9px] p-[6px_9px] shadow-[0_6px_18px_rgba(26,86,219,0.08)] text-[0.55rem] font-bold text-[#1A56DB] whitespace-nowrap flex items-center gap-[5px] left-[-48px] bottom-[20%] animate-flt [animation-delay:1s]">
+                <div className="absolute bg-white rounded-[9px] p-[6px_8px] shadow-[0_6px_18px_rgba(26,86,219,0.08)] text-[0.52rem] font-bold text-[#1A56DB] whitespace-nowrap flex items-center gap-[4px] left-[-30px] xl:left-[-48px] bottom-[16%] animate-flt [animation-delay:1s] scale-[0.88] sm:scale-100 z-30">
                   <span className="text-xs">📍</span>
                   <div>
                     <div className="font-extrabold text-[0.56rem]">Week 8 of 20</div>

@@ -324,6 +324,30 @@ export default function Hero() {
             {/* Bottom fade to page bg */}
             <div className="absolute inset-x-0 bottom-0 h-12 pointer-events-none" style={{ background: 'linear-gradient(to top, #D5E100, transparent)' }} />
           </div>
+
+          {/* Mobile Benefit Icons */}
+          <div className="lg:hidden grid grid-cols-2 gap-4 mt-8 px-1">
+            {benefits.map((b, i) => (
+              <motion.div
+                key={b.label}
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 + i * 0.08 }}
+                className="flex items-center gap-2.5"
+              >
+                <div
+                  className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 border border-white/60 shadow-sm"
+                  style={{ background: 'rgba(255,255,255,0.45)', backdropFilter: 'blur(4px)' }}
+                >
+                  {b.icon}
+                </div>
+                <div>
+                  <div style={{ color: '#1A56DB', fontWeight: 800, fontSize: '0.82rem', lineHeight: 1.2 }}>{b.label}</div>
+                  <div style={{ color: '#1a3a6e', fontWeight: 600, fontSize: '0.72rem' }}>{b.sub}</div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
 
