@@ -175,13 +175,19 @@ export default function Hero() {
               }}
               animate={{
                 y: [0, -12, 0],
-                rotateY: [-5, 5, -5],
-                rotateX: [2, -2, 2],
+                rotateY: [0, 360],
               }}
               transition={{
-                duration: 5,
-                repeat: Infinity,
-                ease: "easeInOut"
+                y: {
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                },
+                rotateY: {
+                  duration: 12,
+                  repeat: Infinity,
+                  ease: "linear"
+                }
               }}
             />
           </motion.div>
@@ -330,13 +336,19 @@ export default function Hero() {
                 }}
                 animate={{
                   y: [0, -8, 0],
-                  rotateY: [-4, 4, -4],
-                  rotateX: [2, -2, 2],
+                  rotateY: [0, 360],
                 }}
                 transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: "easeInOut"
+                  y: {
+                    duration: 4,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  },
+                  rotateY: {
+                    duration: 12,
+                    repeat: Infinity,
+                    ease: "linear"
+                  }
                 }}
               />
             </div>
