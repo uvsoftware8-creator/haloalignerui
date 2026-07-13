@@ -161,7 +161,7 @@ export default function Hero() {
             </div>
 
             {/* Case: positioned to rest on top of the pedestal */}
-            <img
+            <motion.img
               src={caseWithAligner}
               alt="HaloAligner clear aligner in open case"
               style={{
@@ -172,6 +172,16 @@ export default function Hero() {
                 display: 'block',
                 marginBottom: '42px', // offsets it vertically to sit on top of the pedestal
                 filter: 'drop-shadow(0 12px 25px rgba(0,0,0,0.15))',
+              }}
+              animate={{
+                y: [0, -12, 0],
+                rotateY: [-5, 5, -5],
+                rotateX: [2, -2, 2],
+              }}
+              transition={{
+                duration: 5,
+                repeat: Infinity,
+                ease: "easeInOut"
               }}
             />
           </motion.div>
@@ -306,7 +316,7 @@ export default function Hero() {
               </div>
 
               {/* Aligner Case on Mobile */}
-              <img
+              <motion.img
                 src={caseWithAligner}
                 alt="HaloAligner clear aligner in open case"
                 style={{
@@ -317,6 +327,16 @@ export default function Hero() {
                   display: 'block',
                   marginBottom: '6px', // offsets it to sit on top of the pedestal
                   filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.12))',
+                }}
+                animate={{
+                  y: [0, -8, 0],
+                  rotateY: [-4, 4, -4],
+                  rotateX: [2, -2, 2],
+                }}
+                transition={{
+                  duration: 5,
+                  repeat: Infinity,
+                  ease: "easeInOut"
                 }}
               />
             </div>
