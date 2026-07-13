@@ -25,8 +25,8 @@ export default function Features() {
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               src={pricingModel}
               alt="Smiling model showing clear aligner results"
-              className="w-full h-full object-cover"
-              style={{ objectPosition: 'left bottom' }}
+              className="w-full h-full object-contain object-bottom"
+              style={{ transform: 'scale(1.35) translateX(-8%)', transformOrigin: 'bottom' }}
             />
           </div>
         </div>
