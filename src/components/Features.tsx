@@ -26,7 +26,7 @@ export default function Features() {
               src={pricingModel}
               alt="Smiling model showing clear aligner results"
               className="w-full h-full object-contain object-bottom"
-              style={{ transform: 'scale(1.35) translateX(-8%)', transformOrigin: 'bottom' }}
+              style={{ transform: 'scale(1.85) translateX(-25%)', transformOrigin: 'bottom' }}
             />
           </div>
         </div>
