@@ -290,7 +290,7 @@ export default function Hero() {
 
             {/* Aligner Case + Pedestal on the left half, overlapping the model photo */}
             <div 
-              className="absolute left-[5%] bottom-0 flex flex-col items-center justify-end"
+              className="absolute left-[5%] bottom-[-15px] flex flex-col items-center justify-end"
               style={{ width: '220px', height: '260px' }}
             >
               {/* 3D Pedestal on Mobile */}
@@ -315,7 +315,7 @@ export default function Hero() {
                   width: '80%',
                   height: 'auto',
                   display: 'block',
-                  marginBottom: '24px', // offsets it to sit on top of the pedestal
+                  marginBottom: '6px', // offsets it to sit on top of the pedestal
                   filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.12))',
                 }}
               />
