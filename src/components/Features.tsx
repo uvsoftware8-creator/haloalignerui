@@ -16,7 +16,7 @@ export default function Features() {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-stretch max-w-7xl mx-auto">
         {/* LEFT COLUMN: Lady Model Portrait Card */}
-        <div className="lg:col-span-5 flex justify-start items-stretch h-full z-10 self-stretch min-h-[250px] h-[280px] lg:h-auto lg:min-h-none">
+        <div className="lg:col-span-6 flex justify-start items-stretch h-full z-10 self-stretch min-h-[250px] h-[280px] lg:h-auto lg:min-h-none">
           <div className="relative w-full h-full bg-gradient-to-b from-[rgba(213,225,0,0.18)] to-[rgba(213,225,0,0.03)] border border-[rgba(26,86,219,0.08)] rounded-[32px] overflow-hidden shadow-[0_16px_32px_rgba(26,86,219,0.03)] flex items-end justify-center">
             <motion.img
               initial={{ opacity: 0, y: 30 }}
@@ -31,7 +31,7 @@ export default function Features() {
         </div>
 
         {/* RIGHT COLUMN: Text, Cards, Phone Mockup */}
-        <div className="lg:col-span-7 w-full z-20">
+        <div className="lg:col-span-6 w-full z-20">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
             {/* Text and Features Cards */}
             <div className="md:col-span-8">
