@@ -92,43 +92,86 @@ export default function Hero() {
           />
         </div>
 
-        {/* Aligner case + tray composite: sits between text and model */}
+        {/* Aligner case + stage: centered between text and model */}
         <div
-          className="absolute hidden lg:flex items-end justify-center"
-          style={{ left: '33%', right: '27%', top: '54px', bottom: 0, pointerEvents: 'none' }}
+          className="absolute hidden lg:flex items-center justify-center"
+          style={{ left: '33%', right: '27%', top: '54px', bottom: '20px', pointerEvents: 'none' }}
         >
           <motion.div
-            initial={{ opacity: 0, y: 36, scale: 0.9 }}
+            initial={{ opacity: 0, y: 40, scale: 0.88 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 1, delay: 0.28, ease: [0.16, 1, 0.3, 1] }}
-            style={{ position: 'relative', width: '360px', marginBottom: '-8px' }}
+            style={{ position: 'relative', width: '380px', height: '380px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'center' }}
           >
-            {/* Soft radial glow platform beneath the case */}
+            {/* 3D PEDESTAL STAGE */}
             <div
               style={{
                 position: 'absolute',
-                bottom: '6%',
-                left: '50%',
-                transform: 'translateX(-50%)',
-                width: '80%',
-                height: '12%',
-                background: 'radial-gradient(ellipse, rgba(180,200,0,0.55) 0%, transparent 70%)',
-                filter: 'blur(18px)',
+                bottom: '10px',
+                width: '320px',
+                height: '120px',
                 zIndex: 0,
               }}
-            />
+            >
+              {/* Pedestal floor shadow */}
+              <div
+                style={{
+                  position: 'absolute',
+                  bottom: '-12px',
+                  left: '10%',
+                  width: '80%',
+                  height: '35px',
+                  borderRadius: '50%',
+                  background: 'rgba(0, 0, 0, 0.12)',
+                  filter: 'blur(8px)',
+                  zIndex: 0,
+                }}
+              />
+              
+              {/* Pedestal 3D cylinder wall */}
+              <div
+                style={{
+                  position: 'absolute',
+                  bottom: '0',
+                  left: '0',
+                  width: '100%',
+                  height: '50px',
+                  borderRadius: '0 0 160px 160px / 0 0 25px 25px',
+                  background: 'linear-gradient(to bottom, #BFCD00, #A2B000)',
+                  boxShadow: 'inset 0 -5px 12px rgba(0, 0, 0, 0.08)',
+                  zIndex: 1,
+                }}
+              />
+              
+              {/* Pedestal Highlighted Top Face */}
+              <div
+                style={{
+                  position: 'absolute',
+                  bottom: '25px',
+                  left: '0',
+                  width: '100%',
+                  height: '50px',
+                  borderRadius: '50%',
+                  background: '#E2F018',
+                  borderBottom: '2px solid #BFCD00',
+                  boxShadow: 'inset 0 2px 4px rgba(255, 255, 255, 0.4), 0 3px 6px rgba(0, 0, 0, 0.06)',
+                  zIndex: 2,
+                }}
+              />
+            </div>
 
-            {/* Transparent PNG — aligner sitting in open case, no blend tricks needed */}
+            {/* Case: positioned to rest on top of the pedestal */}
             <img
               src={caseWithAligner}
               alt="HaloAligner clear aligner in open case"
               style={{
                 position: 'relative',
-                zIndex: 1,
-                width: '100%',
+                zIndex: 3,
+                width: '82%',
                 height: 'auto',
                 display: 'block',
-                filter: 'drop-shadow(0 18px 40px rgba(0,0,0,0.18)) drop-shadow(0 4px 12px rgba(0,0,0,0.12))',
+                marginBottom: '42px', // offsets it vertically to sit on top of the pedestal
+                filter: 'drop-shadow(0 12px 25px rgba(0,0,0,0.15))',
               }}
             />
           </motion.div>
@@ -160,8 +203,7 @@ export default function Hero() {
 
         {/* LEFT: Text content */}
         <div
-          className="relative z-10 flex flex-col justify-center px-6 md:px-10 lg:px-14 py-10"
-          style={{ maxWidth: '44%' }}
+          className="relative z-10 flex flex-col justify-center px-6 md:px-10 lg:px-14 py-10 w-full lg:max-w-[44%]"
         >
           <motion.div
             initial={{ opacity: 0, y: 18 }}
@@ -228,12 +270,60 @@ export default function Hero() {
               How It Works
             </a>
           </motion.div>
-        </div>
 
-        {/* Mobile: model below text */}
-        <div className="lg:hidden relative h-60 mt-4 overflow-hidden">
-          <img src={heroModel} alt="Happy HaloAligner patient" className="w-full h-full object-cover" style={{ objectPosition: '50% 10%' }} />
-          <div className="absolute inset-x-0 bottom-0 h-16" style={{ background: 'linear-gradient(to top, #D5E100, transparent)' }} />
+          {/* Mobile: Case + Model side-by-side / overlapping, exactly like desktop */}
+          <div className="lg:hidden relative w-full h-[320px] mt-6 overflow-hidden">
+            {/* Model photo on the right half */}
+            <div className="absolute right-0 top-0 bottom-0 w-[65%]">
+              <img 
+                src={heroModel} 
+                alt="Happy HaloAligner patient" 
+                className="w-full h-full object-cover" 
+                style={{ objectPosition: '30% 0%' }} 
+              />
+              {/* Gradient blend to yellow on the left edge of the photo */}
+              <div
+                className="absolute inset-y-0 left-0 w-16 pointer-events-none"
+                style={{ background: 'linear-gradient(to right, #D5E100, transparent)' }}
+              />
+            </div>
+
+            {/* Aligner Case + Pedestal on the left half, overlapping the model photo */}
+            <div 
+              className="absolute left-[5%] bottom-0 flex flex-col items-center justify-end"
+              style={{ width: '220px', height: '260px' }}
+            >
+              {/* 3D Pedestal on Mobile */}
+              <div style={{ position: 'absolute', bottom: '10px', width: '200px', height: '60px', zIndex: 0 }}>
+                {/* Pedestal floor shadow */}
+                <div style={{ position: 'absolute', bottom: '-6px', left: '10%', width: '80%', height: '20px', borderRadius: '50%', background: 'rgba(0, 0, 0, 0.1)', filter: 'blur(5px)' }} />
+                
+                {/* Pedestal 3D cylinder wall */}
+                <div style={{ position: 'absolute', bottom: '0', left: '0', width: '100%', height: '28px', borderRadius: '0 0 100px 100px / 0 0 14px 14px', background: 'linear-gradient(to bottom, #BFCD00, #A2B000)' }} />
+                
+                {/* Pedestal Highlighted Top Face */}
+                <div style={{ position: 'absolute', bottom: '14px', left: '0', width: '100%', height: '28px', borderRadius: '50%', background: '#E2F018', borderBottom: '1px solid #BFCD00' }} />
+              </div>
+
+              {/* Aligner Case on Mobile */}
+              <img
+                src={caseWithAligner}
+                alt="HaloAligner clear aligner in open case"
+                style={{
+                  position: 'relative',
+                  zIndex: 1,
+                  width: '80%',
+                  height: 'auto',
+                  display: 'block',
+                  marginBottom: '24px', // offsets it to sit on top of the pedestal
+                  filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.12))',
+                }}
+              />
+            </div>
+            
+            {/* Bottom fade to page bg */}
+            <div className="absolute inset-x-0 bottom-0 h-12 pointer-events-none" style={{ background: 'linear-gradient(to top, #D5E100, transparent)' }} />
+          </div>
         </div>
       </div>
 

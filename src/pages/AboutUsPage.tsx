@@ -10,12 +10,12 @@ export default function AboutUsPage() {
       {/* Background Glows */}
       <div className="absolute w-[650px] h-[650px] bg-[rgba(255,255,255,0.55)] rounded-full blur-[70px] -top-[180px] -right-[120px] animate-g1 pointer-events-none" />
       <div className="absolute w-[380px] h-[380px] bg-[rgba(184,201,0,0.45)] rounded-full blur-[70px] -bottom-[80px] left-[80px] animate-g2 pointer-events-none" />
-      
+
       {/* Grid Overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(26,86,219,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(26,86,219,0.07)_1px,transparent_1px)] bg-[length:48px_48px] pointer-events-none" />
 
       <Navbar />
-      
+
       <main className="relative z-10 pt-28 pb-20 px-6 md:px-15">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
@@ -26,8 +26,8 @@ export default function AboutUsPage() {
               transition={{ duration: 0.6 }}
             >
               <span className="section-tag bg-[rgba(255,255,255,0.55)] border-[rgba(255,255,255,0.65)]">About Us</span>
-              <h1 className="section-title text-[clamp(2.4rem,5vw,4.5rem)] mb-6">Redefining smiles through<br/><span className="text-[#3B82F6]">precision technology.</span></h1>
-              <p className="section-sub mx-auto max-w-2xl text-[#5B6E99]">HALOALIGNER is doctor-directed, Mumbai-engineered, and built to make clinical orthodontic alignment fast, safe, and accessible.</p>
+              <h1 className="section-title text-[clamp(2.4rem,5vw,4.5rem)] mb-6">Redefining smiles through<br /><span className="text-[#3B82F6]">precision technology.</span></h1>
+              <p className="section-sub mx-auto max-w-2xl text-[#5B6E99]">HALOALIGNER is  engineered to deliver faster, safer, and more accessible orthodontic care.</p>
             </motion.div>
           </div>
 
@@ -46,7 +46,7 @@ export default function AboutUsPage() {
                 </div>
                 <h2 className="font-syne text-2xl font-extrabold text-[#1A56DB] mb-4">Our Mission</h2>
                 <p className="text-[#5B6E99] leading-[1.75] font-medium">
-                  To empower dental practitioners with premium, white-label aligner manufacturing while giving patients a beautiful, comfortable, and affordable orthodontic solution directed entirely by licensed dental specialists.
+                  To empower orthodontic practitioners with premium, clear aligner manufacturing while giving patients a beautiful, comfortable, and affordable orthodontic solution directed entirely by licensed orthodontists.
                 </p>
               </div>
             </motion.div>
@@ -64,7 +64,7 @@ export default function AboutUsPage() {
                 </div>
                 <h2 className="font-syne text-2xl font-extrabold text-[#1A56DB] mb-4">Our Commitment</h2>
                 <p className="text-[#5B6E99] leading-[1.75] font-medium">
-                  We use medical-grade, BPA-free, bio-compatible polymers engineered to apply gentle, constant force. Every step is thoroughly simulated in 3D and verified by senior orthodontists before the trays are printed.
+                  We use high grade bio-compatible polymers engineered to apply gentle & continuous force. Every step is thoroughly simulated in 3D and verified by senior orthodontists before the trays are printed.
                 </p>
               </div>
             </motion.div>
@@ -73,12 +73,10 @@ export default function AboutUsPage() {
           {/* Core Values Grid */}
           <div className="mb-20">
             <h2 className="font-syne text-center text-3xl font-extrabold text-[#1A56DB] mb-12">Our Core Values</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
               {[
                 { icon: <Zap />, title: "Precision First", desc: "Using advanced 3D scanning and sub-millimeter printing to ensure aligners fit perfectly." },
-                { icon: <Heart />, title: "Patient Care", desc: "100% doctor oversight throughout the process to guarantee results and tooth health." },
-                { icon: <Users />, title: "Clinic Partnership", desc: "Helping dental practices scale with fully customized white-label clear aligners." },
-                { icon: <Award />, title: "Top Quality", desc: "Crafted strictly with CE and ISO-certified bio-compatible dental polymers." }
+                { icon: <Users />, title: "Clinic Partnership", desc: "Helping orthodontic practices scale with fully customized white-label clear aligners." },
               ].map((val, idx) => (
                 <motion.div
                   key={val.title}
