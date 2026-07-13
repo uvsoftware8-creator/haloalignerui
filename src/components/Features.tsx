@@ -18,16 +18,20 @@ export default function Features() {
         {/* LEFT COLUMN: Lady Model Portrait Card */}
         <div className="lg:col-span-6 flex justify-start items-stretch h-full z-10 self-stretch min-h-[250px] h-[280px] lg:h-auto lg:min-h-none">
           <div className="relative w-full h-full bg-gradient-to-b from-[rgba(213,225,0,0.18)] to-[rgba(213,225,0,0.03)] border border-[rgba(26,86,219,0.08)] rounded-[32px] overflow-hidden shadow-[0_16px_32px_rgba(26,86,219,0.03)] flex items-end justify-center">
-            <motion.img
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              src={pricingModel}
-              alt="Smiling model showing clear aligner results"
-              className="w-full h-full object-contain object-bottom"
+            <div 
+              className="w-full h-full"
               style={{ transform: 'scale(1.85) translateX(-25%)', transformOrigin: 'bottom' }}
-            />
+            >
+              <motion.img
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                src={pricingModel}
+                alt="Smiling model showing clear aligner results"
+                className="w-full h-full object-contain object-bottom"
+              />
+            </div>
           </div>
         </div>
 
