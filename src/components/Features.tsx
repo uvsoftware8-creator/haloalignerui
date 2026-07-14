@@ -14,44 +14,38 @@ export default function Features() {
     <section id="features" className="bg-[#F9FAF0] py-12 md:py-16 px-6 md:px-15 relative overflow-hidden">
       <div className="absolute -top-[200px] -right-[200px] w-[600px] h-[600px] bg-[rgba(213,225,0,0.22)] rounded-full blur-[80px] pointer-events-none" />
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-stretch max-w-7xl mx-auto">
-        {/* LEFT COLUMN: Lady Model Portrait Card */}
-        <div className="lg:col-span-6 flex justify-start items-stretch h-full z-10 self-stretch min-h-[250px] h-[280px] lg:h-auto lg:min-h-none">
-          <div className="relative w-full h-full bg-gradient-to-b from-[rgba(213,225,0,0.18)] to-[rgba(213,225,0,0.03)] border border-[rgba(26,86,219,0.08)] rounded-[32px] overflow-hidden shadow-[0_16px_32px_rgba(26,86,219,0.03)] flex items-end justify-center">
-            <div 
-              className="w-full h-full"
-              style={{ transform: 'scale(1.15) translateX(-2%)', transformOrigin: 'bottom' }}
-            >
-              <motion.img
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                src={pricingModel}
-                alt="Smiling model showing clear aligner results"
-                className="w-full h-full object-contain object-bottom"
-              />
-            </div>
-          </div>
+      <div className="grid grid-cols-12 gap-4 md:gap-6 items-stretch max-w-7xl mx-auto">
+        {/* LEFT COLUMN: Model Image (absolute on all screen sizes) */}
+        <div className="col-span-5 flex justify-start items-end z-10">
+          <motion.img
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            src={pricingModel}
+            alt="Smiling model showing clear aligner results"
+            className="absolute left-0 bottom-0 w-[42vw] max-w-[480px] h-full object-cover object-left-bottom mix-blend-multiply"
+          />
         </div>
 
         {/* RIGHT COLUMN: Text, Cards, Phone Mockup */}
-        <div className="lg:col-span-6 w-full z-20">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+        <div className="col-span-7 w-full z-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
             {/* Text and Features Cards */}
-            <div className="md:col-span-8">
+            <div className="lg:col-span-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7 }}
+                className="text-left flex flex-col items-start"
               >
-                <span className="section-tag !py-1 !px-2.5 !text-[0.62rem] !mb-2">Why Choose Us?</span>
-                <h2 className="section-title !text-2xl lg:!text-3.5xl !leading-tight !mb-1.5">Advanced aligners<br />Accessible pricing</h2>
-                <p className="section-sub !text-[0.82rem] !leading-normal !mb-3">Everything you need for a perfect smile — without the endless clinic visits or premium price tag.</p>
+                <span className="section-tag !py-0.5 !px-2 !text-[0.55rem] !mb-1.5">Why Choose Us?</span>
+                <h2 className="section-title !text-xl lg:!text-3.5xl !leading-tight !mb-1 text-left">Advanced aligners<br />Accessible pricing</h2>
+                <p className="section-sub !text-[0.75rem] lg:!text-[0.82rem] !leading-normal !mb-2 text-left">Everything you need for a perfect smile — without the endless clinic visits or premium price tag.</p>
               </motion.div>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mt-4">
+              <div className="flex flex-col gap-3 mt-4">
                 {features.map((f, i) => (
                   <motion.div
                     key={f.title}
@@ -59,20 +53,22 @@ export default function Features() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.7, delay: i * 0.05 }}
-                    className="bg-[rgba(255,255,255,0.45)] border border-[rgba(255,255,255,0.65)] backdrop-blur-xl rounded-[16px] p-4.5 transition-all hover:shadow-[0_15px_30px_rgba(26,86,219,0.05)]"
+                    className="flex items-start gap-2.5 border-b border-[rgba(26,86,219,0.08)] pb-3 last:border-0"
                   >
-                    <div className="w-8 h-8 bg-[#D5E100] rounded-lg flex items-center justify-center text-base mb-2.5 shadow-[0_3px_8px_rgba(213,225,0,0.25)]">
+                    <div className="w-6.5 h-6.5 shrink-0 bg-[#D5E100] rounded-md flex items-center justify-center text-xs shadow-[0_2px_6px_rgba(213,225,0,0.2)]">
                       {f.icon}
                     </div>
-                    <h3 className="font-syne text-[0.82rem] font-extrabold mb-1 text-[#1A56DB]">{f.title}</h3>
-                    <p className="text-[#5B6E99] text-[0.74rem] leading-[1.5]">{f.desc}</p>
+                    <div>
+                      <h3 className="font-syne text-[0.78rem] lg:text-[0.85rem] font-extrabold mb-0.5 text-[#1A56DB]">{f.title}</h3>
+                      <p className="text-[#5B6E99] text-[0.7rem] lg:text-[0.76rem] leading-normal">{f.desc}</p>
+                    </div>
                   </motion.div>
                 ))}
               </div>
             </div>
 
             {/* Phone Mockup on the right */}
-            <div className="md:col-span-4 flex items-center justify-center pt-6 md:pt-0">
+            <div className="hidden lg:flex lg:col-span-4 items-center justify-center pt-6 lg:pt-0">
               <div className="relative w-[180px] h-[360px]">
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
@@ -136,14 +132,14 @@ export default function Features() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="mt-4 bg-[#1A56DB] rounded-[16px] p-4.5 flex flex-col sm:flex-row items-start sm:items-center gap-4"
+            className="mt-3.5 bg-[#1A56DB] rounded-[16px] p-3.5 flex flex-row items-center gap-3.5 text-left"
           >
-            <div className="w-8 h-8 bg-[#D5E100] rounded-lg flex items-center justify-center text-base shrink-0 shadow-[0_3px_8px_rgba(213,225,0,0.25)]">
+            <div className="w-7 h-7 bg-[#D5E100] rounded-md flex items-center justify-center text-sm shrink-0 shadow-[0_2px_6px_rgba(213,225,0,0.2)]">
               👨‍⚕️
             </div>
             <div>
-              <h3 className="font-syne text-[0.92rem] font-extrabold text-white mb-0.5">100% Orthodontist Directed</h3>
-              <p className="text-[rgba(255,255,255,0.7)] text-[0.76rem] leading-[1.5]">Every case reviewed and monitored by licensed orthodontists. Your safety and results are always our first priority.</p>
+              <h3 className="font-syne text-[0.78rem] lg:text-[0.92rem] font-extrabold text-white mb-0.5">100% Orthodontist Directed</h3>
+              <p className="text-[rgba(255,255,255,0.7)] text-[0.66rem] lg:text-[0.76rem] leading-normal">Every case reviewed and monitored by licensed orthodontists. Your safety and results are always our first priority.</p>
             </div>
           </motion.div>
         </div>
