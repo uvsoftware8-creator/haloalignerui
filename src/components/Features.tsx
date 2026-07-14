@@ -15,7 +15,7 @@ export default function Features() {
       <div className="absolute -top-[200px] -right-[200px] w-[600px] h-[600px] bg-[rgba(213,225,0,0.22)] rounded-full blur-[80px] pointer-events-none" />
       <div className="grid grid-cols-12 gap-4 md:gap-6 items-stretch max-w-7xl mx-auto">
         {/* LEFT COLUMN: Model Image (absolute on all screen sizes) */}
-        <div className="col-span-5 flex justify-start items-end z-10">
+        <div className="col-span-5 flex justify-start items-end z-10 relative">
           <motion.img
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
