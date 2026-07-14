@@ -406,7 +406,7 @@ export default function Pricing() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center sm:text-left relative z-10">
             {[
-              { icon: '💎', title: 'Precision Fit', desc: 'CE & ISO certified bio-compatible polymer layouts.' },
+              { icon: '💎', title: 'Precision Fit', desc: 'Bio-compatible polymer layouts.' },
               { icon: '⚡', title: 'Fast Turnaround', desc: 'Direct manufacturing ensures record delivery times.' },
               { icon: '📅', title: 'Timely Delivery', desc: 'Optimized logistics directly to your clinic address.' },
               { icon: '📦', title: 'Hygienic Seal', desc: 'Hermetically sealed clinical grade kit packaging.' }
@@ -422,7 +422,7 @@ export default function Pricing() {
           <div className="mt-8 pt-8 border-t border-[rgba(255,255,255,0.1)] flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-bold relative z-10 text-[rgba(255,255,255,0.85)]">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 bg-green-500 rounded-full animate-ping" />
-              Now Serving Pan India & Gujarat (Other)
+              Now Serving Pan India & others.
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
               <span>Call: <a href="tel:09827274882" className="text-[#D5E100] underline hover:text-white transition-colors">09827274882</a></span>
