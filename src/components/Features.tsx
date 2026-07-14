@@ -11,22 +11,20 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="bg-[#F9FAF0] py-12 md:py-16 px-6 md:px-15 relative overflow-hidden">
+    <section id="features" className="bg-white py-12 md:py-16 px-6 md:px-15 relative overflow-hidden">
       <div className="absolute -top-[200px] -right-[200px] w-[600px] h-[600px] bg-[rgba(213,225,0,0.22)] rounded-full blur-[80px] pointer-events-none" />
       <div className="grid grid-cols-12 gap-8 lg:gap-6 items-stretch max-w-7xl mx-auto">
         {/* LEFT COLUMN: Model Image */}
-        <div className="col-span-12 lg:col-span-5 flex justify-start items-stretch z-10 self-stretch min-h-[250px] h-[320px] sm:h-[420px] lg:h-auto">
-          <div className="relative w-full h-full bg-white border border-[rgba(26,86,219,0.08)] rounded-[32px] overflow-hidden shadow-[0_16px_32px_rgba(26,86,219,0.03)] flex items-end justify-center">
-            <motion.img
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              src={pricingModel}
-              alt="Smiling model showing clear aligner results"
-              className="w-full h-full object-cover object-left-bottom"
-            />
-          </div>
+        <div className="col-span-12 lg:col-span-5 flex justify-start items-end z-10 relative lg:static h-[320px] sm:h-[420px] lg:h-auto">
+          <motion.img
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            src={pricingModel}
+            alt="Smiling model showing clear aligner results"
+            className="absolute -left-6 bottom-0 w-[45vw] h-full object-cover object-left-bottom mix-blend-multiply rounded-[24px] lg:rounded-none lg:-left-15 lg:bottom-0 lg:w-[42vw] lg:max-w-[480px] lg:h-full"
+          />
         </div>
 
         {/* RIGHT COLUMN: Text, Cards, Phone Mockup */}
