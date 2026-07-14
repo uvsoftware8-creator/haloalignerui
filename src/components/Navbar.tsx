@@ -22,7 +22,6 @@ export default function Navbar() {
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about' },
     { name: 'Blog', href: '/blog' },
-    { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -48,7 +47,7 @@ export default function Navbar() {
           className="font-syne font-extrabold text-xl sm:text-2xl tracking-widest uppercase inline-block select-none"
           style={{ color: '#D5E100' }}
         >
-          HALOALIGNER
+          HALOALIGNER<sup className="text-[10px] sm:text-xs ml-0.5 font-bold uppercase">TM</sup>
         </Link>
 
         {/* Desktop Links */}

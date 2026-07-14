@@ -2,30 +2,30 @@ import React from 'react';
 import { motion } from 'motion/react';
 
 const steps = [
-  { 
-    num: '01', 
-    title: 'Start with your pre treatment records', 
-    desc: 'Pre-treatment records: Intra-oral scan, Photography, Radiography.' 
+  {
+    num: '01',
+    title: 'Start with your pre treatment records',
+    desc: 'Pre-treatment records: Upload Intraoral scans (STL files for upper arch, lower arch and bite registration) along with X-Ray and photographs'
   },
-  { 
-    num: '02', 
-    title: 'Send your prescription', 
-    desc: '• Social 6 plan\n• Upper arch plan\n• Upper & lower arch plan' 
+  {
+    num: '02',
+    title: 'Send your prescription',
+    desc: '• Social 6 plan\n• Upper arch plan\n• Upper & lower arch plan'
   },
-  { 
-    num: '03', 
-    title: 'Get your plan', 
-    desc: 'Receive your plan and Approve your plan.' 
+  {
+    num: '03',
+    title: 'Get your plan',
+    desc: 'Receive your plan and Approve your plan.'
   },
-  { 
-    num: '04', 
-    title: 'Start your Aligner practice', 
-    desc: 'Commence aligner treatment with professional supervision.' 
+  {
+    num: '04',
+    title: 'Start your Aligner practice',
+    desc: 'Commence aligner treatment with professional.'
   },
-  { 
-    num: '05', 
-    title: 'Post treatment records', 
-    desc: 'Upload your post treatment plan & get retainers free.' 
+  {
+    num: '05',
+    title: 'Post treatment records',
+    desc: 'Upload your post treatment plan.'
   },
 ];
 

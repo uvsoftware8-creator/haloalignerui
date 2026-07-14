@@ -13,7 +13,7 @@ export default function Contact() {
     // Mock API call
     try {
       await new Promise(resolve => setTimeout(resolve, 1500));
-      console.log('Form submitted to haloaligner@gmail.com:', formData);
+      console.log('Form submitted to customercare@haloaligner.com:', formData);
       setStatus('sent');
       setFormData({ name: '', email: '', message: '' });
     } catch (err) {
@@ -31,8 +31,7 @@ export default function Contact() {
           transition={{ duration: 0.7 }}
         >
           <span className="section-tag">Get in Touch</span>
-          <h2 className="section-title">Have questions?<br />We're here to help.</h2>
-          <p className="section-sub mb-10">Our orthodontic team is available 24/7 to guide you through your smile transformation.</p>
+          <h2 className="section-title mb-10">Have questions?<br />We're here to help.</h2>
           
           <div className="flex flex-col gap-6">
             <div className="flex items-center gap-4">
@@ -41,7 +40,7 @@ export default function Contact() {
               </div>
               <div>
                 <div className="text-[0.7rem] font-bold text-[#5B6E99] uppercase tracking-wider">Call Us</div>
-                <div className="text-lg font-bold text-[#1A56DB]">8260525238</div>
+                <div className="text-lg font-bold text-[#1A56DB]">09827274882</div>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -50,7 +49,7 @@ export default function Contact() {
               </div>
               <div>
                 <div className="text-[0.7rem] font-bold text-[#5B6E99] uppercase tracking-wider">Email Us</div>
-                <div className="text-lg font-bold text-[#1A56DB]">haloaligner@gmail.com</div>
+                <div className="text-lg font-bold text-[#1A56DB]">customercare@haloaligner.com</div>
               </div>
             </div>
           </div>

@@ -3,8 +3,7 @@ import { motion } from 'motion/react';
 
 const cards = [
   { icon: '🔬', title: '3D Precision Modelling', desc: 'Advanced 3D imaging technology to create highly accurate dental models for perfectly fitted aligners.' },
-  { icon: '🦷', title: 'Bio-Compatible Materials', desc: 'Crafted from medical-grade, BPA-free materials that ensure comfort and safe, effective tooth alignment.' },
-  { icon: '🎁', title: 'Free Retainers Included', desc: 'Protect your new smile forever. We include high-quality custom retainers with every treatment plan.' },
+  { icon: '🦷', title: 'Bio-Compatible Materials', desc: 'Crafted from only FDA approved medical grade Bio-compatible materials that ensure comfort and safe, effective tooth alignment.' },
   { icon: '✨', title: 'Enhance Your Smile', desc: 'Achieve the radiant, confident smile you deserve with professional-grade clear aligner technology.' },
 ];
 

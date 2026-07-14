@@ -4,15 +4,15 @@ import { cn } from '@/src/lib/utils';
 import { ShieldCheck, Award, Sparkles, CheckCircle2, ChevronRight, Package, Box, Stethoscope, BadgeAlert } from 'lucide-react';
 
 export default function Pricing() {
-  const [activeTab, setActiveTab] = useState<'odisha_pkg' | 'odisha_rates' | 'bhubaneswar_pkg' | 'bhubaneswar_cats'>('odisha_pkg');
+  const [activeTab, setActiveTab] = useState<'pan_india_pkg' | 'pan_india_rates' | 'other_pkg' | 'other_cats'>('pan_india_pkg');
 
-  const odishaPackages = [
+  const panIndiaPackages = [
     {
       title: 'LITE PACKAGE',
       subtitle: 'Suitable for mild corrections',
       trays: 'Upto 14 Pairs of Trays',
       refinements: '5 Pairs Refinements Free',
-      prices: { Premium: 'Rs 29,000', Plus: 'Rs 22,500', ECO: 'Rs 16,400' },
+      prices: { Premium: '₹ 29,000', Plus: '₹ 22,500', ECO: '₹ 16,400' },
       color: 'from-green-500 to-emerald-600',
     },
     {
@@ -20,7 +20,7 @@ export default function Pricing() {
       subtitle: 'Suitable for medium corrections',
       trays: 'Upto 26 Pairs of Trays',
       refinements: '7 Pairs Refinements Free',
-      prices: { Premium: 'Rs 54,000', Plus: 'Rs 40,000', ECO: 'Rs 29,500' },
+      prices: { Premium: '₹ 54,000', Plus: '₹ 40,000', ECO: '₹ 29,500' },
       color: 'from-blue-500 to-indigo-600',
       featured: true,
     },
@@ -29,18 +29,18 @@ export default function Pricing() {
       subtitle: 'Suitable for severe corrections',
       trays: 'Unlimited Trays',
       refinements: '10 Pairs Refinements Free',
-      prices: { Premium: 'Rs 1,45,000', Plus: 'Rs 1,00,000', ECO: 'Rs 85,000' },
+      prices: { Premium: '₹ 1,45,000', Plus: '₹ 1,00,000', ECO: '₹ 85,000' },
       color: 'from-purple-500 to-violet-600',
     },
   ];
 
-  const bhubaneswarPackages = [
+  const otherPackages = [
     {
       title: 'LITE PACKAGE',
       subtitle: 'Suitable for mild corrections',
       trays: 'Upto 14 Pairs Trays',
       refinements: '5 Pairs Refinements Free',
-      prices: { Premium: 'Rs 25,000', Plus: 'Rs 16,000', ECO: 'Rs 10,000' },
+      prices: { Premium: '₹ 25,000', Plus: '₹ 16,000', ECO: '₹ 10,000' },
       color: 'from-green-500 to-emerald-600',
     },
     {
@@ -48,7 +48,7 @@ export default function Pricing() {
       subtitle: 'Suitable for medium corrections',
       trays: 'Upto 26 Pairs Trays',
       refinements: '7 Pairs Refinements Free',
-      prices: { Premium: 'Rs 42,500', Plus: 'Rs 29,500', ECO: 'Rs 19,500' },
+      prices: { Premium: '₹ 42,500', Plus: '₹ 29,500', ECO: '₹ 19,500' },
       color: 'from-blue-500 to-indigo-600',
       featured: true,
     },
@@ -57,7 +57,7 @@ export default function Pricing() {
       subtitle: 'Suitable for severe corrections',
       trays: 'Unlimited Trays',
       refinements: '10 Pairs Refinements Free',
-      prices: { Premium: 'Rs 1,29,000', Plus: 'Rs 95,000', ECO: 'Rs 60,500' },
+      prices: { Premium: '₹ 1,29,000', Plus: '₹ 95,000', ECO: '₹ 60,500' },
       color: 'from-purple-500 to-violet-600',
     },
   ];
@@ -75,16 +75,16 @@ export default function Pricing() {
         >
           <span className="section-tag bg-[rgba(255,255,255,0.8)] border border-[rgba(26,86,219,0.15)]">Pricing Guide</span>
           <h2 className="section-title">Clear, structured packages</h2>
-          <p className="section-sub mx-auto">Select the plan that fits your clinical requirements. Doctor-directed aligners with transparent pricing.</p>
+          <p className="section-sub mx-auto">Select the plan that fits your clinical requirements. Orthodontist-directed aligners with transparent pricing.</p>
         </motion.div>
 
         {/* Tab Selector */}
         <div className="flex flex-wrap justify-center gap-2 mt-10 bg-[rgba(26,86,219,0.05)] border border-[rgba(26,86,219,0.1)] p-1.5 rounded-2xl max-w-3xl mx-auto">
           {[
-            { id: 'odisha_pkg', label: 'Odisha Packages' },
-            { id: 'odisha_rates', label: 'Odisha Per-Tray' },
-            { id: 'bhubaneswar_pkg', label: 'Bhubaneswar Packages' },
-            { id: 'bhubaneswar_cats', label: 'Bhubaneswar Categories' },
+            { id: 'pan_india_pkg', label: 'Pan India Packages' },
+            { id: 'pan_india_rates', label: 'Pan India Per-Tray' },
+            { id: 'other_pkg', label: 'Other Packages' },
+            { id: 'other_cats', label: 'Other Categories' },
           ].map((tab) => (
             <button
               key={tab.id}
@@ -111,11 +111,11 @@ export default function Pricing() {
             exit={{ opacity: 0, y: -15 }}
             transition={{ duration: 0.4 }}
           >
-            {/* ODISHA PACKAGES */}
-            {activeTab === 'odisha_pkg' && (
+            {/* PAN INDIA PACKAGES */}
+            {activeTab === 'pan_india_pkg' && (
               <div className="space-y-12">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-                  {odishaPackages.map((pkg) => (
+                  {panIndiaPackages.map((pkg) => (
                     <div
                       key={pkg.title}
                       className={cn(
@@ -164,7 +164,7 @@ export default function Pricing() {
                   ))}
                 </div>
 
-                {/* Odisha Packages Special Features */}
+                {/* Pan India Packages Special Features */}
                 <div className="bg-white border border-[rgba(26,86,219,0.12)] rounded-[32px] p-8">
                   <h3 className="font-syne text-base font-extrabold text-[#1A56DB] mb-6 uppercase tracking-wider text-center">Special Features</h3>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
@@ -183,19 +183,20 @@ export default function Pricing() {
               </div>
             )}
 
-            {/* ODISHA PER-TRAY RATES */}
-            {activeTab === 'odisha_rates' && (
+            {/* PAN INDIA PER-TRAY RATES */}
+            {activeTab === 'pan_india_rates' && (
               <div className="space-y-8">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="flex flex-wrap justify-center gap-6">
                   {[
-                    { name: 'HALO ALIGNER PREMIUM', price: 'Rs 1,000', desc: 'Premium quality structure per tray.' },
-                    { name: 'HALO ALIGNER PLUS', price: 'Rs 750', desc: 'Medium quality strength per tray.' },
-                    { name: 'HALO ALIGNER ECO', price: 'Rs 550', desc: 'Decent quality basic alignment per tray.' },
-                    { name: 'HALO 4D ALIGNER', price: 'Rs 1,500', desc: 'Advanced 4D polymer setup per tray.' },
-                    { name: 'TEMPLATE', price: 'Rs 750', desc: 'Setup template tray for aligner placement.' },
-                    { name: 'PACKAGING', price: 'Rs 1,000', desc: 'Hygienic sealed packaging box kit.' },
+                    { name: 'HALO ALIGNER PREMIUM', price: '₹ 1,000', desc: 'Premium quality structure per tray.' },
+                    { name: 'HALO ALIGNER PLUS', price: '₹ 750', desc: 'Medium quality strength per tray.' },
+                    { name: 'HALO ALIGNER ECO', price: '₹ 550', desc: 'Decent quality basic alignment per tray.' },
+                    { name: '4D HALOALIGNER', price: '₹ 1,500', desc: 'Advanced 4D polymer setup per tray.' },
+                    { name: '4D NAM', price: '₹ 900/-', desc: 'Advanced 4D Nasoalveolar Molding per tray.' },
+                    { name: 'TEMPLATE', price: '₹ 750', desc: 'Setup template tray for aligner placement.' },
+                    { name: 'PACKAGING', price: '₹ 1,000', desc: 'Hygienic sealed packaging box kit.' },
                   ].map((rate) => (
-                    <div key={rate.name} className="bg-white border border-[rgba(26,86,219,0.12)] rounded-[24px] p-6 hover:shadow-[0_12px_24px_rgba(26,86,219,0.05)] transition-all flex flex-col justify-between min-h-[160px]">
+                    <div key={rate.name} className="bg-white border border-[rgba(26,86,219,0.12)] rounded-[24px] p-6 hover:shadow-[0_12px_24px_rgba(26,86,219,0.05)] transition-all flex flex-col justify-between min-h-[160px] w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)]">
                       <div>
                         <h4 className="font-syne font-extrabold text-sm text-[#1A56DB] mb-1.5">{rate.name}</h4>
                         <p className="text-xs font-semibold text-[#8EA0C0]">{rate.desc}</p>
@@ -208,7 +209,7 @@ export default function Pricing() {
                   ))}
                 </div>
 
-                {/* Odisha Rates Special Features */}
+                {/* Pan India Rates Special Features */}
                 <div className="bg-white border border-[rgba(26,86,219,0.12)] rounded-[32px] p-8">
                   <h3 className="font-syne text-base font-extrabold text-[#1A56DB] mb-6 uppercase tracking-wider text-center">Special Features</h3>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
@@ -227,11 +228,11 @@ export default function Pricing() {
               </div>
             )}
 
-            {/* BHUBANESWAR PACKAGES */}
-            {activeTab === 'bhubaneswar_pkg' && (
+            {/* OTHER PACKAGES */}
+            {activeTab === 'other_pkg' && (
               <div className="space-y-12">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-                  {bhubaneswarPackages.map((pkg) => (
+                  {otherPackages.map((pkg) => (
                     <div
                       key={pkg.title}
                       className={cn(
@@ -280,7 +281,7 @@ export default function Pricing() {
                   ))}
                 </div>
 
-                {/* Bhubaneswar Packages Footer Features */}
+                {/* Other Packages Footer Features */}
                 <div className="bg-white border border-[rgba(26,86,219,0.12)] rounded-[32px] p-8">
                   <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
                     {[
@@ -300,29 +301,29 @@ export default function Pricing() {
               </div>
             )}
 
-            {/* BHUBANESWAR ALIGNER CATEGORIES */}
-            {activeTab === 'bhubaneswar_cats' && (
+            {/* OTHER ALIGNER CATEGORIES */}
+            {activeTab === 'other_cats' && (
               <div className="space-y-12">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
                   {[
                     {
                       tier: 'ALIGNER PREMIUM',
                       subtitle: 'Top Quality',
-                      price: 'Rs 800',
+                      price: '₹ 800',
                       features: ['Crystal Clear Material', 'Maximum Durability', 'Superior Comfort', 'Long-lasting Performance'],
                       icon: '🏆',
                     },
                     {
                       tier: 'ALIGNER PLUS',
                       subtitle: 'Medium Quality',
-                      price: 'Rs 550',
+                      price: '₹ 550',
                       features: ['Excellent Clarity', 'Reliable Strength', 'Cost-effective Solution'],
                       icon: '✨',
                     },
                     {
                       tier: 'ALIGNER ECO',
                       subtitle: 'Decent Quality',
-                      price: 'Rs 350',
+                      price: '₹ 350',
                       features: ['Budget-friendly', 'Functional & Effective', 'Suitable for Basic Cases'],
                       icon: '👍',
                     },
@@ -334,7 +335,7 @@ export default function Pricing() {
                           <span className="text-[0.68rem] font-bold text-[#8EA0C0] uppercase tracking-wider">{item.subtitle}</span>
                         </div>
                         <h3 className="font-syne text-xl font-extrabold text-[#1A56DB] mb-1">{item.tier}</h3>
-                        
+
                         <div className="bg-[#EFF6FF] border border-[rgba(37,99,235,0.08)] rounded-xl p-4.5 mb-6.5 text-center">
                           <div className="text-[0.62rem] font-bold text-[#5B6E99] uppercase tracking-wider mb-1">Per Aligner</div>
                           <div className="font-syne text-2xl font-black text-[#1A56DB]">{item.price}</div>
@@ -357,13 +358,13 @@ export default function Pricing() {
                   ))}
                 </div>
 
-                {/* Add-on Services Bhubaneswar */}
+                {/* Add-on Services Other */}
                 <div className="bg-white border border-[rgba(26,86,219,0.12)] rounded-[32px] p-8 shadow-[0_12px_30px_rgba(26,86,219,0.03)]">
                   <h3 className="font-syne text-base font-extrabold text-[#1A56DB] mb-6 uppercase tracking-wider">Add-On Services</h3>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {[
-                      { title: 'Template Tray', desc: 'Precision Fabrication Support', price: 'Rs 500 per tray' },
-                      { title: 'Premium Packaging', desc: 'Hygienic, Sealed & Professional box kit setup.', price: 'Rs 1000' }
+                      { title: 'Template Tray', desc: 'Precision Fabrication Support', price: '₹ 500 per tray' },
+                      { title: 'Premium Packaging', desc: 'Hygienic, Sealed & Professional box kit setup.', price: '₹ 1,000' }
                     ].map((srv) => (
                       <div key={srv.title} className="bg-[rgba(26,86,219,0.02)] border border-[rgba(26,86,219,0.05)] rounded-2xl p-5 flex justify-between items-center">
                         <div>
@@ -376,7 +377,7 @@ export default function Pricing() {
                   </div>
                 </div>
 
-                {/* Why Choose Bhubaneswar Flyer info */}
+                {/* Why Choose Other Flyer info */}
                 <div className="bg-white border border-[rgba(26,86,219,0.12)] rounded-[32px] p-8">
                   <h3 className="font-syne text-base font-extrabold text-[#1A56DB] mb-6 uppercase tracking-wider text-center">Why HALO DENTIST PRIVATE LIMITED?</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 text-center">
@@ -402,7 +403,7 @@ export default function Pricing() {
         {/* Global Features Banner */}
         <div className="mt-16 bg-[#1A56DB] rounded-[32px] p-8 lg:p-10 text-white relative overflow-hidden shadow-[0_24px_50px_rgba(26,86,219,0.2)]">
           <div className="absolute -top-[100px] -right-[100px] w-[300px] h-[300px] bg-[rgba(255,255,255,0.05)] rounded-full blur-[40px] pointer-events-none" />
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center sm:text-left relative z-10">
             {[
               { icon: '💎', title: 'Precision Fit', desc: 'CE & ISO certified bio-compatible polymer layouts.' },
@@ -421,11 +422,11 @@ export default function Pricing() {
           <div className="mt-8 pt-8 border-t border-[rgba(255,255,255,0.1)] flex flex-col sm:flex-row justify-between items-center gap-4 text-xs font-bold relative z-10 text-[rgba(255,255,255,0.85)]">
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 bg-green-500 rounded-full animate-ping" />
-              Now Serving Odisha & Gujarat (Bhubaneswar)
+              Now Serving Pan India & Gujarat (Other)
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
-              <span>Call: <a href="tel:8260525238" className="text-[#D5E100] underline hover:text-white transition-colors">8260525238</a></span>
-              <span>Email: <a href="mailto:haloaligner@gmail.com" className="text-[#D5E100] underline hover:text-white transition-colors">haloaligner@gmail.com</a></span>
+              <span>Call: <a href="tel:09827274882" className="text-[#D5E100] underline hover:text-white transition-colors">09827274882</a></span>
+              <span>Email: <a href="mailto:customercare@haloaligner.com" className="text-[#D5E100] underline hover:text-white transition-colors">customercare@haloaligner.com</a></span>
             </div>
           </div>
         </div>

@@ -15,7 +15,7 @@ export default function ContactPage() {
     
     try {
       await new Promise(resolve => setTimeout(resolve, 1500));
-      console.log('Form submitted to haloaligner@gmail.com:', formData);
+      console.log('Form submitted to customercare@haloaligner.com:', formData);
       setStatus('sent');
       setFormData({ name: '', email: '', phone: '', message: '' });
     } catch (err) {
@@ -53,7 +53,7 @@ export default function ContactPage() {
             >
               <span className="section-tag bg-[rgba(255,255,255,0.55)] border-[rgba(255,255,255,0.65)]">Contact Us</span>
               <h1 className="section-title text-[clamp(2.4rem,5vw,4.5rem)] mb-6">Let's start your<br/><span className="text-[#3B82F6]">smile journey</span> today.</h1>
-              <p className="section-sub mx-auto max-w-2xl text-[#5B6E99]">Our orthodontic team is available 24/7 to guide you through your transformation. Reach out via form, email, or phone.</p>
+              <p className="section-sub mx-auto max-w-2xl text-[#5B6E99]">Reach out via form, email, or phone.</p>
             </motion.div>
           </div>
 
@@ -75,7 +75,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <div className="text-[0.7rem] font-bold text-[#5B6E99] uppercase tracking-wider mb-1">Call Us Directly</div>
-                      <div className="text-xl font-extrabold text-[#1A56DB]">8260525238</div>
+                      <div className="text-xl font-extrabold text-[#1A56DB]">09827274882</div>
                       <div className="text-sm font-medium text-[#8EA0C0] mt-1">Mon-Sun, 24/7 Support</div>
                     </div>
                   </div>
@@ -86,7 +86,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <div className="text-[0.7rem] font-bold text-[#5B6E99] uppercase tracking-wider mb-1">Email Support</div>
-                      <div className="text-xl font-extrabold text-[#1A56DB]">haloaligner@gmail.com</div>
+                      <div className="text-xl font-extrabold text-[#1A56DB]">customercare@haloaligner.com</div>
                       <div className="text-sm font-medium text-[#8EA0C0] mt-1">Response within 2 hours</div>
                     </div>
                   </div>
@@ -115,8 +115,12 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <div className="text-[0.7rem] font-bold text-[#5B6E99] uppercase tracking-wider mb-1">Our Location</div>
-                      <div className="text-xl font-extrabold text-[#1A56DB]">Quite Clear HQ</div>
-                      <div className="text-sm font-medium text-[#8EA0C0] mt-1">Mumbai, Maharashtra, India</div>
+                      <div className="text-sm font-extrabold text-[#1A56DB] leading-relaxed">
+                        2nd Floor, N4/262, in front of Azad Hind Club,<br />
+                        near Laxmi Mandir, Indradhanu Market,<br />
+                        Block N4, IRC Village, Nayapalli,<br />
+                        Bhubaneswar, Odisha – 751015
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -20,14 +20,6 @@ const posts = [
     author: 'Dr. Priya Patel',
     date: 'May 28, 2026',
     readTime: '4 min read'
-  },
-  {
-    category: 'Patient Care',
-    title: 'Post-Treatment Care: How Custom Retainers Protect Your New Smile',
-    excerpt: 'Finished your aligner trays? Discover why retainers are vital to preventing orthodontic relapse and how to properly maintain them.',
-    author: 'Dr. Rohan Mehta',
-    date: 'May 15, 2026',
-    readTime: '5 min read'
   }
 ];
 

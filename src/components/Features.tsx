@@ -3,9 +3,9 @@ import { motion } from 'motion/react';
 import pricingModel from '../assets/pricing-model.png';
 
 const features = [
-  { icon: '✨', title: 'Invisible Fit', desc: 'Virtually undetectable clear aligners that allow you to smile confidently throughout your treatment.' },
-  { icon: '🚀', title: 'Faster Deliveries', desc: 'Get your custom aligners delivered to your doorstep in record time with our optimized logistics.' },
-  { icon: '🏥', title: 'In-Clinic Delivery', desc: 'Prefer a professional hand-off? Opt for in-clinic delivery and dedicated local doctor guidance.' },
+  { icon: '✨', title: 'Invisible Fit', desc: 'Virtually undetectable clear aligners that allows your patient to smile confidently throughout your treatment.' },
+  { icon: '🚀', title: 'Faster Deliveries', desc: 'Get your customized aligners delivered to your doorstep in record time with our optimized logistics.' },
+  { icon: '🏥', title: 'Confidentiality', desc: 'Confidential and encrypted data to ensure your clinical data safety' },
   { icon: '🛠️', title: 'Customised Plans', desc: 'Reduce the number of trays and treatment duration with a plan fully tailored to your specific goals.' },
 ];
 

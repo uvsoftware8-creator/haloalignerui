@@ -13,8 +13,8 @@ export default function CTA() {
         >
           <span className="section-tag bg-[rgba(255,255,255,0.08)] border-[rgba(255,255,255,0.18)] text-[rgba(255,255,255,0.65)]">Ready to Start?</span>
           <h2 className="section-title text-white max-w-[640px] mx-auto mb-4">Partnered with 100+<br />happy Dental Clinics</h2>
-          <p className="section-sub text-[rgba(255,255,255,0.50)] mx-auto mb-8 text-center text-sm">Experience 100% Ortho Dentist Directed treatment at 40% less cost.</p>
-          
+          <p className="section-sub text-[rgba(255,255,255,0.50)] mx-auto mb-8 text-center text-sm">Experience 100% Orthodontist Directed treatment at 40% less cost.</p>
+
           <div className="flex flex-wrap gap-8 justify-center mb-12">
             <div className="text-center">
               <div className="text-[#D5E100] font-syne text-3xl font-extrabold mb-1">100+</div>
@@ -29,19 +29,13 @@ export default function CTA() {
               <div className="text-white text-[0.65rem] uppercase font-bold tracking-widest opacity-60">Ortho Dentist Directed</div>
             </div>
           </div>
-          
+
           <div className="flex flex-wrap gap-3.5 justify-center">
-            <a 
-              href="#contact" 
+            <a
+              href="#contact"
               className="bg-[#D5E100] text-[#1A56DB] px-9 py-4 rounded-full text-[0.94rem] font-extrabold shadow-[0_12px_30px_rgba(213,225,0,0.30)] transition-all hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(213,225,0,0.42)]"
             >
               Book Consultation
-            </a>
-            <a 
-              href="#contact" 
-              className="bg-[rgba(255,255,255,0.08)] text-white px-9 py-4 rounded-full border border-[rgba(255,255,255,0.22)] text-[0.94rem] font-bold transition-colors hover:bg-[rgba(255,255,255,0.15)]"
-            >
-              Order Impression Kit →
             </a>
           </div>
         </motion.div>

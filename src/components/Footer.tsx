@@ -30,7 +30,6 @@ export default function Footer() {
             <li><Link to="/about" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">About Us</Link></li>
             <li><Link to="/doctors" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">Our Doctors</Link></li>
             <li><Link to="/blog" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">Blog</Link></li>
-            <li><Link to="/careers" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">Careers</Link></li>
           </ul>
         </div>
         
@@ -38,8 +37,8 @@ export default function Footer() {
           <h4 className="font-syne text-[0.8rem] font-extrabold tracking-[1.5px] uppercase text-[#2563EB] mb-4.5">Support</h4>
           <ul className="list-none flex flex-col gap-2.5">
             <li><a href="#" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">FAQ</a></li>
-            <li><a href="tel:8260525238" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">8260525238</a></li>
-            <li><a href="mailto:haloaligner@gmail.com" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">haloaligner@gmail.com</a></li>
+            <li><a href="tel:09827274882" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">09827274882</a></li>
+            <li><a href="mailto:customercare@haloaligner.com" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">customercare@haloaligner.com</a></li>
             <li><a href="#" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">Privacy Policy</a></li>
             <li><a href="#" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">Terms</a></li>
           </ul>
@@ -47,7 +46,7 @@ export default function Footer() {
       </div>
       
       <div className="border-t border-[rgba(26,86,219,0.12)] pt-6.5 flex flex-col sm:flex-row justify-between items-center gap-4">
-        <p className="text-[#8EA0C0] text-[0.82rem]">© 2026 Halo Aligner. All rights reserved.</p>
+        <p className="text-[#8EA0C0] text-[0.82rem]">© 2026 Halodentist India Pvt. Ltd. All rights reserved.</p>
         <div className="flex gap-2.5">
           {[
             { name: 'in', href: '#' },
