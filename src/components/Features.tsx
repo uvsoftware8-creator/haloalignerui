@@ -11,7 +11,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section id="features" className="bg-white py-12 md:py-16 px-6 md:px-15 relative overflow-hidden">
+    <section id="features" className="bg-[#F9FAF0] py-12 md:py-16 px-6 md:px-15 relative overflow-hidden">
       <div className="absolute -top-[200px] -right-[200px] w-[600px] h-[600px] bg-[rgba(213,225,0,0.22)] rounded-full blur-[80px] pointer-events-none" />
       <div className="grid grid-cols-12 gap-8 lg:gap-6 items-stretch max-w-7xl mx-auto">
         {/* LEFT COLUMN: Model Image */}
