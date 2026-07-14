@@ -28,7 +28,6 @@ export default function Footer() {
           <h4 className="font-syne text-[0.8rem] font-extrabold tracking-[1.5px] uppercase text-[#2563EB] mb-4.5">Company</h4>
           <ul className="list-none flex flex-col gap-2.5">
             <li><Link to="/about" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">About Us</Link></li>
-            <li><Link to="/doctors" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">Our Doctors</Link></li>
             <li><Link to="/blog" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">Blog</Link></li>
           </ul>
         </div>

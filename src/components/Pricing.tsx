@@ -406,7 +406,7 @@ export default function Pricing() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center sm:text-left relative z-10">
             {[
-              { icon: '💎', title: 'Precision Fit', desc: 'CE & ISO certified bio-compatible polymer layouts.' },
+              { icon: '💎', title: 'Precision Fit', desc: 'Bio-compatible polymer layouts.' },
               { icon: '⚡', title: 'Fast Turnaround', desc: 'Direct manufacturing ensures record delivery times.' },
               { icon: '📅', title: 'Timely Delivery', desc: 'Optimized logistics directly to your clinic address.' },
               { icon: '📦', title: 'Hygienic Seal', desc: 'Hermetically sealed clinical grade kit packaging.' }

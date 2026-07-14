@@ -24,7 +24,8 @@ export default function Features() {
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
             src={pricingModel}
             alt="Smiling model showing clear aligner results"
-            className="absolute left-0 bottom-0 w-[42vw] max-w-[480px] h-full object-cover object-left-bottom mix-blend-multiply"
+            className="absolute left-0 bottom-0 w-[62vw] sm:w-[50vw] lg:w-[35vw] max-w-[480px] h-full object-cover object-left-bottom mix-blend-multiply"
+            style={{ WebkitMaskImage: 'linear-gradient(to right, black 75%, transparent 100%)', maskImage: 'linear-gradient(to right, black 75%, transparent 100%)' }}
           />
         </div>
 

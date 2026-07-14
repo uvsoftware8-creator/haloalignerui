@@ -26,7 +26,7 @@ const benefits = [
         <path d="M12 2C8.5 2 6 4.5 6 7c0 1.5.5 3 1 4.5C8 14 8 17 8 19c0 1.1.9 2 2 2s2-.9 2-2v-2c0-1.1.9-2 2-2s2 .9 2 2v2c0 1.1.9 2 2 2s2-.9 2-2c0-2 0-5 1-7.5.5-1.5 1-3 1-4.5C22 4.5 19.5 2 16 2c-1 0-2 .4-4 .4S13 2 12 2z"/>
       </svg>
     ),
-    label: 'Straighter', sub: 'Teeth',
+    label: 'Aligned', sub: 'Teeth',
   },
   {
     icon: (
@@ -246,10 +246,10 @@ export default function Hero() {
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.18 }}
-            className="text-[#1a3a6e] font-medium leading-relaxed mb-8"
-            style={{ fontSize: '0.95rem', maxWidth: '320px' }}
+            className="text-[#1a3a6e] font-medium leading-relaxed mb-8 text-left"
+            style={{ fontSize: '0.95rem', maxWidth: '450px' }}
           >
-            Orthodontist-directed, custom-made aligners<br />for a straighter smile and better confidence.
+            Orthodontist-directed, custom-made aligners for a straighter smile and better confidence.
           </motion.p>
 
           <motion.div
