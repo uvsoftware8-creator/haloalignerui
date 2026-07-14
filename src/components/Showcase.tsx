@@ -46,6 +46,25 @@ export default function Showcase() {
           </motion.div>
         ))}
       </div>
+
+      <div className="relative z-10 mt-16 max-w-5xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="w-full h-[500px] md:h-[600px] rounded-3xl overflow-hidden shadow-[0_24px_50px_rgba(0,0,50,0.3)] border border-[rgba(255,255,255,0.1)]"
+        >
+          <iframe
+            title="Teeth Aligner"
+            frameBorder="0"
+            allowFullScreen
+            allow="autoplay; fullscreen; xr-spatial-tracking"
+            src="https://sketchfab.com/models/83bd3cd63f4c46cd9b1fdaf8cc7ecd63/embed"
+            className="w-full h-full"
+          />
+        </motion.div>
+      </div>
     </section>
   );
 }
