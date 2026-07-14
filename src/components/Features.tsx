@@ -16,17 +16,15 @@ export default function Features() {
       <div className="grid grid-cols-12 gap-8 lg:gap-6 items-stretch max-w-7xl mx-auto">
         {/* LEFT COLUMN: Model Image */}
         <div className="col-span-12 lg:col-span-5 flex justify-start items-end z-10 relative lg:static h-[320px] sm:h-[420px] lg:h-auto">
-          <div className="absolute -left-6 bottom-0 w-[45vw] h-full bg-[#D5E100] border border-[rgba(26,86,219,0.08)] rounded-[32px] overflow-hidden shadow-[0_16px_32px_rgba(26,86,219,0.03)] flex items-end justify-center lg:-left-15 lg:w-[42vw] lg:max-w-[480px]">
-            <motion.img
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              src={pricingModel}
-              alt="Smiling model showing clear aligner results"
-              className="w-full h-full object-cover object-left-bottom"
-            />
-          </div>
+          <motion.img
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            src={pricingModel}
+            alt="Smiling model showing clear aligner results"
+            className="absolute -left-6 bottom-0 w-[45vw] h-full object-cover object-left-bottom rounded-[24px] lg:rounded-none lg:-left-15 lg:bottom-0 lg:w-[42vw] lg:max-w-[480px] lg:h-full"
+          />
         </div>
 
         {/* RIGHT COLUMN: Text, Cards, Phone Mockup */}
