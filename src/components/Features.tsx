@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import pricingModel from '../assets/pricing-model.jpg';
+import pricingModel from '../assets/pricing-model.png';
 
 const features = [
   { icon: '✨', title: 'Invisible Fit', desc: 'Virtually undetectable clear aligners that allows your patient to smile confidently throughout your treatment.' },
