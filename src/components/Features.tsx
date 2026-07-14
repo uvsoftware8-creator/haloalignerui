@@ -71,57 +71,78 @@ export default function Features() {
 
             {/* Phone Mockup */}
             <div className="col-span-4 flex items-center justify-center">
-              <div className="relative w-[180px] h-[360px]">
+              <div className="relative w-[220px] h-[510px]">
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.7 }}
-                  className="w-full h-full bg-[#1A56DB] rounded-[32px] shadow-[0_24px_48px_rgba(26,86,219,0.18),0_0_0_5px_rgba(26,86,219,0.05)] relative overflow-hidden animate-[tilt_6s_ease-in-out_infinite]"
+                  className="w-full h-full bg-[#B3C6FF] p-[3px] rounded-[38px] shadow-[0_24px_48px_rgba(26,86,219,0.18),0_0_0_5px_rgba(26,86,219,0.05)] relative overflow-hidden animate-[tilt_6s_ease-in-out_infinite]"
                 >
-                  <div className="absolute inset-[5px] bg-[#E6F200] rounded-[26px] overflow-hidden">
-                    <div className="w-[70px] h-[18px] bg-[#1A56DB] rounded-[0_0_11px_11px] mx-auto" />
-                    <div className="p-4 px-3">
-                      <div className="font-syne font-extrabold text-[0.78rem] text-[#1A56DB] mb-3">My Smile Progress 📊</div>
-                      {[
-                        { label: 'Upper Alignment', width: '78%' },
-                        { label: 'Lower Alignment', width: '65%' },
-                        { label: 'Spacing Correction', width: '90%' },
-                      ].map((row) => (
-                        <div key={row.label} className="bg-[rgba(255,255,255,0.65)] rounded-[8px] p-[6px_8px] mb-1.5">
-                          <div className="text-[0.52rem] font-bold text-[#1A56DB] mb-0.5">{row.label}</div>
-                          <div className="h-1 bg-[rgba(26,86,219,0.15)] rounded-[1px] overflow-hidden">
-                            <div className="h-full bg-[#1A56DB] rounded-[1px]" style={{ width: row.width }} />
+                  <div className="w-full h-full bg-[#1A56DB] rounded-[35px] p-[4px] relative overflow-hidden">
+                    <div className="w-full h-full bg-[#FFFF00] rounded-[31px] overflow-hidden flex flex-col relative">
+                      <div className="w-[80px] h-[16px] bg-[#1A56DB] rounded-[0_0_12px_12px] mx-auto absolute top-0 left-1/2 -translate-x-1/2 z-20" />
+                      
+                      {/* Top Yellow Section */}
+                      <div className="px-3 pt-6 pb-1">
+                        <div className="font-syne font-extrabold text-[0.75rem] text-[#1A56DB] mb-2 flex items-center justify-between">
+                          <span>My Smile Progress</span>
+                          <span className="text-[0.8rem] bg-white rounded-sm px-1">📊</span>
+                        </div>
+                        {[
+                          { label: 'Upper Alignment', width: '78%' },
+                          { label: 'Lower Alignment', width: '65%' },
+                          { label: 'Spacing Correction', width: '90%' },
+                        ].map((row) => (
+                          <div key={row.label} className="bg-[#FFFCE0] rounded-[8px] p-[5px_7px] mb-1.5 shadow-sm">
+                            <div className="text-[0.55rem] font-bold text-[#1A56DB] mb-1">{row.label}</div>
+                            <div className="h-1 bg-[#C5D3FF] rounded-[2px] overflow-hidden">
+                              <div className="h-full bg-[#1A56DB] rounded-[2px]" style={{ width: row.width }} />
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+
+                      {/* Middle Blue Section */}
+                      <div className="bg-[#1A56DB] px-3 py-2 flex items-center gap-2">
+                         <span className="text-white text-[1rem]">🦷</span>
+                         <span className="text-[#FFFF00] font-bold text-[0.75rem]">Aligner #8 Active</span>
+                      </div>
+                      
+                      {/* Bottom Light Yellow Section */}
+                      <div className="bg-[#FFFCE0] flex-1 rounded-t-[14px] rounded-b-[31px] mt-0 px-3 pt-3 pb-3 flex flex-col items-center text-center overflow-hidden">
+                        <div className="bg-[#FFFF00] text-[#1A56DB] text-[0.42rem] font-bold px-2 py-0.5 rounded-full mb-1.5">CENTRAL PORTAL</div>
+                        <h4 className="font-syne font-extrabold text-[#1A56DB] text-[0.95rem] leading-none mb-0.5 tracking-widest">HALOALIGNER</h4>
+                        <p className="text-[0.35rem] font-bold text-[#1A56DB] mb-2.5">SMART ALIGNER MANAGEMENT SYSTEM</p>
+                        
+                        <div className="w-full text-left mb-1.5">
+                          <div className="text-[0.42rem] font-bold text-[#1A56DB] mb-0.5">EMAIL / USERNAME</div>
+                          <div className="bg-white border border-[rgba(26,86,219,0.25)] rounded-[4px] p-1.5 flex items-center gap-1.5">
+                            <span className="text-[0.5rem] opacity-70">☑️</span>
+                            <span className="text-[0.5rem] text-[#1A56DB] font-medium">Superadmin</span>
                           </div>
                         </div>
-                      ))}
-                      <div className="bg-[#1A56DB] rounded-[10px] p-[8px_12px] mt-3 flex items-center gap-1.5">
-                        <span className="text-[#D5E100] font-bold text-[0.74rem]">🦷 Aligner #8 Active</span>
+                        
+                        <div className="w-full text-left mb-2">
+                          <div className="text-[0.42rem] font-bold text-[#1A56DB] mb-0.5">PASSWORD</div>
+                          <div className="bg-white border border-[rgba(26,86,219,0.25)] rounded-[4px] p-1.5 flex items-center gap-1.5">
+                            <span className="text-[0.5rem] opacity-70">🔒</span>
+                            <span className="text-[0.5rem] text-[#1A56DB] font-medium flex-1 tracking-widest">••••••••</span>
+                            <span className="text-[0.5rem] opacity-70">👁️</span>
+                          </div>
+                        </div>
+                        
+                        <button className="w-full bg-[#1A56DB] text-white font-bold text-[0.58rem] py-1.5 rounded-[4px] mb-2">Login to Portal</button>
+                        
+                        <div className="flex gap-1.5 w-full">
+                          <button className="flex-1 border border-[rgba(26,86,219,0.4)] bg-transparent text-[#1A56DB] text-[0.4rem] font-bold py-1 rounded-[4px] flex items-center justify-center gap-0.5 opacity-80"><span className="text-[0.45rem]">🏥</span> Clinic Registration</button>
+                          <button className="flex-1 border border-[rgba(26,86,219,0.4)] bg-transparent text-[#1A56DB] text-[0.4rem] font-bold py-1 rounded-[4px] opacity-80">Forgot Password?</button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </motion.div>
-                <div className="absolute bg-white rounded-[9px] p-[6px_8px] shadow-[0_6px_18px_rgba(26,86,219,0.08)] text-[0.52rem] font-bold text-[#1A56DB] whitespace-nowrap flex items-center gap-[4px] left-[-64px] top-[16%] animate-flt z-30">
-                  <span className="text-xs">🏆</span>
-                  <div>
-                    <div className="font-extrabold text-[0.56rem]">Top Rated</div>
-                    <div className="text-[0.5rem] text-[#5B6E99]">4.9 / 5.0 stars</div>
-                  </div>
-                </div>
-                <div className="absolute bg-white rounded-[9px] p-[6px_8px] shadow-[0_6px_18px_rgba(26,86,219,0.08)] text-[0.52rem] font-bold text-[#1A56DB] whitespace-nowrap flex items-center gap-[4px] right-[-54px] top-[44%] animate-flt [animation-delay:1.5s] z-30">
-                  <span className="text-xs">📱</span>
-                  <div>
-                    <div className="font-extrabold text-[0.56rem]">Virtual Check-ins</div>
-                    <div className="text-[0.5rem] text-[#5B6E99]">Remote monitoring</div>
-                  </div>
-                </div>
-                <div className="absolute bg-white rounded-[9px] p-[6px_8px] shadow-[0_6px_18px_rgba(26,86,219,0.08)] text-[0.52rem] font-bold text-[#1A56DB] whitespace-nowrap flex items-center gap-[4px] left-[-48px] bottom-[16%] animate-flt [animation-delay:1s] z-30">
-                  <span className="text-xs">📍</span>
-                  <div>
-                    <div className="font-extrabold text-[0.56rem]">Week 8 of 20</div>
-                    <div className="text-[0.5rem] text-[#5B6E99]">On track!</div>
-                  </div>
-                </div>
+
               </div>
             </div>
           </div>
@@ -163,37 +184,74 @@ export default function Features() {
           </p>
         </motion.div>
 
-        <div className="relative flex justify-center mb-8" style={{ height: '320px' }}>
+        <div className="relative flex justify-center mb-10" style={{ height: '390px' }}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="relative w-[160px] h-[300px] z-10"
+            className="relative w-[180px] h-[370px] z-10"
           >
-            <div className="w-full h-full bg-[#1A56DB] rounded-[24px] shadow-[0_20px_50px_rgba(26,86,219,0.25),0_0_0_4px_rgba(26,86,219,0.1)] relative overflow-hidden">
-              <div className="absolute inset-[4px] bg-[#E6F200] rounded-[20px] overflow-hidden">
-                <div className="w-[50px] h-[13px] bg-[#1A56DB] rounded-[0_0_8px_8px] mx-auto" />
-                <div className="p-2.5 px-2">
-                  <div className="font-syne font-extrabold text-[0.58rem] text-[#1A56DB] mb-2">My Smile Progress 📊</div>
-                  {[
-                    { label: 'Upper Alignment', width: '85%' },
-                    { label: 'Lower Alignment', width: '60%' },
-                    { label: 'Spacing Correction', width: '90%' },
-                  ].map((row) => (
-                    <div key={row.label} className="bg-[rgba(255,255,255,0.7)] rounded-[6px] p-[5px_7px] mb-1.5">
-                      <div className="flex justify-between mb-0.5">
-                        <div className="text-[0.44rem] font-bold text-[#1A56DB]">{row.label}</div>
-                        <div className="text-[0.44rem] font-bold text-[#1A56DB]">{row.width}</div>
+            <div className="w-full h-full bg-[#B3C6FF] p-[3px] rounded-[32px] shadow-[0_20px_50px_rgba(26,86,219,0.25),0_0_0_4px_rgba(26,86,219,0.1)] relative overflow-hidden">
+              <div className="w-full h-full bg-[#1A56DB] rounded-[29px] p-[3.5px] relative overflow-hidden">
+                <div className="w-full h-full bg-[#FFFF00] rounded-[26px] overflow-hidden flex flex-col relative">
+                  <div className="w-[60px] h-[14px] bg-[#1A56DB] rounded-[0_0_10px_10px] mx-auto absolute top-0 left-1/2 -translate-x-1/2 z-20" />
+                  
+                  {/* Top Yellow Section */}
+                  <div className="p-3 pt-5 pb-1.5">
+                    <div className="font-syne font-extrabold text-[0.7rem] text-[#1A56DB] mb-2 flex items-center justify-between">
+                      <span>My Smile Progress</span>
+                      <span className="text-[0.8rem] bg-white rounded-sm px-1">📊</span>
+                    </div>
+                    {[
+                      { label: 'Upper Alignment', width: '85%' },
+                      { label: 'Lower Alignment', width: '60%' },
+                      { label: 'Spacing Correction', width: '90%' },
+                    ].map((row) => (
+                      <div key={row.label} className="bg-[#FFFCE0] rounded-[8px] p-[5px_6px] mb-1.5 shadow-sm">
+                        <div className="text-[0.5rem] font-bold text-[#1A56DB] mb-1">{row.label}</div>
+                        <div className="h-1 bg-[#C5D3FF] rounded-[2px] overflow-hidden">
+                          <div className="h-full bg-[#1A56DB] rounded-[2px]" style={{ width: row.width }} />
+                        </div>
                       </div>
-                      <div className="h-[3px] bg-[rgba(26,86,219,0.15)] rounded overflow-hidden">
-                        <div className="h-full bg-[#1A56DB] rounded" style={{ width: row.width }} />
+                    ))}
+                  </div>
+
+                  {/* Middle Blue Section */}
+                  <div className="bg-[#1A56DB] px-3 py-1.5 flex items-center gap-1.5">
+                     <span className="text-white text-[0.85rem]">🦷</span>
+                     <span className="text-[#FFFF00] font-bold text-[0.65rem]">Aligner #8 Active</span>
+                  </div>
+                  
+                  {/* Bottom Light Yellow Section */}
+                  <div className="bg-[#FFFCE0] flex-1 rounded-t-[14px] rounded-b-[26px] mt-0 p-2.5 pt-3 flex flex-col items-center text-center">
+                    <div className="bg-[#FFFF00] text-[#1A56DB] text-[0.4rem] font-bold px-1.5 py-0.5 rounded-full mb-1.5">CENTRAL PORTAL</div>
+                    <h4 className="font-syne font-extrabold text-[#1A56DB] text-[0.9rem] leading-none mb-1 tracking-widest">HALOALIGNER</h4>
+                    <p className="text-[0.35rem] font-bold text-[#1A56DB] mb-2.5">SMART ALIGNER MANAGEMENT SYSTEM</p>
+                    
+                    <div className="w-full text-left mb-1.5">
+                      <div className="text-[0.4rem] font-bold text-[#1A56DB] mb-0.5">EMAIL / USERNAME</div>
+                      <div className="bg-[#E6EDFF] border border-[rgba(26,86,219,0.2)] rounded-[4px] p-1 flex items-center gap-1">
+                        <span className="text-[0.45rem] opacity-70">☑️</span>
+                        <span className="text-[0.45rem] text-[#1A56DB] font-medium">Superadmin</span>
                       </div>
                     </div>
-                  ))}
-                  <div className="bg-[#1A56DB] rounded-[6px] p-[5px_8px] mt-2 flex items-center gap-1.5">
-                    <span className="text-[0.7rem]">🦷</span>
-                    <span className="text-[#D5E100] font-bold text-[0.46rem]">Aligner #8 Active</span>
+                    
+                    <div className="w-full text-left mb-2.5">
+                      <div className="text-[0.4rem] font-bold text-[#1A56DB] mb-0.5">PASSWORD</div>
+                      <div className="bg-[#E6EDFF] border border-[rgba(26,86,219,0.2)] rounded-[4px] p-1 flex items-center gap-1">
+                        <span className="text-[0.45rem] opacity-70">🔒</span>
+                        <span className="text-[0.45rem] text-[#1A56DB] font-medium flex-1 tracking-widest">••••••••</span>
+                        <span className="text-[0.45rem] opacity-70">👁️</span>
+                      </div>
+                    </div>
+                    
+                    <button className="w-full bg-[#1A56DB] text-white font-bold text-[0.55rem] py-1.5 rounded-[4px] mb-2">Login to Portal</button>
+                    
+                    <div className="flex gap-1.5 w-full mt-auto mb-1">
+                      <button className="flex-1 border border-[#1A56DB] bg-transparent text-[#1A56DB] text-[0.4rem] font-bold py-1 rounded-[4px] flex items-center justify-center gap-1 opacity-80"><span className="text-[0.4rem]">🏥</span> Clinic Reg.</button>
+                      <button className="flex-1 border border-[#1A56DB] bg-transparent text-[#1A56DB] text-[0.4rem] font-bold py-1 rounded-[4px] opacity-80">Forgot Pass?</button>
+                    </div>
                   </div>
                 </div>
               </div>
