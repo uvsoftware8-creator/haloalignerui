@@ -222,7 +222,7 @@ export default function Hero() {
             className="text-[#1a3a6e] font-medium leading-relaxed mb-8 text-left"
             style={{ fontSize: '0.95rem', maxWidth: '450px' }}
           >
-            Orthodontist-directed, custom-made aligners for a straighter smile and better confidence.
+            Orthodontist-directed, custom-made aligners for an aligned smile and better confidence.
           </motion.p>
 
           <motion.div
@@ -402,36 +402,36 @@ export default function Hero() {
                     border: '1px solid rgba(26,86,219,0.07)',
                   }}
                 >
-                <div className="grid grid-cols-3 text-center">
-                  <div className="flex flex-col items-center px-1">
-                    <div className="w-8 h-8 rounded-full bg-[#D5E100] flex items-center justify-center text-sm shrink-0 mb-1.5 shadow-[0_2px_6px_rgba(213,225,0,0.2)]">
-                      😊
+                  <div className="grid grid-cols-3 text-center">
+                    <div className="flex flex-col items-center px-1">
+                      <div className="w-8 h-8 rounded-full bg-[#D5E100] flex items-center justify-center text-sm shrink-0 mb-1.5 shadow-[0_2px_6px_rgba(213,225,0,0.2)]">
+                        😊
+                      </div>
+                      <div className="font-syne font-extrabold text-[#1A56DB] leading-none" style={{ fontSize: '1.6rem' }}>
+                        <Counter target={100} suffix="+" />
+                      </div>
+                      <div className="font-bold text-[#1A56DB] mt-1" style={{ fontSize: '0.7rem', lineHeight: 1.2 }}>Happy Smiles</div>
+                      <div className="text-[#9aaac4]" style={{ fontSize: '0.6rem' }}>And counting</div>
                     </div>
-                    <div className="font-syne font-extrabold text-[#1A56DB] leading-none" style={{ fontSize: '1.6rem' }}>
-                      <Counter target={100} suffix="+" />
+                    <div className="flex flex-col items-center px-1">
+                      <div className="w-8 h-8 rounded-full bg-[#D5E100] flex items-center justify-center text-sm shrink-0 mb-1.5 shadow-[0_2px_6px_rgba(213,225,0,0.2)]">
+                        🏆
+                      </div>
+                      <div className="font-syne font-extrabold leading-none" style={{ fontSize: '1.6rem', color: '#c5a800' }}>4.9/5</div>
+                      <div className="font-bold text-[#1A56DB] mt-1" style={{ fontSize: '0.7rem', lineHeight: 1.2 }}>Top Rated</div>
+                      <div className="text-[#9aaac4]" style={{ fontSize: '0.6rem' }}>By our patients</div>
                     </div>
-                    <div className="font-bold text-[#1A56DB] mt-1" style={{ fontSize: '0.7rem', lineHeight: 1.2 }}>Happy Smiles</div>
-                    <div className="text-[#9aaac4]" style={{ fontSize: '0.6rem' }}>And counting</div>
+                    <div className="flex flex-col items-center px-1">
+                      <div className="w-8 h-8 rounded-full bg-[#D5E100] flex items-center justify-center text-sm shrink-0 mb-1.5 shadow-[0_2px_6px_rgba(213,225,0,0.2)]">
+                        📊
+                      </div>
+                      <div className="font-syne font-extrabold text-[#1A56DB] leading-none" style={{ fontSize: '1.6rem' }}>
+                        <Counter target={100} suffix="%" />
+                      </div>
+                      <div className="font-bold text-[#1A56DB] mt-1" style={{ fontSize: '0.7rem', lineHeight: 1.2 }}>Orthodontist Directed</div>
+                      <div className="text-[#9aaac4]" style={{ fontSize: '0.6rem' }}>Your safety is our priority</div>
+                    </div>
                   </div>
-                  <div className="flex flex-col items-center px-1">
-                    <div className="w-8 h-8 rounded-full bg-[#D5E100] flex items-center justify-center text-sm shrink-0 mb-1.5 shadow-[0_2px_6px_rgba(213,225,0,0.2)]">
-                      🏆
-                    </div>
-                    <div className="font-syne font-extrabold leading-none" style={{ fontSize: '1.6rem', color: '#c5a800' }}>4.9/5</div>
-                    <div className="font-bold text-[#1A56DB] mt-1" style={{ fontSize: '0.7rem', lineHeight: 1.2 }}>Top Rated</div>
-                    <div className="text-[#9aaac4]" style={{ fontSize: '0.6rem' }}>By our patients</div>
-                  </div>
-                  <div className="flex flex-col items-center px-1">
-                    <div className="w-8 h-8 rounded-full bg-[#D5E100] flex items-center justify-center text-sm shrink-0 mb-1.5 shadow-[0_2px_6px_rgba(213,225,0,0.2)]">
-                      📊
-                    </div>
-                    <div className="font-syne font-extrabold text-[#1A56DB] leading-none" style={{ fontSize: '1.6rem' }}>
-                      <Counter target={100} suffix="%" />
-                    </div>
-                    <div className="font-bold text-[#1A56DB] mt-1" style={{ fontSize: '0.7rem', lineHeight: 1.2 }}>Orthodontist Directed</div>
-                    <div className="text-[#9aaac4]" style={{ fontSize: '0.6rem' }}>Your safety is our priority</div>
-                  </div>
-                </div>
                 </motion.div>
               </motion.div>
 
