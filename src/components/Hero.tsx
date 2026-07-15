@@ -340,7 +340,7 @@ export default function Hero() {
         {/* BOTTOM STRIP */}
         <div
           className="relative z-10 w-full mt-auto"
-          style={{ borderTop: '1px solid rgba(26,86,219,0.1)', background: 'transparent' }}
+          style={{ background: 'transparent' }}
         >
           <div className="px-6 md:px-10 lg:px-14 py-5">
             <div className="flex flex-col lg:flex-row gap-3 items-stretch">
