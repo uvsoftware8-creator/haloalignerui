@@ -90,7 +90,9 @@ export default function Navbar() {
           {/* CTA Button — yellow outline matching wireframe */}
           <li>
             <a
-              href="#cta"
+              href="https://haloaligner.uvsoftware8.workers.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block font-bold uppercase tracking-wide rounded-full transition-all hover:-translate-y-0.5"
               style={{
                 padding: '0.52rem 1.25rem',
@@ -159,12 +161,14 @@ export default function Navbar() {
               )
             )}
             <a
-              href="#cta"
+              href="https://haloaligner.uvsoftware8.workers.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={() => setIsMobileMenuOpen(false)}
               className="mt-6 text-center rounded-full py-4 font-bold text-lg uppercase tracking-wide"
               style={{ color: '#D5E100', border: '2px solid #D5E100', background: 'transparent' }}
             >
-              Book Consultation
+              Login/Signup
             </a>
           </motion.div>
         )}

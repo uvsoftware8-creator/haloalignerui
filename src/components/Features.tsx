@@ -71,7 +71,11 @@ export default function Features() {
 
             {/* Phone Mockup */}
             <div className="col-span-4 flex items-center justify-center">
-              <div className="relative w-[220px] h-[475px]">
+              <div 
+                className="relative w-[220px] h-[475px] cursor-pointer transition-transform hover:scale-[1.02]" 
+                onClick={() => window.open('https://haloaligner.uvsoftware8.workers.dev/', '_blank')}
+                title="Open Portal"
+              >
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -220,7 +224,12 @@ export default function Features() {
           </p>
         </motion.div>
 
-        <div className="relative flex justify-center mb-8" style={{ height: '390px' }}>
+        <div 
+          className="relative flex justify-center mb-8 cursor-pointer transition-transform hover:scale-[1.02]" 
+          style={{ height: '390px' }}
+          onClick={() => window.open('https://haloaligner.uvsoftware8.workers.dev/', '_blank')}
+          title="Open Portal"
+        >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

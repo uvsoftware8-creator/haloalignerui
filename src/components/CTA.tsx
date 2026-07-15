@@ -32,10 +32,12 @@ export default function CTA() {
 
           <div className="flex flex-wrap gap-3.5 justify-center">
             <a
-              href="#contact"
+              href="https://haloaligner.uvsoftware8.workers.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-[#D5E100] text-[#1A56DB] px-9 py-4 rounded-full text-[0.94rem] font-extrabold shadow-[0_12px_30px_rgba(213,225,0,0.30)] transition-all hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(213,225,0,0.42)]"
             >
-              Book Consultation
+              Book Your Order
             </a>
           </div>
         </motion.div>

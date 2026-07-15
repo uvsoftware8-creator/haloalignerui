@@ -231,7 +231,9 @@ export default function Hero() {
             className="flex flex-wrap gap-3"
           >
             <a
-              href="#cta"
+              href="https://haloaligner.uvsoftware8.workers.dev/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#1A56DB] text-white rounded-full font-bold shadow-[0_6px_22px_rgba(26,86,219,0.38)] hover:-translate-y-0.5 hover:bg-[#2563EB] transition-all"
               style={{ padding: '0.75rem 1.5rem', fontSize: '0.85rem' }}
             >
