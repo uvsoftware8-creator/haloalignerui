@@ -128,9 +128,9 @@ export default function Hero() {
                   width: '100%',
                   height: '36px',
                   borderRadius: '50%',
-                  background: 'radial-gradient(ellipse at 38% 35%, #F2FF40, #D5E100)',
-                  borderBottom: '2px solid #B8C800',
-                  boxShadow: 'inset 0 3px 6px rgba(255,255,255,0.65), 0 2px 6px rgba(0,0,0,0.08)',
+                  background: 'radial-gradient(ellipse at 38% 35%, #ffffff, #f0f0f0)',
+                  borderBottom: '2px solid #e0e0e0',
+                  boxShadow: 'inset 0 3px 6px rgba(255,255,255,0.8), 0 2px 6px rgba(0,0,0,0.08)',
                   zIndex: 2,
                 }}
               />
@@ -143,8 +143,8 @@ export default function Hero() {
                   width: '100%',
                   height: '48px',
                   borderRadius: '0 0 130px 130px / 0 0 20px 20px',
-                  background: 'linear-gradient(to bottom, #C8D900, #9EA800)',
-                  boxShadow: 'inset 0 -4px 10px rgba(0,0,0,0.12)',
+                  background: 'linear-gradient(to bottom, #e0e0e0, #c0c0c0)',
+                  boxShadow: 'inset 0 -4px 10px rgba(0,0,0,0.08)',
                   zIndex: 1,
                 }}
               />
