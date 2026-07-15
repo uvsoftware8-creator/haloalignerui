@@ -357,19 +357,29 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.5 + i * 0.07 }}
-                    whileHover={{ y: -5, scale: 1.02, boxShadow: '0 12px 24px rgba(26,86,219,0.12)' }}
-                    whileTap={{ scale: 0.98 }}
-                    className="rounded-2xl p-4 flex flex-col gap-2 border cursor-pointer transition-colors hover:bg-white"
-                    style={{ background: 'rgba(255,255,255,0.85)', borderColor: 'rgba(255,255,255,0.95)' }}
                   >
-                    <div
-                      className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-[#1A56DB] text-lg"
-                      style={{ background: '#D5E100', border: '2px solid rgba(26,86,219,0.15)' }}
+                    <motion.div
+                      animate={{ y: [0, -4, 0] }}
+                      transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: i * 0.2 }}
+                      whileHover={{ scale: 1.03, boxShadow: '0 12px 24px rgba(26,86,219,0.15)' }}
+                      whileTap={{ scale: 0.96 }}
+                      className="rounded-2xl p-4 flex flex-col gap-2 border cursor-pointer h-full transition-colors hover:bg-white"
+                      style={{ background: 'rgba(255,255,255,0.85)', borderColor: 'rgba(255,255,255,0.95)' }}
                     >
-                      {f.emoji}
-                    </div>
-                    <div className="font-bold text-[#1A56DB] leading-snug" style={{ fontSize: '0.8rem' }}>{f.title}</div>
-                    <div className="text-[#5B6E99] leading-relaxed" style={{ fontSize: '0.7rem' }}>{f.desc}</div>
+                      <div
+                        className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-[#1A56DB] text-lg overflow-hidden"
+                        style={{ background: '#D5E100', border: '2px solid rgba(26,86,219,0.15)' }}
+                      >
+                        <motion.div
+                          animate={{ scale: [1, 1.15, 1], rotate: [0, 5, -5, 0] }}
+                          transition={{ duration: 2.5, repeat: Infinity, delay: i * 0.3 }}
+                        >
+                          {f.emoji}
+                        </motion.div>
+                      </div>
+                      <div className="font-bold text-[#1A56DB] leading-snug" style={{ fontSize: '0.8rem' }}>{f.title}</div>
+                      <div className="text-[#5B6E99] leading-relaxed" style={{ fontSize: '0.7rem' }}>{f.desc}</div>
+                    </motion.div>
                   </motion.div>
                 ))}
               </div>
@@ -379,15 +389,19 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.72 }}
-                whileHover={{ y: -4, scale: 1.01, boxShadow: '0 16px 40px rgba(26,86,219,0.18)' }}
-                className="rounded-2xl p-5 flex flex-col justify-center w-full lg:w-[460px] cursor-pointer"
-                style={{
-                  maxWidth: '460px',
-                  background: '#ffffff',
-                  boxShadow: '0 10px 30px rgba(26,86,219,0.12)',
-                  border: '1px solid rgba(26,86,219,0.07)',
-                }}
+                className="w-full lg:w-[460px] h-full"
               >
+                <motion.div
+                  animate={{ y: [0, -3, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                  whileHover={{ scale: 1.02, boxShadow: '0 16px 40px rgba(26,86,219,0.18)' }}
+                  className="rounded-2xl p-5 flex flex-col justify-center h-full cursor-pointer"
+                  style={{
+                    background: '#ffffff',
+                    boxShadow: '0 10px 30px rgba(26,86,219,0.12)',
+                    border: '1px solid rgba(26,86,219,0.07)',
+                  }}
+                >
                 <div className="grid grid-cols-3 text-center">
                   <div className="flex flex-col items-center px-1">
                     <div className="w-8 h-8 rounded-full bg-[#D5E100] flex items-center justify-center text-sm shrink-0 mb-1.5 shadow-[0_2px_6px_rgba(213,225,0,0.2)]">
@@ -418,6 +432,7 @@ export default function Hero() {
                     <div className="text-[#9aaac4]" style={{ fontSize: '0.6rem' }}>Your safety is our priority</div>
                   </div>
                 </div>
+                </motion.div>
               </motion.div>
 
             </div>
