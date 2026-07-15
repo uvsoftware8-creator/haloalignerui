@@ -108,7 +108,7 @@ export default function Navbar() {
                 (e.currentTarget as HTMLAnchorElement).style.color = '#D5E100';
               }}
             >
-              Book Consultation
+              Login/Signup
             </a>
           </li>
         </ul>
