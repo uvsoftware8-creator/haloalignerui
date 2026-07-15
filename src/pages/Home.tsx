@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
+import BeforeAfterSection from '../components/BeforeAfterSection';
 import Features from '../components/Features';
 import HowItWorks from '../components/HowItWorks';
 import Showcase from '../components/Showcase';
@@ -16,6 +17,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <BeforeAfterSection />
         <Features />
         <HowItWorks />
         <Showcase />

@@ -138,7 +138,7 @@ export default function Hero() {
                   width: '100%',
                   height: '50px',
                   borderRadius: '0 0 160px 160px / 0 0 25px 25px',
-                  background: 'linear-gradient(to bottom, #BFCD00, #A2B000)',
+                  background: 'linear-gradient(to bottom, #B2C000, #95A300)',
                   boxShadow: 'inset 0 -5px 12px rgba(0, 0, 0, 0.08)',
                   zIndex: 1,
                 }}
@@ -153,9 +153,9 @@ export default function Hero() {
                   width: '100%',
                   height: '50px',
                   borderRadius: '50%',
-                  background: '#FFFFFF',
-                  borderBottom: '2px solid #E2E8F0',
-                  boxShadow: 'inset 0 2px 4px rgba(255, 255, 255, 0.4), 0 3px 6px rgba(0, 0, 0, 0.06)',
+                  background: '#E5F31A',
+                  borderBottom: '2px solid #C0D000',
+                  boxShadow: 'inset 0 2px 4px rgba(255, 255, 255, 0.6), 0 3px 6px rgba(0, 0, 0, 0.06)',
                   zIndex: 2,
                 }}
               />
@@ -342,10 +342,10 @@ export default function Hero() {
                 <div style={{ position: 'absolute', bottom: '-6px', left: '10%', width: '80%', height: '20px', borderRadius: '50%', background: 'rgba(0, 0, 0, 0.1)', filter: 'blur(5px)' }} />
                 
                 {/* Pedestal 3D cylinder wall */}
-                <div style={{ position: 'absolute', bottom: '0', left: '0', width: '100%', height: '28px', borderRadius: '0 0 100px 100px / 0 0 14px 14px', background: 'linear-gradient(to bottom, #BFCD00, #A2B000)' }} />
+                <div style={{ position: 'absolute', bottom: '0', left: '0', width: '100%', height: '28px', borderRadius: '0 0 100px 100px / 0 0 14px 14px', background: 'linear-gradient(to bottom, #B2C000, #95A300)' }} />
                 
                 {/* Pedestal Highlighted Top Face */}
-                <div style={{ position: 'absolute', bottom: '14px', left: '0', width: '100%', height: '28px', borderRadius: '50%', background: '#FFFFFF', borderBottom: '1px solid #E2E8F0' }} />
+                <div style={{ position: 'absolute', bottom: '14px', left: '0', width: '100%', height: '28px', borderRadius: '50%', background: '#E5F31A', borderBottom: '1px solid #C0D000' }} />
               </div>
 
               {/* Aligner Case on Mobile */}
