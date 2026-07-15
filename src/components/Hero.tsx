@@ -320,48 +320,7 @@ export default function Hero() {
                 }}
               />
 
-              {/* Glowing Aligner Tray on Mobile */}
-              <motion.div
-                style={{
-                  position: 'absolute',
-                  top: '15px',
-                  width: '60%',
-                  zIndex: 2,
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}
-                animate={{
-                  y: [0, -10, 0],
-                }}
-                transition={{
-                  duration: 3.5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-              >
-                {/* Glow Aura Background Effect */}
-                <div
-                  style={{
-                    position: 'absolute',
-                    width: '130%',
-                    height: '130%',
-                    background: 'radial-gradient(circle, rgba(255,255,255,0.85) 0%, rgba(213,225,0,0.4) 50%, transparent 70%)',
-                    filter: 'blur(12px)',
-                    zIndex: -1,
-                  }}
-                />
-                <img
-                  src={alignerTray}
-                  alt="HaloAligner clear transparent aligner tray"
-                  style={{
-                    width: '100%',
-                    height: 'auto',
-                    filter: 'drop-shadow(0 0 8px rgba(255,255,255,0.8)) drop-shadow(0 6px 12px rgba(26,86,219,0.1))',
-                    transform: 'rotate(-12deg) scale(1.1)',
-                  }}
-                />
-              </motion.div>
+
             </div>
             
             {/* Bottom fade to page bg */}
@@ -428,9 +387,9 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.72 }}
-                className="rounded-2xl p-5 flex flex-col justify-center"
+                className="rounded-2xl p-5 flex flex-col justify-center w-full lg:w-[460px]"
                 style={{
-                  width: '460px',
+                  maxWidth: '460px',
                   background: '#ffffff',
                   boxShadow: '0 10px 30px rgba(26,86,219,0.12)',
                   border: '1px solid rgba(26,86,219,0.07)',
@@ -447,10 +406,7 @@ export default function Hero() {
                     <div className="font-bold text-[#1A56DB] mt-1" style={{ fontSize: '0.7rem', lineHeight: 1.2 }}>Happy Smiles</div>
                     <div className="text-[#9aaac4]" style={{ fontSize: '0.6rem' }}>And counting</div>
                   </div>
-                  <div
-                    className="flex flex-col items-center px-1"
-                    style={{ borderLeft: '1px solid rgba(26,86,219,0.1)', borderRight: '1px solid rgba(26,86,219,0.1)' }}
-                  >
+                  <div className="flex flex-col items-center px-1">
                     <div className="w-8 h-8 rounded-full bg-[#D5E100] flex items-center justify-center text-sm shrink-0 mb-1.5 shadow-[0_2px_6px_rgba(213,225,0,0.2)]">
                       🏆
                     </div>
