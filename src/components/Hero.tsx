@@ -167,7 +167,7 @@ export default function Hero() {
               style={{
                 position: 'relative',
                 zIndex: 3,
-                width: '82%',
+                width: '112%',
                 height: 'auto',
                 display: 'block',
                 marginBottom: '42px', // offsets it vertically to sit on top of the pedestal
@@ -175,18 +175,12 @@ export default function Hero() {
               }}
               animate={{
                 y: [0, -12, 0],
-                rotateY: [0, 360],
               }}
               transition={{
                 y: {
                   duration: 4,
                   repeat: Infinity,
                   ease: "easeInOut"
-                },
-                rotateY: {
-                  duration: 12,
-                  repeat: Infinity,
-                  ease: "linear"
                 }
               }}
             />
@@ -328,7 +322,7 @@ export default function Hero() {
                 style={{
                   position: 'relative',
                   zIndex: 1,
-                  width: '80%',
+                  width: '110%',
                   height: 'auto',
                   display: 'block',
                   marginBottom: '6px', // offsets it to sit on top of the pedestal
@@ -336,18 +330,12 @@ export default function Hero() {
                 }}
                 animate={{
                   y: [0, -8, 0],
-                  rotateY: [0, 360],
                 }}
                 transition={{
                   y: {
                     duration: 4,
                     repeat: Infinity,
                     ease: "easeInOut"
-                  },
-                  rotateY: {
-                    duration: 12,
-                    repeat: Infinity,
-                    ease: "linear"
                   }
                 }}
               />
