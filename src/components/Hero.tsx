@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
-import caseWithAligner from '../assets/case-with-aligner.png';
+import alignerCase from '../assets/aligner-case.png';
+import alignerTray from '../assets/aligner-tray.png';
 import heroModel from '../assets/hero-model.jpg';
 
 const Counter = ({ target, suffix = '', duration = 1800 }: { target: number; suffix?: string; duration?: number }) => {
@@ -26,7 +27,7 @@ const benefits = [
         <path d="M12 2C8.5 2 6 4.5 6 7c0 1.5.5 3 1 4.5C8 14 8 17 8 19c0 1.1.9 2 2 2s2-.9 2-2v-2c0-1.1.9-2 2-2s2 .9 2 2v2c0 1.1.9 2 2 2s2-.9 2-2c0-2 0-5 1-7.5.5-1.5 1-3 1-4.5C22 4.5 19.5 2 16 2c-1 0-2 .4-4 .4S13 2 12 2z"/>
       </svg>
     ),
-    label: 'Aligned', sub: 'Teeth',
+    label: 'Straighter', sub: 'Teeth',
   },
   {
     icon: (
@@ -56,9 +57,9 @@ const benefits = [
 ];
 
 const features = [
-  { emoji: '✦', title: 'Invisible Fit', desc: 'Virtually undetectable clear aligners that let you smile confidently.' },
+  { emoji: '✨', title: 'Invisible Fit', desc: 'Virtually undetectable clear aligners that let you smile confidently.' },
   { emoji: '🚀', title: 'Faster Deliveries', desc: 'Get your custom aligners delivered to your doorstep in record time.' },
-  { emoji: '+', title: 'In-Clinic Delivery', desc: 'Prefer a professional hand-off? Opt for in-clinic delivery and dedicated care.' },
+  { emoji: '🩺', title: 'In-Clinic Delivery', desc: 'Prefer a professional hand-off? Opt for in-clinic delivery and dedicated care.' },
   { emoji: '📅', title: 'Customised Plans', desc: 'Reduce the number of trays and treatment duration with a plan tailored to you.' },
 ];
 
@@ -67,7 +68,7 @@ export default function Hero() {
     <section id="home" className="relative overflow-hidden bg-[#D5E100]">
 
       {/* MAIN HERO */}
-      <div className="relative" style={{ paddingTop: '54px', minHeight: '560px' }}>
+      <div className="relative flex flex-col justify-between" style={{ paddingTop: '54px', minHeight: '640px' }}>
 
         {/* Model photo fills right ~63% — starts below navbar */}
         <div className="absolute bottom-0 right-0 hidden lg:block" style={{ left: '37%', top: '54px' }}>
@@ -160,52 +161,84 @@ export default function Hero() {
               />
             </div>
 
-            {/* Case: positioned to rest on top of the pedestal */}
-            <motion.img
-              src={caseWithAligner}
-              alt="HaloAligner clear aligner in open case"
+            {/* Case: sitting on top of the pedestal */}
+            <img
+              src={alignerCase}
+              alt="HaloAligner open case"
               style={{
                 position: 'relative',
                 zIndex: 3,
-                width: '112%',
+                width: '85%',
                 height: 'auto',
                 display: 'block',
-                marginBottom: '42px', // offsets it vertically to sit on top of the pedestal
-                filter: 'drop-shadow(0 12px 25px rgba(0,0,0,0.15))',
-              }}
-              animate={{
-                y: [0, -12, 0],
-              }}
-              transition={{
-                y: {
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }
+                marginBottom: '40px', // sit on pedestal
+                filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.1))',
               }}
             />
+
+            {/* Glowing Aligner Tray: floating above the case */}
+            <motion.div
+              style={{
+                position: 'absolute',
+                top: '5%',
+                width: '65%',
+                zIndex: 4,
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+              animate={{
+                y: [0, -18, 0],
+              }}
+              transition={{
+                duration: 3.5,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              {/* Glow Aura Background Effect */}
+              <div
+                style={{
+                  position: 'absolute',
+                  width: '140%',
+                  height: '140%',
+                  background: 'radial-gradient(circle, rgba(255,255,255,0.85) 0%, rgba(213,225,0,0.45) 45%, transparent 70%)',
+                  filter: 'blur(20px)',
+                  zIndex: -1,
+                }}
+              />
+              <img
+                src={alignerTray}
+                alt="HaloAligner clear transparent aligner tray"
+                style={{
+                  width: '100%',
+                  height: 'auto',
+                  filter: 'drop-shadow(0 0 12px rgba(255,255,255,0.9)) drop-shadow(0 10px 25px rgba(26,86,219,0.15))',
+                  transform: 'rotate(-12deg) scale(1.1)',
+                }}
+              />
+            </motion.div>
           </motion.div>
         </div>
 
         {/* Benefit icons: far right edge, vertically centered */}
-        <div className="absolute right-5 top-1/2 -translate-y-1/2 z-20 hidden lg:flex flex-col gap-4">
+        <div className="absolute right-5 top-1/2 -translate-y-1/2 z-20 hidden lg:flex flex-col gap-5">
           {benefits.map((b, i) => (
             <motion.div
               key={b.label}
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.5 + i * 0.1 }}
-              className="flex items-center gap-2"
+              className="flex items-center gap-3.5"
             >
               <div
-                className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 border-2 border-white/80"
-                style={{ background: 'rgba(255,255,255,0.2)', backdropFilter: 'blur(8px)' }}
+                className="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0 bg-white border border-[rgba(26,86,219,0.1)] shadow-[0_4px_10px_rgba(0,0,0,0.06)]"
               >
                 {b.icon}
               </div>
-              <div>
-                <div style={{ color: '#111', fontWeight: 700, fontSize: '0.82rem', lineHeight: 1.2, textShadow: '0 1px 4px rgba(255,255,255,0.6)' }}>{b.label}</div>
-                <div style={{ color: '#333', fontWeight: 500, fontSize: '0.7rem', textShadow: '0 1px 4px rgba(255,255,255,0.6)' }}>{b.sub}</div>
+              <div className="flex flex-col">
+                <span className="text-[#1A56DB] font-extrabold text-[0.8rem] leading-[1.1]">{b.label}</span>
+                <span className="text-[#1a3a6e] font-extrabold text-[0.8rem] leading-[1.1]">{b.sub}</span>
               </div>
             </motion.div>
           ))}
@@ -316,29 +349,62 @@ export default function Hero() {
               </div>
 
               {/* Aligner Case on Mobile */}
-              <motion.img
-                src={caseWithAligner}
-                alt="HaloAligner clear aligner in open case"
+              <img
+                src={alignerCase}
+                alt="HaloAligner open case"
                 style={{
                   position: 'relative',
                   zIndex: 1,
-                  width: '110%',
+                  width: '80%',
                   height: 'auto',
                   display: 'block',
                   marginBottom: '6px', // offsets it to sit on top of the pedestal
-                  filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.12))',
-                }}
-                animate={{
-                  y: [0, -8, 0],
-                }}
-                transition={{
-                  y: {
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut"
-                  }
+                  filter: 'drop-shadow(0 6px 12px rgba(0,0,0,0.1))',
                 }}
               />
+
+              {/* Glowing Aligner Tray on Mobile */}
+              <motion.div
+                style={{
+                  position: 'absolute',
+                  top: '15px',
+                  width: '60%',
+                  zIndex: 2,
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+                animate={{
+                  y: [0, -10, 0],
+                }}
+                transition={{
+                  duration: 3.5,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
+              >
+                {/* Glow Aura Background Effect */}
+                <div
+                  style={{
+                    position: 'absolute',
+                    width: '130%',
+                    height: '130%',
+                    background: 'radial-gradient(circle, rgba(255,255,255,0.85) 0%, rgba(213,225,0,0.4) 50%, transparent 70%)',
+                    filter: 'blur(12px)',
+                    zIndex: -1,
+                  }}
+                />
+                <img
+                  src={alignerTray}
+                  alt="HaloAligner clear transparent aligner tray"
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                    filter: 'drop-shadow(0 0 8px rgba(255,255,255,0.8)) drop-shadow(0 6px 12px rgba(26,86,219,0.1))',
+                    transform: 'rotate(-12deg) scale(1.1)',
+                  }}
+                />
+              </motion.div>
             </div>
             
             {/* Bottom fade to page bg */}
@@ -356,96 +422,102 @@ export default function Hero() {
                 className="flex items-center gap-2.5"
               >
                 <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0 border border-white/60 shadow-sm"
-                  style={{ background: 'rgba(255,255,255,0.45)', backdropFilter: 'blur(4px)' }}
+                  className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 bg-white border border-[rgba(26,86,219,0.1)] shadow-[0_2px_5px_rgba(0,0,0,0.05)]"
                 >
                   {b.icon}
                 </div>
-                <div>
-                  <div style={{ color: '#1A56DB', fontWeight: 800, fontSize: '0.82rem', lineHeight: 1.2 }}>{b.label}</div>
-                  <div style={{ color: '#1a3a6e', fontWeight: 600, fontSize: '0.72rem' }}>{b.sub}</div>
+                <div className="flex flex-col">
+                  <span className="text-[#1A56DB] font-extrabold text-[0.74rem] leading-tight">{b.label}</span>
+                  <span className="text-[#1a3a6e] font-extrabold text-[0.74rem] leading-tight">{b.sub}</span>
                 </div>
               </motion.div>
             ))}
           </div>
         </div>
-      </div>
 
-      {/* BOTTOM STRIP */}
-      <div
-        className="relative z-10"
-        style={{ borderTop: '1px solid rgba(26,86,219,0.1)', background: 'rgba(240,248,160,0.55)' }}
-      >
-        <div className="px-6 md:px-10 lg:px-14 py-5">
-          <div className="flex flex-col lg:flex-row gap-3 items-stretch">
+        {/* BOTTOM STRIP */}
+        <div
+          className="relative z-10 w-full mt-auto"
+          style={{ borderTop: '1px solid rgba(26,86,219,0.1)', background: 'transparent' }}
+        >
+          <div className="px-6 md:px-10 lg:px-14 py-5">
+            <div className="flex flex-col lg:flex-row gap-3 items-stretch">
 
-            {/* 4 Feature cards */}
-            <div className="flex-1 grid grid-cols-2 sm:grid-cols-4 gap-3">
-              {features.map((f, i) => (
-                <motion.div
-                  key={f.title}
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.5 + i * 0.07 }}
-                  className="rounded-2xl p-4 flex flex-col gap-2 border hover:shadow-md transition-shadow"
-                  style={{ background: 'rgba(255,255,255,0.72)', borderColor: 'rgba(255,255,255,0.85)' }}
-                >
-                  <div
-                    className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-[#1A56DB] text-lg"
-                    style={{ background: '#D5E100', border: '2px solid rgba(26,86,219,0.15)' }}
+              {/* 4 Feature cards */}
+              <div className="flex-1 grid grid-cols-2 sm:grid-cols-4 gap-3">
+                {features.map((f, i) => (
+                  <motion.div
+                    key={f.title}
+                    initial={{ opacity: 0, y: 16 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.5 + i * 0.07 }}
+                    className="rounded-2xl p-4 flex flex-col gap-2 border hover:shadow-md transition-shadow"
+                    style={{ background: 'rgba(255,255,255,0.85)', borderColor: 'rgba(255,255,255,0.95)' }}
                   >
-                    {f.emoji}
-                  </div>
-                  <div className="font-bold text-[#1A56DB] leading-snug" style={{ fontSize: '0.8rem' }}>{f.title}</div>
-                  <div className="text-[#5B6E99] leading-relaxed" style={{ fontSize: '0.7rem' }}>{f.desc}</div>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Stats card */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.72 }}
-              className="rounded-2xl p-5 flex flex-col justify-center"
-              style={{
-                width: '280px',
-                background: '#ffffff',
-                boxShadow: '0 4px 20px rgba(26,86,219,0.12)',
-                border: '1px solid rgba(26,86,219,0.07)',
-              }}
-            >
-              <div className="grid grid-cols-3 text-center">
-                <div className="flex flex-col items-center px-1">
-                  <span style={{ fontSize: '1.3rem' }}>😊</span>
-                  <div className="font-syne font-extrabold text-[#1A56DB] leading-none mt-1" style={{ fontSize: '1.6rem' }}>
-                    <Counter target={100} suffix="+" />
-                  </div>
-                  <div className="font-bold text-[#1A56DB] mt-1" style={{ fontSize: '0.7rem' }}>Happy Smiles</div>
-                  <div className="text-[#9aaac4]" style={{ fontSize: '0.6rem' }}>And counting</div>
-                </div>
-                <div
-                  className="flex flex-col items-center px-1"
-                  style={{ borderLeft: '1px solid rgba(26,86,219,0.1)', borderRight: '1px solid rgba(26,86,219,0.1)' }}
-                >
-                  <span style={{ fontSize: '1.3rem' }}>🏆</span>
-                  <div className="font-syne font-extrabold leading-none mt-1" style={{ fontSize: '1.6rem', color: '#c5a800' }}>4.9/5</div>
-                  <div className="font-bold text-[#1A56DB] mt-1" style={{ fontSize: '0.7rem' }}>Top Rated</div>
-                  <div className="text-[#9aaac4]" style={{ fontSize: '0.6rem' }}>By our patients</div>
-                </div>
-                <div className="flex flex-col items-center px-1">
-                  <span style={{ fontSize: '1.3rem' }}>📊</span>
-                  <div className="font-syne font-extrabold text-[#1A56DB] leading-none mt-1" style={{ fontSize: '1.6rem' }}>
-                    <Counter target={100} suffix="%" />
-                  </div>
-                  <div className="font-bold text-[#1A56DB] mt-1" style={{ fontSize: '0.7rem' }}>Orthodontist</div>
-                  <div className="text-[#9aaac4]" style={{ fontSize: '0.6rem' }}>Directed</div>
-                </div>
+                    <div
+                      className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-[#1A56DB] text-lg"
+                      style={{ background: '#D5E100', border: '2px solid rgba(26,86,219,0.15)' }}
+                    >
+                      {f.emoji}
+                    </div>
+                    <div className="font-bold text-[#1A56DB] leading-snug" style={{ fontSize: '0.8rem' }}>{f.title}</div>
+                    <div className="text-[#5B6E99] leading-relaxed" style={{ fontSize: '0.7rem' }}>{f.desc}</div>
+                  </motion.div>
+                ))}
               </div>
-            </motion.div>
 
+              {/* Stats card */}
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.72 }}
+                className="rounded-2xl p-5 flex flex-col justify-center"
+                style={{
+                  width: '460px',
+                  background: '#ffffff',
+                  boxShadow: '0 10px 30px rgba(26,86,219,0.12)',
+                  border: '1px solid rgba(26,86,219,0.07)',
+                }}
+              >
+                <div className="grid grid-cols-3 text-center">
+                  <div className="flex flex-col items-center px-1">
+                    <div className="w-8 h-8 rounded-full bg-[#D5E100] flex items-center justify-center text-sm shrink-0 mb-1.5 shadow-[0_2px_6px_rgba(213,225,0,0.2)]">
+                      😊
+                    </div>
+                    <div className="font-syne font-extrabold text-[#1A56DB] leading-none" style={{ fontSize: '1.6rem' }}>
+                      <Counter target={100} suffix="+" />
+                    </div>
+                    <div className="font-bold text-[#1A56DB] mt-1" style={{ fontSize: '0.7rem', lineHeight: 1.2 }}>Happy Smiles</div>
+                    <div className="text-[#9aaac4]" style={{ fontSize: '0.6rem' }}>And counting</div>
+                  </div>
+                  <div
+                    className="flex flex-col items-center px-1"
+                    style={{ borderLeft: '1px solid rgba(26,86,219,0.1)', borderRight: '1px solid rgba(26,86,219,0.1)' }}
+                  >
+                    <div className="w-8 h-8 rounded-full bg-[#D5E100] flex items-center justify-center text-sm shrink-0 mb-1.5 shadow-[0_2px_6px_rgba(213,225,0,0.2)]">
+                      🏆
+                    </div>
+                    <div className="font-syne font-extrabold leading-none" style={{ fontSize: '1.6rem', color: '#c5a800' }}>4.9/5</div>
+                    <div className="font-bold text-[#1A56DB] mt-1" style={{ fontSize: '0.7rem', lineHeight: 1.2 }}>Top Rated</div>
+                    <div className="text-[#9aaac4]" style={{ fontSize: '0.6rem' }}>By our patients</div>
+                  </div>
+                  <div className="flex flex-col items-center px-1">
+                    <div className="w-8 h-8 rounded-full bg-[#D5E100] flex items-center justify-center text-sm shrink-0 mb-1.5 shadow-[0_2px_6px_rgba(213,225,0,0.2)]">
+                      📊
+                    </div>
+                    <div className="font-syne font-extrabold text-[#1A56DB] leading-none" style={{ fontSize: '1.6rem' }}>
+                      <Counter target={100} suffix="%" />
+                    </div>
+                    <div className="font-bold text-[#1A56DB] mt-1" style={{ fontSize: '0.7rem', lineHeight: 1.2 }}>Orthodontist Directed</div>
+                    <div className="text-[#9aaac4]" style={{ fontSize: '0.6rem' }}>Your safety is our priority</div>
+                  </div>
+                </div>
+              </motion.div>
+
+            </div>
           </div>
         </div>
+
       </div>
     </section>
   );
