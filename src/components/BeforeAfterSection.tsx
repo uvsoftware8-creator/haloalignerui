@@ -180,14 +180,16 @@ export default function BeforeAfterSection() {
                 Ready to Transform<br />Your Smile?
               </h3>
               <p className="text-[#1a3a6e] text-[0.58rem] sm:text-[0.62rem] font-semibold leading-tight">
-                Book your consultation today.
+                <a href='https://haloaligner-smart-dental-aligner-po.vercel.app/' target="_blank" rel="noopener noreferrer" className='text-[#1a3a6e] text-[0.58rem] sm:text-[0.62rem] font-semibold leading-tight hover:underline'>Book Your Order today !!</a>
               </p>
             </div>
 
             <div className="relative z-10 text-left mt-3">
               <a
-                href="#cta"
-                className="inline-flex items-center justify-center gap-1 bg-[#1A56DB] text-white rounded-full font-bold hover:bg-[#2563EB] transition-colors text-[0.6rem] uppercase tracking-wider px-2.5 py-1.5 shadow-sm"
+                href="https://haloaligner-smart-dental-aligner-po.vercel.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-1 bg-[#1A56DB] text-white rounded-full font-bold hover:bg-[#2563EB] transition-colors text-[0.6rem] uppercase tracking-wider px-2.5 py-1.5 shadow-sm cursor-pointer"
               >
                 Login/Signup
                 <span className="font-extrabold">&rarr;</span>
