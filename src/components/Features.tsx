@@ -73,7 +73,7 @@ export default function Features() {
             <div className="col-span-4 flex items-center justify-center">
               <div 
                 className="relative w-[220px] h-[475px] cursor-pointer transition-transform hover:scale-[1.02]" 
-                onClick={() => window.open('https://haloaligner.uvsoftware8.workers.dev/', '_blank')}
+                onClick={() => window.open('https://haloaligner-smart-dental-aligner-po.vercel.app/', '_blank')}
                 title="Open Portal"
               >
                 <motion.div
@@ -227,7 +227,7 @@ export default function Features() {
         <div 
           className="relative flex justify-center mb-8 cursor-pointer transition-transform hover:scale-[1.02]" 
           style={{ height: '390px' }}
-          onClick={() => window.open('https://haloaligner.uvsoftware8.workers.dev/', '_blank')}
+          onClick={() => window.open('https://haloaligner-smart-dental-aligner-po.vercel.app/', '_blank')}
           title="Open Portal"
         >
           <motion.div

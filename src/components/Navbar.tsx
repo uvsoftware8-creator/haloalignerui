@@ -90,7 +90,7 @@ export default function Navbar() {
           {/* CTA Button — yellow outline matching wireframe */}
           <li>
             <a
-              href="https://haloaligner.uvsoftware8.workers.dev/"
+              href="https://haloaligner-smart-dental-aligner-po.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block font-bold uppercase tracking-wide rounded-full transition-all hover:-translate-y-0.5"
@@ -161,7 +161,7 @@ export default function Navbar() {
               )
             )}
             <a
-              href="https://haloaligner.uvsoftware8.workers.dev/"
+              href="https://haloaligner-smart-dental-aligner-po.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setIsMobileMenuOpen(false)}
