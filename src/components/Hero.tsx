@@ -118,7 +118,7 @@ export default function Hero() {
             />
 
             {/* 3D PEDESTAL directly below the case */}
-            <div style={{ position: 'relative', width: '260px', height: '70px', marginTop: '-10px', zIndex: 2 }}>
+            <div style={{ position: 'relative', width: '240px', height: '68px', marginTop: '-55px', zIndex: 2 }}>
               {/* Pedestal Top Face (ellipse) */}
               <div
                 style={{
