@@ -95,7 +95,7 @@ export default function Hero() {
         {/* Aligner case + stage: centered between text and model */}
         <div
           className="absolute hidden lg:flex items-center justify-center"
-          style={{ left: '30%', right: '25%', top: '54px', bottom: '20px', pointerEvents: 'none' }}
+          style={{ left: '36%', right: '22%', top: '54px', bottom: '20px', pointerEvents: 'none' }}
         >
           <motion.div
             initial={{ opacity: 0, y: 40, scale: 0.88 }}
