@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
-import alignerCase from '../assets/aligner-case.png';
-import alignerTray from '../assets/aligner-tray.png';
+import caseWithAligner from '../assets/case-with-aligner.png';
 import heroModel from '../assets/hero-model.jpg';
 
 const Counter = ({ target, suffix = '', duration = 1800 }: { target: number; suffix?: string; duration?: number }) => {
@@ -96,21 +95,21 @@ export default function Hero() {
         {/* Aligner case + stage: centered between text and model */}
         <div
           className="absolute hidden lg:flex items-center justify-center"
-          style={{ left: '33%', right: '27%', top: '54px', bottom: '20px', pointerEvents: 'none' }}
+          style={{ left: '30%', right: '25%', top: '54px', bottom: '20px', pointerEvents: 'none' }}
         >
           <motion.div
             initial={{ opacity: 0, y: 40, scale: 0.88 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 1, delay: 0.28, ease: [0.16, 1, 0.3, 1] }}
-            style={{ position: 'relative', width: '380px', height: '380px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'center' }}
+            style={{ position: 'relative', width: '420px', height: '420px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', alignItems: 'center' }}
           >
             {/* 3D PEDESTAL STAGE */}
             <div
               style={{
                 position: 'absolute',
                 bottom: '10px',
-                width: '320px',
-                height: '120px',
+                width: '360px',
+                height: '130px',
                 zIndex: 0,
               }}
             >
@@ -118,13 +117,13 @@ export default function Hero() {
               <div
                 style={{
                   position: 'absolute',
-                  bottom: '-12px',
+                  bottom: '-14px',
                   left: '10%',
                   width: '80%',
-                  height: '35px',
+                  height: '40px',
                   borderRadius: '50%',
-                  background: 'rgba(0, 0, 0, 0.12)',
-                  filter: 'blur(8px)',
+                  background: 'rgba(0, 0, 0, 0.14)',
+                  filter: 'blur(10px)',
                   zIndex: 0,
                 }}
               />
@@ -136,10 +135,10 @@ export default function Hero() {
                   bottom: '0',
                   left: '0',
                   width: '100%',
-                  height: '50px',
-                  borderRadius: '0 0 160px 160px / 0 0 25px 25px',
-                  background: 'linear-gradient(to bottom, #B2C000, #95A300)',
-                  boxShadow: 'inset 0 -5px 12px rgba(0, 0, 0, 0.08)',
+                  height: '55px',
+                  borderRadius: '0 0 180px 180px / 0 0 28px 28px',
+                  background: 'linear-gradient(to bottom, #C8D900, #A0B000)',
+                  boxShadow: 'inset 0 -6px 14px rgba(0, 0, 0, 0.1)',
                   zIndex: 1,
                 }}
               />
@@ -148,31 +147,31 @@ export default function Hero() {
               <div
                 style={{
                   position: 'absolute',
-                  bottom: '25px',
+                  bottom: '28px',
                   left: '0',
                   width: '100%',
-                  height: '50px',
+                  height: '55px',
                   borderRadius: '50%',
-                  background: '#E5F31A',
-                  borderBottom: '2px solid #C0D000',
-                  boxShadow: 'inset 0 2px 4px rgba(255, 255, 255, 0.6), 0 3px 6px rgba(0, 0, 0, 0.06)',
+                  background: 'radial-gradient(ellipse at 35% 35%, #F0FF30, #D5E100)',
+                  borderBottom: '2px solid #B8C800',
+                  boxShadow: 'inset 0 3px 6px rgba(255, 255, 255, 0.7), 0 4px 8px rgba(0, 0, 0, 0.08)',
                   zIndex: 2,
                 }}
               />
             </div>
 
-            {/* Case: sitting on top of the pedestal */}
+            {/* Case with aligner: sitting on top of the pedestal */}
             <img
-              src={alignerCase}
-              alt="HaloAligner open case"
+              src={caseWithAligner}
+              alt="HaloAligner open case with aligner"
               style={{
                 position: 'relative',
                 zIndex: 3,
-                width: '85%',
+                width: '92%',
                 height: 'auto',
                 display: 'block',
-                marginBottom: '40px', // sit on pedestal
-                filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.1))',
+                marginBottom: '46px',
+                filter: 'drop-shadow(0 12px 24px rgba(0,0,0,0.12))',
               }}
             />
           </motion.div>
@@ -290,37 +289,35 @@ export default function Hero() {
 
             {/* Aligner Case + Pedestal on the left half, overlapping the model photo */}
             <div 
-              className="absolute left-[5%] bottom-[-15px] flex flex-col items-center justify-end"
-              style={{ width: '220px', height: '260px' }}
+              className="absolute left-[2%] bottom-[-10px] flex flex-col items-center justify-end"
+              style={{ width: '240px', height: '290px' }}
             >
               {/* 3D Pedestal on Mobile */}
-              <div style={{ position: 'absolute', bottom: '10px', width: '200px', height: '60px', zIndex: 0 }}>
+              <div style={{ position: 'absolute', bottom: '10px', width: '220px', height: '70px', zIndex: 0 }}>
                 {/* Pedestal floor shadow */}
-                <div style={{ position: 'absolute', bottom: '-6px', left: '10%', width: '80%', height: '20px', borderRadius: '50%', background: 'rgba(0, 0, 0, 0.1)', filter: 'blur(5px)' }} />
+                <div style={{ position: 'absolute', bottom: '-8px', left: '10%', width: '80%', height: '24px', borderRadius: '50%', background: 'rgba(0, 0, 0, 0.12)', filter: 'blur(6px)' }} />
                 
                 {/* Pedestal 3D cylinder wall */}
-                <div style={{ position: 'absolute', bottom: '0', left: '0', width: '100%', height: '28px', borderRadius: '0 0 100px 100px / 0 0 14px 14px', background: 'linear-gradient(to bottom, #B2C000, #95A300)' }} />
+                <div style={{ position: 'absolute', bottom: '0', left: '0', width: '100%', height: '32px', borderRadius: '0 0 110px 110px / 0 0 16px 16px', background: 'linear-gradient(to bottom, #C8D900, #A0B000)' }} />
                 
                 {/* Pedestal Highlighted Top Face */}
-                <div style={{ position: 'absolute', bottom: '14px', left: '0', width: '100%', height: '28px', borderRadius: '50%', background: '#E5F31A', borderBottom: '1px solid #C0D000' }} />
+                <div style={{ position: 'absolute', bottom: '16px', left: '0', width: '100%', height: '32px', borderRadius: '50%', background: 'radial-gradient(ellipse at 35% 35%, #F0FF30, #D5E100)', borderBottom: '1px solid #B8C800', boxShadow: 'inset 0 2px 4px rgba(255,255,255,0.6)' }} />
               </div>
 
-              {/* Aligner Case on Mobile */}
+              {/* Case with Aligner on Mobile */}
               <img
-                src={alignerCase}
-                alt="HaloAligner open case"
+                src={caseWithAligner}
+                alt="HaloAligner open case with aligner"
                 style={{
                   position: 'relative',
                   zIndex: 1,
-                  width: '80%',
+                  width: '88%',
                   height: 'auto',
                   display: 'block',
-                  marginBottom: '6px', // offsets it to sit on top of the pedestal
-                  filter: 'drop-shadow(0 6px 12px rgba(0,0,0,0.1))',
+                  marginBottom: '8px',
+                  filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.12))',
                 }}
               />
-
-
             </div>
             
             {/* Bottom fade to page bg */}
