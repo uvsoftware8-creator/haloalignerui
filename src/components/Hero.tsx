@@ -174,7 +174,8 @@ export default function Hero() {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.5 + i * 0.1 }}
-              className="flex items-center gap-3.5"
+              whileHover={{ x: -5, scale: 1.05 }}
+              className="flex items-center gap-3.5 cursor-default"
             >
               <div
                 className="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0 bg-white border border-[rgba(26,86,219,0.1)] shadow-[0_4px_10px_rgba(0,0,0,0.06)]"
@@ -323,7 +324,8 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 + i * 0.08 }}
-                className="flex items-center gap-2.5"
+                whileHover={{ y: -3, scale: 1.05 }}
+                className="flex items-center gap-2.5 cursor-default"
               >
                 <div
                   className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 bg-white border border-[rgba(26,86,219,0.1)] shadow-[0_2px_5px_rgba(0,0,0,0.05)]"
@@ -355,7 +357,9 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.5 + i * 0.07 }}
-                    className="rounded-2xl p-4 flex flex-col gap-2 border hover:shadow-md transition-shadow"
+                    whileHover={{ y: -5, scale: 1.02, boxShadow: '0 12px 24px rgba(26,86,219,0.12)' }}
+                    whileTap={{ scale: 0.98 }}
+                    className="rounded-2xl p-4 flex flex-col gap-2 border cursor-pointer transition-colors hover:bg-white"
                     style={{ background: 'rgba(255,255,255,0.85)', borderColor: 'rgba(255,255,255,0.95)' }}
                   >
                     <div
@@ -375,7 +379,8 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.72 }}
-                className="rounded-2xl p-5 flex flex-col justify-center w-full lg:w-[460px]"
+                whileHover={{ y: -4, scale: 1.01, boxShadow: '0 16px 40px rgba(26,86,219,0.18)' }}
+                className="rounded-2xl p-5 flex flex-col justify-center w-full lg:w-[460px] cursor-pointer"
                 style={{
                   maxWidth: '460px',
                   background: '#ffffff',
