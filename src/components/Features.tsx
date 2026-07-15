@@ -4,7 +4,7 @@ import pricingModel from '../assets/pricing-model.png';
 
 const features = [
   { icon: '✨', title: 'Invisible Fit', desc: 'Virtually undetectable clear aligners that allows your patient to smile confidently throughout your treatment.' },
-  { icon: '🚀', title: 'Faster Deliveries', desc: 'Get your customized aligners delivered to your doorstep in record time with our optimized logistics.' },
+  { icon: '🚀', title: 'Faster Deliveries', desc: 'Get your customized aligners delivered to your clinic in record time with our optimized logistics.' },
   { icon: '🏥', title: 'Confidentiality', desc: 'Confidential and encrypted data to ensure your clinical data safety' },
   { icon: '🛠️', title: 'Customised Plans', desc: 'Reduce the number of trays and treatment duration with a plan fully tailored to your specific goals.' },
 ];
@@ -72,8 +72,8 @@ export default function Features() {
 
             {/* Phone Mockup */}
             <div className="col-span-4 flex items-center justify-center">
-              <div 
-                className="relative w-[220px] h-[475px] cursor-pointer transition-transform hover:scale-[1.02]" 
+              <div
+                className="relative w-[220px] h-[475px] cursor-pointer transition-transform hover:scale-[1.02]"
                 onClick={() => window.open('https://haloaligner-smart-dental-aligner-po.vercel.app/', '_blank')}
                 title="Open Portal"
               >
@@ -104,9 +104,9 @@ export default function Features() {
                           </div>
                           {/* WiFi */}
                           <svg width="9" height="7" viewBox="0 0 24 18" fill="none">
-                            <path d="M12 14a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" fill="#1A56DB"/>
-                            <path d="M5.5 10.5C7.2 8.8 9.5 7.8 12 7.8s4.8 1 6.5 2.7" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
-                            <path d="M1.5 6.5C4.5 3.5 8 2 12 2s7.5 1.5 10.5 4.5" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
+                            <path d="M12 14a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" fill="#1A56DB" />
+                            <path d="M5.5 10.5C7.2 8.8 9.5 7.8 12 7.8s4.8 1 6.5 2.7" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+                            <path d="M1.5 6.5C4.5 3.5 8 2 12 2s7.5 1.5 10.5 4.5" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" fill="none" />
                           </svg>
                           {/* Battery */}
                           <div className="flex items-center gap-[1px]">
@@ -124,20 +124,20 @@ export default function Features() {
                         {/* Tab bar */}
                         <div className="flex items-center gap-1 px-1.5 pt-1 pb-0.5 border-b border-[rgba(26,86,219,0.08)]">
                           <div className="flex-1 bg-[#F0F4FF] rounded-[3px] px-1 py-0.5 flex items-center gap-1">
-                            <svg width="6" height="6" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                            <svg width="6" height="6" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round"><circle cx="12" cy="12" r="10" /><path d="M12 8v4l3 3" /></svg>
                             <span className="text-[0.32rem] text-[#1A56DB] font-medium flex-1">haloaligner.com/portal</span>
-                            <svg width="5" height="5" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                            <svg width="5" height="5" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round"><polyline points="23 4 23 10 17 10" /><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" /></svg>
                           </div>
                         </div>
                         {/* Nav row */}
                         <div className="flex items-center justify-between px-1.5 py-0.5">
                           <div className="flex gap-1.5">
-                            <svg width="7" height="7" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="opacity-40"><polyline points="15 18 9 12 15 6"/></svg>
-                            <svg width="7" height="7" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                            <svg width="7" height="7" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="opacity-40"><polyline points="15 18 9 12 15 6" /></svg>
+                            <svg width="7" height="7" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6" /></svg>
                           </div>
                           <div className="flex gap-1.5">
-                            <svg width="7" height="7" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
-                            <svg width="7" height="7" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+                            <svg width="7" height="7" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="3" y="14" width="7" height="7" /><rect x="14" y="14" width="7" height="7" /></svg>
+                            <svg width="7" height="7" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="1" /><circle cx="19" cy="12" r="1" /><circle cx="5" cy="12" r="1" /></svg>
                           </div>
                         </div>
                       </div>
@@ -225,8 +225,8 @@ export default function Features() {
           </p>
         </motion.div>
 
-        <div 
-          className="relative flex justify-center mb-8 cursor-pointer transition-transform hover:scale-[1.02]" 
+        <div
+          className="relative flex justify-center mb-8 cursor-pointer transition-transform hover:scale-[1.02]"
           style={{ height: '390px' }}
           onClick={() => window.open('https://haloaligner-smart-dental-aligner-po.vercel.app/', '_blank')}
           title="Open Portal"
@@ -259,9 +259,9 @@ export default function Features() {
                       </div>
                       {/* WiFi */}
                       <svg width="8" height="6" viewBox="0 0 24 18" fill="none">
-                        <path d="M12 14a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" fill="#1A56DB"/>
-                        <path d="M5.5 10.5C7.2 8.8 9.5 7.8 12 7.8s4.8 1 6.5 2.7" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
-                        <path d="M1.5 6.5C4.5 3.5 8 2 12 2s7.5 1.5 10.5 4.5" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
+                        <path d="M12 14a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" fill="#1A56DB" />
+                        <path d="M5.5 10.5C7.2 8.8 9.5 7.8 12 7.8s4.8 1 6.5 2.7" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+                        <path d="M1.5 6.5C4.5 3.5 8 2 12 2s7.5 1.5 10.5 4.5" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" fill="none" />
                       </svg>
                       {/* Battery */}
                       <div className="flex items-center gap-[1px]">
@@ -279,20 +279,20 @@ export default function Features() {
                     {/* Tab bar */}
                     <div className="flex items-center gap-1 px-1.5 pt-1 pb-0.5 border-b border-[rgba(26,86,219,0.08)]">
                       <div className="flex-1 bg-[#F0F4FF] rounded-[2px] px-1 py-0.5 flex items-center gap-1">
-                        <svg width="5" height="5" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                        <svg width="5" height="5" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round"><circle cx="12" cy="12" r="10" /><path d="M12 8v4l3 3" /></svg>
                         <span className="text-[0.28rem] text-[#1A56DB] font-medium flex-1">haloaligner.com/portal</span>
-                        <svg width="4" height="4" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                        <svg width="4" height="4" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round"><polyline points="23 4 23 10 17 10" /><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" /></svg>
                       </div>
                     </div>
                     {/* Nav row */}
                     <div className="flex items-center justify-between px-1.5 py-0.5">
                       <div className="flex gap-1.5">
-                        <svg width="6" height="6" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="opacity-40"><polyline points="15 18 9 12 15 6"/></svg>
-                        <svg width="6" height="6" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                        <svg width="6" height="6" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="opacity-40"><polyline points="15 18 9 12 15 6" /></svg>
+                        <svg width="6" height="6" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6" /></svg>
                       </div>
                       <div className="flex gap-1.5">
-                        <svg width="6" height="6" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
-                        <svg width="6" height="6" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+                        <svg width="6" height="6" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="3" y="14" width="7" height="7" /><rect x="14" y="14" width="7" height="7" /></svg>
+                        <svg width="6" height="6" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="1" /><circle cx="19" cy="12" r="1" /><circle cx="5" cy="12" r="1" /></svg>
                       </div>
                     </div>
                   </div>
