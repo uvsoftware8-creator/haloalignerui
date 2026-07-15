@@ -55,7 +55,8 @@ export default function Features() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.7, delay: i * 0.05 }}
-                    className="flex items-start gap-2.5 border-b border-[rgba(26,86,219,0.08)] pb-3 last:border-0"
+                    whileHover={{ x: 5 }}
+                    className="flex items-start gap-2.5 border-b border-[rgba(26,86,219,0.08)] pb-3 last:border-0 cursor-default transition-colors hover:bg-[rgba(26,86,219,0.02)] rounded-lg p-2 -ml-2"
                   >
                     <div className="w-6.5 h-6.5 shrink-0 bg-[#D5E100] rounded-md flex items-center justify-center text-xs shadow-[0_2px_6px_rgba(213,225,0,0.2)]">
                       {f.icon}
@@ -349,7 +350,8 @@ export default function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: i * 0.06 }}
-              className="flex items-center gap-3 py-3 border-b border-[rgba(26,86,219,0.08)] last:border-0"
+              whileHover={{ x: 4 }}
+              className="flex items-center gap-3 py-3 px-2 -mx-2 border-b border-[rgba(26,86,219,0.08)] last:border-0 cursor-default transition-colors hover:bg-[rgba(26,86,219,0.02)] rounded-lg"
             >
               <div className="w-9 h-9 shrink-0 bg-[#D5E100] rounded-[10px] flex items-center justify-center text-base shadow-[0_2px_8px_rgba(213,225,0,0.25)]">
                 {f.icon}

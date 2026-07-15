@@ -174,7 +174,8 @@ export default function Hero() {
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5, delay: 0.5 + i * 0.1 }}
-              className="flex items-center gap-3.5"
+              whileHover={{ x: -5, scale: 1.05 }}
+              className="flex items-center gap-3.5 cursor-default"
             >
               <div
                 className="w-11 h-11 rounded-full flex items-center justify-center flex-shrink-0 bg-white border border-[rgba(26,86,219,0.1)] shadow-[0_4px_10px_rgba(0,0,0,0.06)]"
@@ -221,7 +222,7 @@ export default function Hero() {
             className="text-[#1a3a6e] font-medium leading-relaxed mb-8 text-left"
             style={{ fontSize: '0.95rem', maxWidth: '450px' }}
           >
-            Orthodontist-directed, custom-made aligners for a straighter smile and better confidence.
+            Orthodontist-directed, custom-made aligners for an aligned smile and better confidence.
           </motion.p>
 
           <motion.div
@@ -323,7 +324,8 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 + i * 0.08 }}
-                className="flex items-center gap-2.5"
+                whileHover={{ y: -3, scale: 1.05 }}
+                className="flex items-center gap-2.5 cursor-default"
               >
                 <div
                   className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 bg-white border border-[rgba(26,86,219,0.1)] shadow-[0_2px_5px_rgba(0,0,0,0.05)]"
@@ -355,17 +357,29 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 16 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.5 + i * 0.07 }}
-                    className="rounded-2xl p-4 flex flex-col gap-2 border hover:shadow-md transition-shadow"
-                    style={{ background: 'rgba(255,255,255,0.85)', borderColor: 'rgba(255,255,255,0.95)' }}
                   >
-                    <div
-                      className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-[#1A56DB] text-lg"
-                      style={{ background: '#D5E100', border: '2px solid rgba(26,86,219,0.15)' }}
+                    <motion.div
+                      animate={{ y: [0, -4, 0] }}
+                      transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut', delay: i * 0.2 }}
+                      whileHover={{ scale: 1.03, boxShadow: '0 12px 24px rgba(26,86,219,0.15)' }}
+                      whileTap={{ scale: 0.96 }}
+                      className="rounded-2xl p-4 flex flex-col gap-2 border cursor-pointer h-full transition-colors hover:bg-white"
+                      style={{ background: 'rgba(255,255,255,0.85)', borderColor: 'rgba(255,255,255,0.95)' }}
                     >
-                      {f.emoji}
-                    </div>
-                    <div className="font-bold text-[#1A56DB] leading-snug" style={{ fontSize: '0.8rem' }}>{f.title}</div>
-                    <div className="text-[#5B6E99] leading-relaxed" style={{ fontSize: '0.7rem' }}>{f.desc}</div>
+                      <div
+                        className="w-9 h-9 rounded-full flex items-center justify-center flex-shrink-0 font-bold text-[#1A56DB] text-lg overflow-hidden"
+                        style={{ background: '#D5E100', border: '2px solid rgba(26,86,219,0.15)' }}
+                      >
+                        <motion.div
+                          animate={{ scale: [1, 1.15, 1], rotate: [0, 5, -5, 0] }}
+                          transition={{ duration: 2.5, repeat: Infinity, delay: i * 0.3 }}
+                        >
+                          {f.emoji}
+                        </motion.div>
+                      </div>
+                      <div className="font-bold text-[#1A56DB] leading-snug" style={{ fontSize: '0.8rem' }}>{f.title}</div>
+                      <div className="text-[#5B6E99] leading-relaxed" style={{ fontSize: '0.7rem' }}>{f.desc}</div>
+                    </motion.div>
                   </motion.div>
                 ))}
               </div>
@@ -375,44 +389,50 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.72 }}
-                className="rounded-2xl p-5 flex flex-col justify-center w-full lg:w-[460px]"
-                style={{
-                  maxWidth: '460px',
-                  background: '#ffffff',
-                  boxShadow: '0 10px 30px rgba(26,86,219,0.12)',
-                  border: '1px solid rgba(26,86,219,0.07)',
-                }}
+                className="w-full lg:w-[460px] h-full"
               >
-                <div className="grid grid-cols-3 text-center">
-                  <div className="flex flex-col items-center px-1">
-                    <div className="w-8 h-8 rounded-full bg-[#D5E100] flex items-center justify-center text-sm shrink-0 mb-1.5 shadow-[0_2px_6px_rgba(213,225,0,0.2)]">
-                      😊
+                <motion.div
+                  animate={{ y: [0, -3, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
+                  whileHover={{ scale: 1.02, boxShadow: '0 16px 40px rgba(26,86,219,0.18)' }}
+                  className="rounded-2xl p-5 flex flex-col justify-center h-full cursor-pointer"
+                  style={{
+                    background: '#ffffff',
+                    boxShadow: '0 10px 30px rgba(26,86,219,0.12)',
+                    border: '1px solid rgba(26,86,219,0.07)',
+                  }}
+                >
+                  <div className="grid grid-cols-3 text-center">
+                    <div className="flex flex-col items-center px-1">
+                      <div className="w-8 h-8 rounded-full bg-[#D5E100] flex items-center justify-center text-sm shrink-0 mb-1.5 shadow-[0_2px_6px_rgba(213,225,0,0.2)]">
+                        😊
+                      </div>
+                      <div className="font-syne font-extrabold text-[#1A56DB] leading-none" style={{ fontSize: '1.6rem' }}>
+                        <Counter target={100} suffix="+" />
+                      </div>
+                      <div className="font-bold text-[#1A56DB] mt-1" style={{ fontSize: '0.7rem', lineHeight: 1.2 }}>Happy Smiles</div>
+                      <div className="text-[#9aaac4]" style={{ fontSize: '0.6rem' }}>And counting</div>
                     </div>
-                    <div className="font-syne font-extrabold text-[#1A56DB] leading-none" style={{ fontSize: '1.6rem' }}>
-                      <Counter target={100} suffix="+" />
+                    <div className="flex flex-col items-center px-1">
+                      <div className="w-8 h-8 rounded-full bg-[#D5E100] flex items-center justify-center text-sm shrink-0 mb-1.5 shadow-[0_2px_6px_rgba(213,225,0,0.2)]">
+                        🏆
+                      </div>
+                      <div className="font-syne font-extrabold leading-none" style={{ fontSize: '1.6rem', color: '#c5a800' }}>4.9/5</div>
+                      <div className="font-bold text-[#1A56DB] mt-1" style={{ fontSize: '0.7rem', lineHeight: 1.2 }}>Top Rated</div>
+                      <div className="text-[#9aaac4]" style={{ fontSize: '0.6rem' }}>By our patients</div>
                     </div>
-                    <div className="font-bold text-[#1A56DB] mt-1" style={{ fontSize: '0.7rem', lineHeight: 1.2 }}>Happy Smiles</div>
-                    <div className="text-[#9aaac4]" style={{ fontSize: '0.6rem' }}>And counting</div>
+                    <div className="flex flex-col items-center px-1">
+                      <div className="w-8 h-8 rounded-full bg-[#D5E100] flex items-center justify-center text-sm shrink-0 mb-1.5 shadow-[0_2px_6px_rgba(213,225,0,0.2)]">
+                        📊
+                      </div>
+                      <div className="font-syne font-extrabold text-[#1A56DB] leading-none" style={{ fontSize: '1.6rem' }}>
+                        <Counter target={100} suffix="%" />
+                      </div>
+                      <div className="font-bold text-[#1A56DB] mt-1" style={{ fontSize: '0.7rem', lineHeight: 1.2 }}>Orthodontist Directed</div>
+                      <div className="text-[#9aaac4]" style={{ fontSize: '0.6rem' }}>Your safety is our priority</div>
+                    </div>
                   </div>
-                  <div className="flex flex-col items-center px-1">
-                    <div className="w-8 h-8 rounded-full bg-[#D5E100] flex items-center justify-center text-sm shrink-0 mb-1.5 shadow-[0_2px_6px_rgba(213,225,0,0.2)]">
-                      🏆
-                    </div>
-                    <div className="font-syne font-extrabold leading-none" style={{ fontSize: '1.6rem', color: '#c5a800' }}>4.9/5</div>
-                    <div className="font-bold text-[#1A56DB] mt-1" style={{ fontSize: '0.7rem', lineHeight: 1.2 }}>Top Rated</div>
-                    <div className="text-[#9aaac4]" style={{ fontSize: '0.6rem' }}>By our patients</div>
-                  </div>
-                  <div className="flex flex-col items-center px-1">
-                    <div className="w-8 h-8 rounded-full bg-[#D5E100] flex items-center justify-center text-sm shrink-0 mb-1.5 shadow-[0_2px_6px_rgba(213,225,0,0.2)]">
-                      📊
-                    </div>
-                    <div className="font-syne font-extrabold text-[#1A56DB] leading-none" style={{ fontSize: '1.6rem' }}>
-                      <Counter target={100} suffix="%" />
-                    </div>
-                    <div className="font-bold text-[#1A56DB] mt-1" style={{ fontSize: '0.7rem', lineHeight: 1.2 }}>Orthodontist Directed</div>
-                    <div className="text-[#9aaac4]" style={{ fontSize: '0.6rem' }}>Your safety is our priority</div>
-                  </div>
-                </div>
+                </motion.div>
               </motion.div>
 
             </div>
