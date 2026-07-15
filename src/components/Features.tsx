@@ -81,46 +81,104 @@ export default function Features() {
                 >
                   <div className="w-full h-full bg-[#1A56DB] rounded-[35px] p-[4px] relative overflow-hidden">
                     <div className="w-full h-full bg-[#FFFCE0] rounded-[31px] overflow-hidden flex flex-col relative">
-                      <div className="w-[80px] h-[16px] bg-[#1A56DB] rounded-[0_0_12px_12px] mx-auto absolute top-0 left-1/2 -translate-x-1/2 z-20" />
+                      {/* Dynamic Island / Notch */}
+                      <div className="w-[72px] h-[14px] bg-[#0a0a0a] rounded-[0_0_10px_10px] mx-auto absolute top-0 left-1/2 -translate-x-1/2 z-20" />
 
-                      {/* Central Portal — full screen */}
-                      <div className="flex-1 px-3 pt-8 pb-3 flex flex-col items-center text-center">
+                      {/* iOS Status Bar */}
+                      <div className="flex items-center justify-between px-3 pt-[18px] pb-[3px] bg-[#FFFCE0] z-10">
+                        {/* Time */}
+                        <span className="text-[0.42rem] font-bold text-[#1A56DB]">9:41</span>
+                        {/* Icons */}
+                        <div className="flex items-center gap-[3px]">
+                          {/* Signal bars */}
+                          <div className="flex items-end gap-[1.5px] h-[7px]">
+                            <div className="w-[1.5px] h-[3px] bg-[#1A56DB] rounded-sm" />
+                            <div className="w-[1.5px] h-[4px] bg-[#1A56DB] rounded-sm" />
+                            <div className="w-[1.5px] h-[5.5px] bg-[#1A56DB] rounded-sm" />
+                            <div className="w-[1.5px] h-[7px] bg-[#1A56DB] rounded-sm" />
+                          </div>
+                          {/* WiFi */}
+                          <svg width="9" height="7" viewBox="0 0 24 18" fill="none">
+                            <path d="M12 14a2 2 0 1 1 0 4 2 2 0 0 1 0-4z" fill="#1A56DB"/>
+                            <path d="M5.5 10.5C7.2 8.8 9.5 7.8 12 7.8s4.8 1 6.5 2.7" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
+                            <path d="M1.5 6.5C4.5 3.5 8 2 12 2s7.5 1.5 10.5 4.5" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" fill="none"/>
+                          </svg>
+                          {/* Battery */}
+                          <div className="flex items-center gap-[1px]">
+                            <div className="w-[14px] h-[7px] border border-[#1A56DB] rounded-[1.5px] relative flex items-center px-[1px]">
+                              <div className="h-[4px] bg-[#1A56DB] rounded-[1px]" style={{ width: '80%' }} />
+                            </div>
+                            <div className="w-[1.5px] h-[3.5px] bg-[#1A56DB] rounded-r-[1px]" />
+                          </div>
+                          <span className="text-[0.38rem] font-bold text-[#1A56DB]">80%</span>
+                        </div>
+                      </div>
+
+                      {/* Browser Chrome */}
+                      <div className="mx-2 mb-1 bg-white rounded-[6px] border border-[rgba(26,86,219,0.15)] shadow-sm">
+                        {/* Tab bar */}
+                        <div className="flex items-center gap-1 px-1.5 pt-1 pb-0.5 border-b border-[rgba(26,86,219,0.08)]">
+                          <div className="flex-1 bg-[#F0F4FF] rounded-[3px] px-1 py-0.5 flex items-center gap-1">
+                            <svg width="6" height="6" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                            <span className="text-[0.32rem] text-[#1A56DB] font-medium flex-1">haloaligner.com/portal</span>
+                            <svg width="5" height="5" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                          </div>
+                        </div>
+                        {/* Nav row */}
+                        <div className="flex items-center justify-between px-1.5 py-0.5">
+                          <div className="flex gap-1.5">
+                            <svg width="7" height="7" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="opacity-40"><polyline points="15 18 9 12 15 6"/></svg>
+                            <svg width="7" height="7" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                          </div>
+                          <div className="flex gap-1.5">
+                            <svg width="7" height="7" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+                            <svg width="7" height="7" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Central Portal — centered vertically */}
+                      <div className="flex-1 px-3 pb-2 flex flex-col items-center justify-center text-center overflow-hidden">
                         {/* Blue header bar */}
-                        <div className="w-full bg-[#1A56DB] rounded-[10px] py-2 mb-3 flex flex-col items-center">
-                          <span className="text-[#FFFF00] font-extrabold text-[0.52rem] tracking-[0.18em]">CENTRAL PORTAL</span>
-                          <span className="text-white font-syne font-extrabold text-[0.9rem] tracking-widest leading-none">HALOALIGNER</span>
+                        <div className="w-full bg-[#1A56DB] rounded-[8px] py-2 mb-2.5 flex flex-col items-center">
+                          <span className="text-[#FFFF00] font-extrabold text-[0.48rem] tracking-[0.18em]">CENTRAL PORTAL</span>
+                          <span className="text-white font-syne font-extrabold text-[0.85rem] tracking-widest leading-none">HALOALIGNER</span>
                         </div>
 
-                        <p className="text-[0.32rem] font-bold text-[#1A56DB] mb-4 opacity-60 uppercase tracking-wider">Smart Aligner Management System</p>
+                        <p className="text-[0.3rem] font-bold text-[#1A56DB] mb-2.5 opacity-60 uppercase tracking-wider">Smart Aligner Management System</p>
 
-                        <div className="w-full text-left mb-2">
-                          <div className="text-[0.42rem] font-bold text-[#1A56DB] mb-0.5 uppercase tracking-wide">Email / Username</div>
-                          <div className="bg-white border border-[rgba(26,86,219,0.25)] rounded-[5px] p-1.5 flex items-center gap-1.5 shadow-sm">
-                            <span className="text-[0.5rem] opacity-60">✉️</span>
-                            <span className="text-[0.5rem] text-[#1A56DB] font-medium">Superadmin</span>
+                        <div className="w-full text-left mb-1.5">
+                          <div className="text-[0.4rem] font-bold text-[#1A56DB] mb-0.5 uppercase tracking-wide">Email / Username</div>
+                          <div className="bg-white border border-[rgba(26,86,219,0.25)] rounded-[4px] p-1.5 flex items-center gap-1.5 shadow-sm">
+                            <span className="text-[0.48rem] opacity-60">✉️</span>
+                            <span className="text-[0.48rem] text-[#1A56DB] font-medium">Superadmin</span>
                           </div>
                         </div>
 
-                        <div className="w-full text-left mb-3">
-                          <div className="text-[0.42rem] font-bold text-[#1A56DB] mb-0.5 uppercase tracking-wide">Password</div>
-                          <div className="bg-white border border-[rgba(26,86,219,0.25)] rounded-[5px] p-1.5 flex items-center gap-1.5 shadow-sm">
-                            <span className="text-[0.5rem] opacity-60">🔒</span>
-                            <span className="text-[0.5rem] text-[#1A56DB] font-medium flex-1 tracking-widest">••••••••</span>
-                            <span className="text-[0.5rem] opacity-60">👁️</span>
+                        <div className="w-full text-left mb-2.5">
+                          <div className="text-[0.4rem] font-bold text-[#1A56DB] mb-0.5 uppercase tracking-wide">Password</div>
+                          <div className="bg-white border border-[rgba(26,86,219,0.25)] rounded-[4px] p-1.5 flex items-center gap-1.5 shadow-sm">
+                            <span className="text-[0.48rem] opacity-60">🔒</span>
+                            <span className="text-[0.48rem] text-[#1A56DB] font-medium flex-1 tracking-widest">••••••••</span>
+                            <span className="text-[0.48rem] opacity-60">👁️</span>
                           </div>
                         </div>
 
-                        <button className="w-full bg-[#1A56DB] text-white font-bold text-[0.58rem] py-2 rounded-[5px] mb-2 shadow-[0_3px_8px_rgba(26,86,219,0.3)]">Login to Portal →</button>
+                        <button className="w-full bg-[#1A56DB] text-white font-bold text-[0.55rem] py-1.5 rounded-[4px] mb-1.5 shadow-[0_3px_8px_rgba(26,86,219,0.3)]">Login to Portal →</button>
 
                         <div className="flex gap-1.5 w-full">
-                          <button className="flex-1 border border-[rgba(26,86,219,0.3)] bg-white/70 text-[#1A56DB] text-[0.38rem] font-bold py-1 rounded-[4px] flex items-center justify-center gap-0.5">🏥 Clinic Reg.</button>
-                          <button className="flex-1 border border-[rgba(26,86,219,0.3)] bg-white/70 text-[#1A56DB] text-[0.38rem] font-bold py-1 rounded-[4px]">Forgot Pass?</button>
+                          <button className="flex-1 border border-[rgba(26,86,219,0.3)] bg-white/70 text-[#1A56DB] text-[0.36rem] font-bold py-1 rounded-[4px] flex items-center justify-center gap-0.5">🏥 Clinic Reg.</button>
+                          <button className="flex-1 border border-[rgba(26,86,219,0.3)] bg-white/70 text-[#1A56DB] text-[0.36rem] font-bold py-1 rounded-[4px]">Forgot Pass?</button>
                         </div>
+                      </div>
+
+                      {/* iPhone-style home indicator */}
+                      <div className="flex justify-center pb-2">
+                        <div className="w-[60px] h-[4px] bg-[#1A56DB] rounded-full opacity-30" />
                       </div>
                     </div>
                   </div>
                 </motion.div>
-
               </div>
             </div>
           </div>
@@ -175,15 +233,15 @@ export default function Features() {
                 <div className="w-full h-full bg-[#FFFCE0] rounded-[24px] overflow-hidden flex flex-col relative">
                   <div className="w-[50px] h-[12px] bg-[#1A56DB] rounded-[0_0_8px_8px] mx-auto absolute top-0 left-1/2 -translate-x-1/2 z-20" />
 
-                  {/* Central Portal — full screen */}
-                  <div className="flex-1 px-2.5 pt-6 pb-3 flex flex-col items-center text-center">
+                  {/* Central Portal — centered vertically */}
+                  <div className="flex-1 px-2.5 pt-4 pb-2 flex flex-col items-center justify-center text-center">
                     {/* Top blue header bar */}
-                    <div className="w-full bg-[#1A56DB] rounded-[8px] py-1.5 mb-3 flex flex-col items-center">
+                    <div className="w-full bg-[#1A56DB] rounded-[8px] py-1.5 mb-2.5 flex flex-col items-center">
                       <span className="text-[#FFFF00] font-extrabold text-[0.5rem] tracking-[0.15em]">CENTRAL PORTAL</span>
                       <span className="text-white font-syne font-extrabold text-[0.75rem] tracking-widest leading-none">HALOALIGNER</span>
                     </div>
 
-                    <p className="text-[0.3rem] font-bold text-[#1A56DB] mb-3 opacity-70">SMART ALIGNER MANAGEMENT SYSTEM</p>
+                    <p className="text-[0.3rem] font-bold text-[#1A56DB] mb-2.5 opacity-70">SMART ALIGNER MANAGEMENT SYSTEM</p>
 
                     <div className="w-full text-left mb-2">
                       <div className="text-[0.38rem] font-bold text-[#1A56DB] mb-0.5 uppercase tracking-wide">Email / Username</div>
@@ -193,7 +251,7 @@ export default function Features() {
                       </div>
                     </div>
 
-                    <div className="w-full text-left mb-3">
+                    <div className="w-full text-left mb-2.5">
                       <div className="text-[0.38rem] font-bold text-[#1A56DB] mb-0.5 uppercase tracking-wide">Password</div>
                       <div className="bg-white border border-[rgba(26,86,219,0.25)] rounded-[4px] px-1.5 py-1 flex items-center gap-1 shadow-sm">
                         <span className="text-[0.45rem] opacity-60">🔒</span>
@@ -202,12 +260,17 @@ export default function Features() {
                       </div>
                     </div>
 
-                    <button className="w-full bg-[#1A56DB] text-white font-bold text-[0.5rem] py-1.5 rounded-[4px] mb-2 shadow-[0_2px_6px_rgba(26,86,219,0.3)]">Login to Portal →</button>
+                    <button className="w-full bg-[#1A56DB] text-white font-bold text-[0.5rem] py-1.5 rounded-[4px] mb-1.5 shadow-[0_2px_6px_rgba(26,86,219,0.3)]">Login to Portal →</button>
 
                     <div className="flex gap-1 w-full">
                       <button className="flex-1 border border-[rgba(26,86,219,0.3)] bg-white/60 text-[#1A56DB] text-[0.32rem] font-bold py-0.5 rounded-[3px] flex items-center justify-center gap-0.5">🏥 Clinic Reg.</button>
                       <button className="flex-1 border border-[rgba(26,86,219,0.3)] bg-white/60 text-[#1A56DB] text-[0.32rem] font-bold py-0.5 rounded-[3px]">Forgot Pass?</button>
                     </div>
+                  </div>
+
+                  {/* iPhone-style home indicator */}
+                  <div className="flex justify-center pb-2">
+                    <div className="w-[50px] h-[3px] bg-[#1A56DB] rounded-full opacity-30" />
                   </div>
                 </div>
               </div>
