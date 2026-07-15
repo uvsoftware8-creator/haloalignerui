@@ -175,49 +175,6 @@ export default function Hero() {
                 filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.1))',
               }}
             />
-
-            {/* Glowing Aligner Tray: floating above the case */}
-            <motion.div
-              style={{
-                position: 'absolute',
-                top: '5%',
-                width: '65%',
-                zIndex: 4,
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-              }}
-              animate={{
-                y: [0, -18, 0],
-              }}
-              transition={{
-                duration: 3.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            >
-              {/* Glow Aura Background Effect */}
-              <div
-                style={{
-                  position: 'absolute',
-                  width: '140%',
-                  height: '140%',
-                  background: 'radial-gradient(circle, rgba(255,255,255,0.85) 0%, rgba(213,225,0,0.45) 45%, transparent 70%)',
-                  filter: 'blur(20px)',
-                  zIndex: -1,
-                }}
-              />
-              <img
-                src={alignerTray}
-                alt="HaloAligner clear transparent aligner tray"
-                style={{
-                  width: '100%',
-                  height: 'auto',
-                  filter: 'drop-shadow(0 0 12px rgba(255,255,255,0.9)) drop-shadow(0 10px 25px rgba(26,86,219,0.15))',
-                  transform: 'rotate(-12deg) scale(1.1)',
-                }}
-              />
-            </motion.div>
           </motion.div>
         </div>
 
