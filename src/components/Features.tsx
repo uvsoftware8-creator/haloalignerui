@@ -184,73 +184,51 @@ export default function Features() {
           </p>
         </motion.div>
 
-        <div className="relative flex justify-center mb-8" style={{ height: '440px' }}>
+        <div className="relative flex justify-center mb-8" style={{ height: '360px' }}>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="relative w-[200px] h-[430px] z-10"
+            className="relative w-[200px] h-[350px] z-10"
           >
             <div className="w-full h-full bg-[#B3C6FF] p-[2.5px] rounded-[30px] shadow-[0_15px_35px_rgba(26,86,219,0.2),0_0_0_3px_rgba(26,86,219,0.08)] relative overflow-hidden">
               <div className="w-full h-full bg-[#1A56DB] rounded-[27px] p-[3px] relative overflow-hidden">
-                <div className="w-full h-full bg-[#FFFF00] rounded-[24px] overflow-hidden flex flex-col relative">
+                <div className="w-full h-full bg-[#FFFCE0] rounded-[24px] overflow-hidden flex flex-col relative">
                   <div className="w-[50px] h-[12px] bg-[#1A56DB] rounded-[0_0_8px_8px] mx-auto absolute top-0 left-1/2 -translate-x-1/2 z-20" />
-                  
-                  {/* Top Yellow Section */}
-                  <div className="px-2.5 pt-5 pb-0.5">
-                    <div className="font-syne font-extrabold text-[0.65rem] text-[#1A56DB] mb-1.5 flex items-center justify-between">
-                      <span>My Smile Progress</span>
-                      <span className="text-[0.7rem] bg-white rounded-sm px-0.5">📊</span>
+
+                  {/* Central Portal — full screen */}
+                  <div className="flex-1 px-2.5 pt-6 pb-3 flex flex-col items-center text-center">
+                    {/* Top blue header bar */}
+                    <div className="w-full bg-[#1A56DB] rounded-[8px] py-1.5 mb-3 flex flex-col items-center">
+                      <span className="text-[#FFFF00] font-extrabold text-[0.5rem] tracking-[0.15em]">CENTRAL PORTAL</span>
+                      <span className="text-white font-syne font-extrabold text-[0.75rem] tracking-widest leading-none">HALOALIGNER</span>
                     </div>
-                    {[
-                      { label: 'Upper Alignment', width: '85%' },
-                      { label: 'Lower Alignment', width: '60%' },
-                      { label: 'Spacing Correction', width: '90%' },
-                    ].map((row) => (
-                      <div key={row.label} className="bg-[#FFFCE0] rounded-[6px] p-[4px_6px] mb-1 shadow-sm">
-                        <div className="text-[0.5rem] font-bold text-[#1A56DB] mb-0.5">{row.label}</div>
-                        <div className="h-0.5 bg-[#C5D3FF] rounded-[1px] overflow-hidden">
-                          <div className="h-full bg-[#1A56DB] rounded-[1px]" style={{ width: row.width }} />
-                        </div>
-                      </div>
-                    ))}
-                  </div>
 
-                  {/* Middle Blue Section */}
-                  <div className="bg-[#1A56DB] px-2.5 py-1 flex items-center gap-1">
-                     <span className="text-white text-[0.75rem]">🦷</span>
-                     <span className="text-[#FFFF00] font-bold text-[0.6rem]">Aligner #8 Active</span>
-                  </div>
-                  
-                  {/* Bottom Light Yellow Section */}
-                  <div className="bg-[#FFFCE0] flex-1 rounded-t-[12px] rounded-b-[24px] mt-0 px-2.5 pt-2 pb-2 flex flex-col items-center text-center overflow-hidden">
-                    <div className="bg-[#FFFF00] text-[#1A56DB] text-[0.38rem] font-bold px-1.5 py-0.5 rounded-full mb-1">CENTRAL PORTAL</div>
-                    <h4 className="font-syne font-extrabold text-[#1A56DB] text-[0.85rem] leading-none mb-0.5 tracking-widest">HALOALIGNER</h4>
-                    <p className="text-[0.32rem] font-bold text-[#1A56DB] mb-1.5">SMART ALIGNER MANAGEMENT SYSTEM</p>
+                    <p className="text-[0.3rem] font-bold text-[#1A56DB] mb-3 opacity-70">SMART ALIGNER MANAGEMENT SYSTEM</p>
 
-                    <div className="w-full text-left mb-1">
-                      <div className="text-[0.38rem] font-bold text-[#1A56DB] mb-0.5">EMAIL / USERNAME</div>
-                      <div className="bg-white border border-[rgba(26,86,219,0.2)] rounded-[3px] p-1 flex items-center gap-1">
-                        <span className="text-[0.45rem] opacity-70">☑️</span>
+                    <div className="w-full text-left mb-2">
+                      <div className="text-[0.38rem] font-bold text-[#1A56DB] mb-0.5 uppercase tracking-wide">Email / Username</div>
+                      <div className="bg-white border border-[rgba(26,86,219,0.25)] rounded-[4px] px-1.5 py-1 flex items-center gap-1 shadow-sm">
+                        <span className="text-[0.45rem] opacity-60">✉️</span>
                         <span className="text-[0.45rem] text-[#1A56DB] font-medium">Superadmin</span>
                       </div>
                     </div>
 
-                    <div className="w-full text-left mb-1.5">
-                      <div className="text-[0.38rem] font-bold text-[#1A56DB] mb-0.5">PASSWORD</div>
-                      <div className="bg-white border border-[rgba(26,86,219,0.2)] rounded-[3px] p-1 flex items-center gap-1">
-                        <span className="text-[0.45rem] opacity-70">🔒</span>
+                    <div className="w-full text-left mb-3">
+                      <div className="text-[0.38rem] font-bold text-[#1A56DB] mb-0.5 uppercase tracking-wide">Password</div>
+                      <div className="bg-white border border-[rgba(26,86,219,0.25)] rounded-[4px] px-1.5 py-1 flex items-center gap-1 shadow-sm">
+                        <span className="text-[0.45rem] opacity-60">🔒</span>
                         <span className="text-[0.45rem] text-[#1A56DB] font-medium flex-1 tracking-widest">••••••••</span>
-                        <span className="text-[0.45rem] opacity-70">👁️</span>
+                        <span className="text-[0.45rem] opacity-60">👁️</span>
                       </div>
                     </div>
 
-                    <button className="w-full bg-[#1A56DB] text-white font-bold text-[0.5rem] py-1 rounded-[3px] mb-1.5">Login to Portal</button>
+                    <button className="w-full bg-[#1A56DB] text-white font-bold text-[0.5rem] py-1.5 rounded-[4px] mb-2 shadow-[0_2px_6px_rgba(26,86,219,0.3)]">Login to Portal →</button>
 
                     <div className="flex gap-1 w-full">
-                      <button className="flex-1 border border-[rgba(26,86,219,0.3)] bg-transparent text-[#1A56DB] text-[0.35rem] font-bold py-0.5 rounded-[3px] flex items-center justify-center gap-0.5 opacity-80"><span className="text-[0.4rem]">🏥</span> Clinic Reg.</button>
-                      <button className="flex-1 border border-[rgba(26,86,219,0.3)] bg-transparent text-[#1A56DB] text-[0.35rem] font-bold py-0.5 rounded-[3px] opacity-80">Forgot Pass?</button>
+                      <button className="flex-1 border border-[rgba(26,86,219,0.3)] bg-white/60 text-[#1A56DB] text-[0.32rem] font-bold py-0.5 rounded-[3px] flex items-center justify-center gap-0.5">🏥 Clinic Reg.</button>
+                      <button className="flex-1 border border-[rgba(26,86,219,0.3)] bg-white/60 text-[#1A56DB] text-[0.32rem] font-bold py-0.5 rounded-[3px]">Forgot Pass?</button>
                     </div>
                   </div>
                 </div>

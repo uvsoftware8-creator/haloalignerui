@@ -23,7 +23,7 @@ const benefits = [
   {
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2C8.5 2 6 4.5 6 7c0 1.5.5 3 1 4.5C8 14 8 17 8 19c0 1.1.9 2 2 2s2-.9 2-2v-2c0-1.1.9-2 2-2s2 .9 2 2v2c0 1.1.9 2 2 2s2-.9 2-2c0-2 0-5 1-7.5.5-1.5 1-3 1-4.5C22 4.5 19.5 2 16 2c-1 0-2 .4-4 .4S13 2 12 2z"/>
+        <path d="M12 2C8.5 2 6 4.5 6 7c0 1.5.5 3 1 4.5C8 14 8 17 8 19c0 1.1.9 2 2 2s2-.9 2-2v-2c0-1.1.9-2 2-2s2 .9 2 2v2c0 1.1.9 2 2 2s2-.9 2-2c0-2 0-5 1-7.5.5-1.5 1-3 1-4.5C22 4.5 19.5 2 16 2c-1 0-2 .4-4 .4S13 2 12 2z" />
       </svg>
     ),
     label: 'Straighter', sub: 'Teeth',
@@ -31,7 +31,7 @@ const benefits = [
   {
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M4 6h16M4 10h16M4 14h10"/>
+        <path d="M4 6h16M4 10h16M4 14h10" />
       </svg>
     ),
     label: 'Improved', sub: 'Bite',
@@ -39,8 +39,8 @@ const benefits = [
   {
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <circle cx="12" cy="8" r="4"/>
-        <path d="M6 20v-2a6 6 0 0 1 12 0v2"/>
+        <circle cx="12" cy="8" r="4" />
+        <path d="M6 20v-2a6 6 0 0 1 12 0v2" />
       </svg>
     ),
     label: 'Enhanced', sub: 'Facial Aesthetics',
@@ -48,7 +48,7 @@ const benefits = [
   {
     icon: (
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1A56DB" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
       </svg>
     ),
     label: 'Boosted', sub: 'Confidence',
@@ -235,7 +235,7 @@ export default function Hero() {
               className="inline-flex items-center gap-2 bg-[#1A56DB] text-white rounded-full font-bold shadow-[0_6px_22px_rgba(26,86,219,0.38)] hover:-translate-y-0.5 hover:bg-[#2563EB] transition-all"
               style={{ padding: '0.75rem 1.5rem', fontSize: '0.85rem' }}
             >
-              Book Your Consultation →
+              Book Your Order →
             </a>
             <a
               href="#how"
@@ -263,11 +263,11 @@ export default function Hero() {
           <div className="lg:hidden relative w-full h-[320px] mt-6 overflow-hidden">
             {/* Model photo on the right half */}
             <div className="absolute right-0 top-0 bottom-0 w-[65%]">
-              <img 
-                src={heroModel} 
-                alt="Happy HaloAligner patient" 
-                className="w-full h-full object-cover" 
-                style={{ objectPosition: '50% 0%' }} 
+              <img
+                src={heroModel}
+                alt="Happy HaloAligner patient"
+                className="w-full h-full object-cover"
+                style={{ objectPosition: '50% 0%' }}
               />
               {/* Gradient blend to yellow on the left edge of the photo */}
               <div
@@ -277,7 +277,7 @@ export default function Hero() {
             </div>
 
             {/* Aligner Case + Pedestal on the left half, overlapping the model photo */}
-            <div 
+            <div
               className="absolute left-[2%] bottom-[-10px] flex flex-col items-center justify-end"
               style={{ width: '240px', height: '290px' }}
             >
@@ -285,10 +285,10 @@ export default function Hero() {
               <div style={{ position: 'absolute', bottom: '10px', width: '220px', height: '70px', zIndex: 0 }}>
                 {/* Pedestal floor shadow */}
                 <div style={{ position: 'absolute', bottom: '-8px', left: '10%', width: '80%', height: '24px', borderRadius: '50%', background: 'rgba(0, 0, 0, 0.12)', filter: 'blur(6px)' }} />
-                
+
                 {/* Pedestal 3D cylinder wall */}
                 <div style={{ position: 'absolute', bottom: '0', left: '0', width: '100%', height: '32px', borderRadius: '0 0 110px 110px / 0 0 16px 16px', background: 'linear-gradient(to bottom, #C8D900, #A0B000)' }} />
-                
+
                 {/* Pedestal Highlighted Top Face */}
                 <div style={{ position: 'absolute', bottom: '16px', left: '0', width: '100%', height: '32px', borderRadius: '50%', background: 'radial-gradient(ellipse at 35% 35%, #F0FF30, #D5E100)', borderBottom: '1px solid #B8C800', boxShadow: 'inset 0 2px 4px rgba(255,255,255,0.6)' }} />
               </div>
@@ -308,7 +308,7 @@ export default function Hero() {
                 }}
               />
             </div>
-            
+
             {/* Bottom fade to page bg */}
             <div className="absolute inset-x-0 bottom-0 h-12 pointer-events-none" style={{ background: 'linear-gradient(to top, #D5E100, transparent)' }} />
           </div>

@@ -8,10 +8,10 @@ import alignerTray from '../assets/aligner-tray.png';
 export default function BeforeAfterSection() {
   return (
     <section className="bg-[#F9FAF0] py-10 px-6 md:px-10 lg:px-14 relative overflow-hidden select-none">
-      
+
       {/* ---- ROW 1: Real Transformations + 3 Sliders + Smile Progress Card ---- */}
       <div className="max-w-7xl mx-auto grid grid-cols-12 gap-4 lg:gap-6 items-stretch mb-6">
-        
+
         {/* Left Column: Heading and description (Centered vertically since the See More button is removed) */}
         <div className="col-span-12 lg:col-span-3 flex flex-col justify-center items-start text-left mb-4 lg:mb-0">
           <h2 className="font-syne font-extrabold text-[#1A56DB] leading-[1.1] tracking-tight mb-2 text-base sm:text-lg lg:text-xl">
@@ -26,39 +26,39 @@ export default function BeforeAfterSection() {
         {/* Middle Column: 3 Before-After sliders (Always side-by-side in one row with same height, dynamically sized via percentages to fit container width without overflowing) */}
         <div className="col-span-12 lg:col-span-6 flex justify-center items-center w-full mb-4 lg:mb-0">
           <div className="flex flex-row justify-between items-center gap-1.5 sm:gap-3 w-full">
-            
+
             {/* Card 1 */}
-            <div 
+            <div
               className="rounded-xl overflow-hidden border border-white/80 shadow-sm select-none bg-gray-50 group hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
               style={{ width: '34.1%', aspectRatio: '203/105' }}
             >
-              <img 
-                src={beforeAfter1} 
-                alt="Before and after crowded teeth correction" 
+              <img
+                src={beforeAfter1}
+                alt="Before and after crowded teeth correction"
                 className="w-full h-full object-cover pointer-events-none"
               />
             </div>
 
             {/* Card 2 */}
-            <div 
+            <div
               className="rounded-xl overflow-hidden border border-white/80 shadow-sm select-none bg-gray-50 group hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
               style={{ width: '30.9%', aspectRatio: '184/105' }}
             >
-              <img 
-                src={beforeAfter2} 
-                alt="Before and after spacing closure" 
+              <img
+                src={beforeAfter2}
+                alt="Before and after spacing closure"
                 className="w-full h-full object-cover pointer-events-none"
               />
             </div>
 
             {/* Card 3 (Clean crop without blue card overlap) */}
-            <div 
+            <div
               className="rounded-xl overflow-hidden border border-white/80 shadow-sm select-none bg-gray-50 group hover:shadow-md hover:-translate-y-0.5 transition-all duration-300"
               style={{ width: '30.5%', aspectRatio: '182/105' }}
             >
-              <img 
-                src={beforeAfter3} 
-                alt="Before and after overbite realignment" 
+              <img
+                src={beforeAfter3}
+                alt="Before and after overbite realignment"
                 className="w-full h-full object-cover pointer-events-none"
               />
             </div>
@@ -70,12 +70,12 @@ export default function BeforeAfterSection() {
         <div className="col-span-12 lg:col-span-3">
           <div className="bg-[#0B2545] rounded-2xl p-4 h-full flex flex-col justify-between relative overflow-hidden shadow-md border border-white/10 group min-h-[110px]">
             {/* Background Aligner Tray Graphic */}
-            <img 
-              src={alignerTray} 
+            <img
+              src={alignerTray}
               alt="Clear aligner graphic"
               className="absolute -right-6 top-1/2 -translate-y-1/2 w-[110px] opacity-40 mix-blend-screen pointer-events-none group-hover:scale-105 transition-transform duration-700 rotate-[20deg]"
             />
-            
+
             <div className="relative z-10 pr-12 text-left">
               <h3 className="font-syne font-extrabold text-white text-[0.8rem] sm:text-[0.85rem] leading-[1.2] mb-1.5">
                 Track Your<br />Smile Progress
@@ -101,11 +101,11 @@ export default function BeforeAfterSection() {
 
       {/* ---- ROW 2: 4 Details strip + Yellow CTA Card ---- */}
       <div className="max-w-7xl mx-auto grid grid-cols-12 gap-4 lg:gap-6 items-stretch">
-        
+
         {/* Left Column: 4 Feature highlights */}
         <div className="col-span-12 lg:col-span-9 flex items-center bg-white border border-white shadow-[0_4px_25px_rgba(0,0,0,0.015)] rounded-2xl p-4 lg:p-5">
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
-            
+
             {/* Item 1 */}
             <div className="flex gap-2">
               <div className="w-8 h-8 rounded-lg bg-[#F9FAF0] border border-[rgba(26,86,219,0.08)] shadow-sm flex items-center justify-center flex-shrink-0">
@@ -169,12 +169,12 @@ export default function BeforeAfterSection() {
         <div className="col-span-12 lg:col-span-3">
           <div className="bg-[#D5E100] rounded-2xl p-4 h-full flex flex-col justify-between relative overflow-hidden shadow-md border border-white/20 group min-h-[90px]">
             {/* Background Aligner Tray Graphic */}
-            <img 
-              src={alignerTray} 
+            <img
+              src={alignerTray}
               alt="Clear aligner graphic"
               className="absolute -right-6 top-1/2 -translate-y-1/2 w-[120px] opacity-35 mix-blend-multiply pointer-events-none group-hover:scale-105 transition-transform duration-700 rotate-[35deg]"
             />
-            
+
             <div className="relative z-10 pr-12 text-left">
               <h3 className="font-syne font-extrabold text-[#1A56DB] text-[0.8rem] sm:text-[0.85rem] leading-[1.2] mb-1.5">
                 Ready to Transform<br />Your Smile?
@@ -189,7 +189,7 @@ export default function BeforeAfterSection() {
                 href="#cta"
                 className="inline-flex items-center justify-center gap-1 bg-[#1A56DB] text-white rounded-full font-bold hover:bg-[#2563EB] transition-colors text-[0.6rem] uppercase tracking-wider px-2.5 py-1.5 shadow-sm"
               >
-                Book Consultation
+                Login/Signup
                 <span className="font-extrabold">&rarr;</span>
               </a>
             </div>
