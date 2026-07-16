@@ -25,7 +25,7 @@ const steps = [
   {
     num: '05',
     title: 'Post treatment records',
-    desc: 'Upload your post treatment plan.'
+    desc: 'Upload your post treatment records.'
   },
 ];
 
