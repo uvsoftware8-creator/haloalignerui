@@ -57,7 +57,7 @@ const benefits = [
 
 const features = [
   { emoji: '✨', title: 'Invisible Fit', desc: 'Virtually undetectable clear aligners that let you smile confidently.' },
-  { emoji: '🚀', title: 'Faster Deliveries', desc: 'Get your custom aligners delivered to your doorstep in record time.' },
+  { emoji: '🚀', title: 'Faster Deliveries', desc: 'Get your custom aligners delivered to your clinic in record time.' },
   { emoji: '🩺', title: 'In-Clinic Delivery', desc: 'Prefer a professional hand-off? Opt for in-clinic delivery and dedicated care.' },
   { emoji: '📅', title: 'Customised Plans', desc: 'Reduce the number of trays and treatment duration with a plan tailored to you.' },
 ];

@@ -65,38 +65,6 @@ export default function BeforeAfterSection() {
 
           </div>
         </div>
-
-        {/* Right Column: Track Your Smile Progress Card (Same height as teeth cards row on desktop) */}
-        <div className="col-span-12 lg:col-span-3">
-          <div className="bg-[#0B2545] rounded-2xl p-4 h-full flex flex-col justify-between relative overflow-hidden shadow-md border border-white/10 group min-h-[110px]">
-            {/* Background Aligner Tray Graphic */}
-            <img
-              src={alignerTray}
-              alt="Clear aligner graphic"
-              className="absolute -right-6 top-1/2 -translate-y-1/2 w-[110px] opacity-40 mix-blend-screen pointer-events-none group-hover:scale-105 transition-transform duration-700 rotate-[20deg]"
-            />
-
-            <div className="relative z-10 pr-12 text-left">
-              <h3 className="font-syne font-extrabold text-white text-[0.8rem] sm:text-[0.85rem] leading-[1.2] mb-1.5">
-                Track Your<br />Smile Progress
-              </h3>
-              <p className="text-white/60 text-[0.58rem] sm:text-[0.62rem] font-medium leading-tight">
-                With virtual check-ins and real-time updates.
-              </p>
-            </div>
-
-            <div className="relative z-10 text-left mt-3">
-              <a
-                href="#cta"
-                className="inline-flex items-center justify-center gap-1 bg-[#D5E100] text-[#0B2545] rounded-full font-bold hover:bg-[#c5a800] transition-colors text-[0.6rem] uppercase tracking-wider px-2.5 py-1.5 shadow-sm"
-              >
-                Learn More
-                <span className="font-extrabold">&rarr;</span>
-              </a>
-            </div>
-          </div>
-        </div>
-
       </div>
 
       {/* ---- ROW 2: 4 Details strip ---- */}
