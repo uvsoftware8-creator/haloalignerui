@@ -42,13 +42,13 @@ export default function Navbar() {
         }}
       >
         {/* Logo */}
-        <Link
-          to="/"
+        <a
+          href="/"
           className="font-syne font-extrabold text-xl sm:text-2xl tracking-widest uppercase inline-block select-none"
           style={{ color: '#D5E100' }}
         >
           HALOALIGNER<sup className="text-[10px] sm:text-xs ml-0.5 font-bold uppercase">TM</sup>
-        </Link>
+        </a>
 
         {/* Desktop Links */}
         <ul className="hidden lg:flex items-center gap-8 list-none">
