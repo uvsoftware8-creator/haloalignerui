@@ -26,7 +26,7 @@ const benefits = [
         <path d="M12 2C8.5 2 6 4.5 6 7c0 1.5.5 3 1 4.5C8 14 8 17 8 19c0 1.1.9 2 2 2s2-.9 2-2v-2c0-1.1.9-2 2-2s2 .9 2 2v2c0 1.1.9 2 2 2s2-.9 2-2c0-2 0-5 1-7.5.5-1.5 1-3 1-4.5C22 4.5 19.5 2 16 2c-1 0-2 .4-4 .4S13 2 12 2z" />
       </svg>
     ),
-    label: 'Straighter', sub: 'Teeth',
+    label: 'Aligned', sub: 'Teeth',
   },
   {
     icon: (
@@ -57,7 +57,7 @@ const benefits = [
 
 const features = [
   { emoji: '✨', title: 'Invisible Fit', desc: 'Virtually undetectable clear aligners that let you smile confidently.' },
-  { emoji: '🚀', title: 'Faster Deliveries', desc: 'Get your custom aligners delivered to your doorstep in record time.' },
+  { emoji: '🚀', title: 'Faster Deliveries', desc: 'Get your custom aligners delivered to your clinic in record time.' },
   { emoji: '🩺', title: 'In-Clinic Delivery', desc: 'Prefer a professional hand-off? Opt for in-clinic delivery and dedicated care.' },
   { emoji: '📅', title: 'Customised Plans', desc: 'Reduce the number of trays and treatment duration with a plan tailored to you.' },
 ];

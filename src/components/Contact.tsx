@@ -49,7 +49,7 @@ export default function Contact() {
               </div>
               <div>
                 <div className="text-[0.7rem] font-bold text-[#5B6E99] uppercase tracking-wider">Email Us</div>
-                <div className="text-lg font-bold text-[#1A56DB]">customercare@haloaligner.com</div>
+                <div className="text-lg font-bold text-[#1A56DB] break-all">customercare@haloaligner.com</div>
               </div>
             </div>
           </div>
