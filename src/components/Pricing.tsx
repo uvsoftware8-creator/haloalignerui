@@ -307,7 +307,7 @@ export default function Pricing() {
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-6">
               <span>Call: <a href="tel:09827274882" className="text-[#D5E100] underline hover:text-white transition-colors">09827274882</a></span>
-              <span>Email: <a href="mailto:customercare@haloaligner.com" className="text-[#D5E100] underline hover:text-white transition-colors">customercare@haloaligner.com</a></span>
+              <span className="text-center sm:text-left">Email: <a href="mailto:customercare@haloaligner.com" className="text-[#D5E100] underline hover:text-white transition-colors break-all">customercare@haloaligner.com</a></span>
             </div>
           </div>
         </div>

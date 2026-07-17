@@ -37,7 +37,7 @@ export default function Footer() {
           <ul className="list-none flex flex-col gap-2.5">
             <li><a href="#" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">FAQ</a></li>
             <li><a href="tel:09827274882" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">09827274882</a></li>
-            <li><a href="mailto:customercare@haloaligner.com" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">customercare@haloaligner.com</a></li>
+            <li><a href="mailto:customercare@haloaligner.com" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB] break-all">customercare@haloaligner.com</a></li>
             <li><a href="#" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">Privacy Policy</a></li>
             <li><a href="#" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">Terms & Conditions</a></li>
           </ul>

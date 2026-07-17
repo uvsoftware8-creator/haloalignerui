@@ -86,7 +86,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <div className="text-[0.7rem] font-bold text-[#5B6E99] uppercase tracking-wider mb-1">Email Support</div>
-                      <div className="text-xl font-extrabold text-[#1A56DB]">customercare@haloaligner.com</div>
+                      <div className="text-xl font-extrabold text-[#1A56DB] break-all">customercare@haloaligner.com</div>
                       <div className="text-sm font-medium text-[#8EA0C0] mt-1">Response within 2 hours</div>
                     </div>
                   </div>
