@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { cn } from '@/src/lib/utils';
 import { ShieldCheck, Award, Sparkles, CheckCircle2, ChevronRight, Package, Box, Stethoscope, BadgeAlert } from 'lucide-react';
+import { label, section } from 'motion/react-client';
+import thailandImage from '../assets/thailand.png';
 
 export default function Pricing() {
-  const [activeTab, setActiveTab] = useState<'pan_india_pkg' | 'pan_india_rates' | 'other_pkg' | 'other_cats'>('pan_india_pkg');
+  const [activeTab, setActiveTab] = useState<'pan_india_pkg' | 'pan_india_rates' | 'bonus_package'>('pan_india_pkg');
 
   const panIndiaPackages = [
     {
@@ -83,8 +85,9 @@ export default function Pricing() {
           {[
             { id: 'pan_india_pkg', label: 'Pan India Packages' },
             { id: 'pan_india_rates', label: 'Pan India Per-Tray' },
-            { id: 'other_pkg', label: 'Other Packages' },
-            { id: 'other_cats', label: 'Other Categories' },
+            { id: 'bonus_package', label: 'Bonus Package' }
+            // { id: 'other_pkg', label: 'Other Packages' },
+            // { id: 'other_cats', label: 'Other Categories' },
           ].map((tab) => (
             <button
               key={tab.id}
@@ -227,173 +230,51 @@ export default function Pricing() {
                 </div>
               </div>
             )}
-
-            {/* OTHER PACKAGES */}
-            {activeTab === 'other_pkg' && (
+            {activeTab === 'pan_india_rates' && (
               <div className="space-y-12">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-                  {otherPackages.map((pkg) => (
-                    <div
-                      key={pkg.title}
-                      className={cn(
-                        "bg-white border border-[rgba(26,86,219,0.12)] rounded-[32px] p-8 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_24px_48px_rgba(26,86,219,0.08)] relative",
-                        pkg.featured && "border-[#1A56DB] shadow-[0_24px_50px_rgba(26,86,219,0.15)] bg-gradient-to-b from-white to-[rgba(26,86,219,0.01)]"
-                      )}
-                    >
-                      {pkg.featured && (
-                        <div className="absolute top-[-13px] left-1/2 -translate-x-1/2 bg-[#1A56DB] text-[#D5E100] text-[0.65rem] font-black tracking-[1.5px] uppercase px-4 py-1.5 rounded-full shadow-md whitespace-nowrap">
-                          Most Demanded
-                        </div>
-                      )}
-                      <div>
-                        <h3 className="font-syne text-2xl font-extrabold text-[#1A56DB] mb-1">{pkg.title}</h3>
-                        <p className="text-[#8EA0C0] text-[0.78rem] font-bold uppercase tracking-wider mb-6">{pkg.subtitle}</p>
-
-                        <div className="bg-[#EFF6FF] border border-[rgba(37,99,235,0.08)] rounded-2xl p-4.5 mb-6.5">
-                          <div className="flex items-center gap-2 text-xs font-bold text-[#1A56DB] mb-2">
-                            <CheckCircle2 size={15} /> {pkg.trays}
-                          </div>
-                          <div className="flex items-center gap-2 text-xs font-semibold text-[#5B6E99]">
-                            <Sparkles size={15} className="text-[#2563EB]" /> {pkg.refinements}
-                          </div>
-                        </div>
-
-                        <div className="space-y-3 mb-8">
-                          <div className="text-[0.72rem] font-bold text-[#8EA0C0] uppercase tracking-wider mb-2">Pricing Tiers</div>
-                          {Object.entries(pkg.prices).map(([tier, price]) => (
-                            <div key={tier} className="flex items-center justify-between bg-[rgba(26,86,219,0.02)] border border-[rgba(26,86,219,0.06)] rounded-xl p-3.5 hover:bg-white hover:border-[#1A56DB] transition-all">
-                              <span className="text-xs font-bold text-[#1A56DB] flex items-center gap-1.5">
-                                <span className={cn(
-                                  "w-2.5 h-2.5 rounded-full",
-                                  tier === 'Premium' ? 'bg-amber-500' : tier === 'Plus' ? 'bg-blue-500' : 'bg-gray-400'
-                                )} />
-                                {tier}
-                              </span>
-                              <span className="font-syne text-lg font-extrabold text-[#1a56db]">{price}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </div>
-                      <a href="#contact" className="block w-full py-4 rounded-xl text-center text-sm font-bold transition-all bg-[#1A56DB] text-white shadow-[0_8px_20px_rgba(26,86,219,0.25)] hover:bg-[#2563EB] hover:-translate-y-0.5 flex items-center justify-center gap-1.5">
-                        Choose Plan <ChevronRight size={16} />
-                      </a>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Other Packages Footer Features */}
-                <div className="bg-white border border-[rgba(26,86,219,0.12)] rounded-[32px] p-8">
-                  <div className="grid grid-cols-1 md:grid-cols-4 gap-6 text-center">
-                    {[
-                      { icon: '💎', title: 'Premium Quality Material', desc: 'Engineered with FDA-approved medical-grade dental polymers.' },
-                      { icon: '⚙️', title: 'Advanced Technology', desc: 'Computerized orthodontic CAD staging animations.' },
-                      { icon: '✨', title: 'Precise Finishing', desc: 'Laser-trimmed and hand-polished tray margins.' },
-                      { icon: '📅', title: 'Timely Delivery', desc: 'Predictable logistics schedules for clinic partners.' }
-                    ].map((feat) => (
-                      <div key={feat.title} className="flex flex-col items-center">
-                        <span className="text-[1.8rem] mb-2">{feat.icon}</span>
-                        <h4 className="font-syne font-extrabold text-xs text-[#1A56DB] mb-1">{feat.title}</h4>
-                        <p className="text-[0.72rem] text-[#5B6E99] leading-relaxed font-semibold">{feat.desc}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                {/* Content for Pan India Rates */}
               </div>
             )}
 
-            {/* OTHER ALIGNER CATEGORIES */}
-            {activeTab === 'other_cats' && (
-              <div className="space-y-12">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-                  {[
-                    {
-                      tier: 'ALIGNER PREMIUM',
-                      subtitle: 'Top Quality',
-                      price: '₹ 800',
-                      features: ['Crystal Clear Material', 'Maximum Durability', 'Superior Comfort', 'Long-lasting Performance'],
-                      icon: '🏆',
-                    },
-                    {
-                      tier: 'ALIGNER PLUS',
-                      subtitle: 'Medium Quality',
-                      price: '₹ 550',
-                      features: ['Excellent Clarity', 'Reliable Strength', 'Cost-effective Solution'],
-                      icon: '✨',
-                    },
-                    {
-                      tier: 'ALIGNER ECO',
-                      subtitle: 'Decent Quality',
-                      price: '₹ 350',
-                      features: ['Budget-friendly', 'Functional & Effective', 'Suitable for Basic Cases'],
-                      icon: '👍',
-                    },
-                  ].map((item) => (
-                    <div key={item.tier} className="bg-white border border-[rgba(26,86,219,0.12)] rounded-[32px] p-8 flex flex-col justify-between hover:shadow-[0_24px_48px_rgba(26,86,219,0.08)] transition-all">
-                      <div>
-                        <div className="flex items-center justify-between mb-4">
-                          <span className="text-[1.8rem]">{item.icon}</span>
-                          <span className="text-[0.68rem] font-bold text-[#8EA0C0] uppercase tracking-wider">{item.subtitle}</span>
-                        </div>
-                        <h3 className="font-syne text-xl font-extrabold text-[#1A56DB] mb-1">{item.tier}</h3>
-
-                        <div className="bg-[#EFF6FF] border border-[rgba(37,99,235,0.08)] rounded-xl p-4.5 mb-6.5 text-center">
-                          <div className="text-[0.62rem] font-bold text-[#5B6E99] uppercase tracking-wider mb-1">Per Aligner</div>
-                          <div className="font-syne text-2xl font-black text-[#1A56DB]">{item.price}</div>
-                        </div>
-
-                        <ul className="list-none text-left mb-8 flex flex-col gap-2.5">
-                          {item.features.map((f) => (
-                            <li key={f} className="flex items-start gap-2.5 text-xs font-semibold text-[#5B6E99]">
-                              <span className="w-4 h-4 bg-[#DBEAFE] text-[#1A56DB] shrink-0 rounded-full flex items-center justify-center text-[0.55rem] font-black mt-0.5">✓</span>
-                              {f}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-
-                      <a href="#contact" className="block w-full py-3.5 rounded-xl text-center text-xs font-bold transition-all bg-transparent text-[#1A56DB] border-2 border-[rgba(26,86,219,0.15)] hover:border-[#1A56DB] flex items-center justify-center gap-1.5">
-                        Inquire Category <ChevronRight size={14} />
-                      </a>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Add-on Services Other */}
-                <div className="bg-white border border-[rgba(26,86,219,0.12)] rounded-[32px] p-8 shadow-[0_12px_30px_rgba(26,86,219,0.03)]">
-                  <h3 className="font-syne text-base font-extrabold text-[#1A56DB] mb-6 uppercase tracking-wider">Add-On Services</h3>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {[
-                      { title: 'Template Tray', desc: 'Precision Fabrication Support', price: '₹ 500 per tray' },
-                      { title: 'Premium Packaging', desc: 'Hygienic, Sealed & Professional box kit setup.', price: '₹ 1,000' }
-                    ].map((srv) => (
-                      <div key={srv.title} className="bg-[rgba(26,86,219,0.02)] border border-[rgba(26,86,219,0.05)] rounded-2xl p-5 flex justify-between items-center">
-                        <div>
-                          <h4 className="font-syne font-extrabold text-sm text-[#1A56DB] mb-1">{srv.title}</h4>
-                          <p className="text-[0.7rem] font-semibold text-[#8EA0C0]">{srv.desc}</p>
-                        </div>
-                        <span className="font-syne text-base font-extrabold text-[#1A56DB] ml-4 shrink-0">{srv.price}</span>
-                      </div>
-                    ))}
+            {/* BONUS PACKAGE */}
+            {activeTab === 'bonus_package' && (
+              <div className="relative w-full max-w-5xl mx-auto rounded-[32px] overflow-hidden shadow-[0_24px_50px_rgba(26,86,219,0.15)] flex flex-col md:flex-row min-h-[400px] lg:min-h-[480px] border border-[rgba(26,86,219,0.12)]">
+                {/* Background Image */}
+                <img 
+                  src={thailandImage} 
+                  alt="Thailand Tour" 
+                  className="absolute inset-0 w-full h-full object-cover object-right transition-transform duration-1000 hover:scale-105" 
+                />
+                
+                {/* White Gradient Overlay (fades from left to right) */}
+                <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent w-full md:w-[70%]" />
+                <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent md:hidden" />
+                
+                {/* Content */}
+                <div className="relative z-10 w-full md:w-[55%] p-10 lg:p-14 flex flex-col items-start justify-center text-left">
+                  <div className="bg-[#1A56DB] text-[#D5E100] px-5 py-2 rounded-full font-bold text-xs tracking-[1.5px] uppercase mb-6 shadow-md inline-flex items-center gap-2">
+                    <Award size={16} /> Exclusive Bonus Offer
                   </div>
-                </div>
-
-                {/* Why Choose Other Flyer info */}
-                <div className="bg-white border border-[rgba(26,86,219,0.12)] rounded-[32px] p-8">
-                  <h3 className="font-syne text-base font-extrabold text-[#1A56DB] mb-6 uppercase tracking-wider text-center">Why HALO DENTIST PRIVATE LIMITED?</h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 text-center">
-                    {[
-                      { title: 'Advanced Thermoforming', desc: 'Using digital thermoforming machinery for absolute accuracy.' },
-                      { title: 'Consistent Finishing', desc: 'Strict edge polishing routines to avoid mouth irritation.' },
-                      { title: 'Strict Quality Control', desc: 'Multi-point validation of individual aligner stages.' },
-                      { title: 'Timely Delivery', desc: 'Fast, secure shipping to keep treatment milestones on track.' },
-                      { title: 'Professional Case Handling', desc: 'Direct planning oversight and expert clinical support.' }
-                    ].map((feat) => (
-                      <div key={feat.title} className="flex flex-col items-center">
-                        <h4 className="font-syne font-extrabold text-xs text-[#1A56DB] mb-2">{feat.title}</h4>
-                        <p className="text-[0.7rem] text-[#5B6E99] font-semibold leading-relaxed">{feat.desc}</p>
-                      </div>
-                    ))}
-                  </div>
+                  
+                  <h3 className="font-syne text-4xl lg:text-[3.5rem] font-extrabold text-[#1A56DB] mb-6 leading-[1.1]">
+                    Thailand Tour<br />
+                    <span className="relative inline-block mt-2">
+                      Package
+                      <span className="absolute -bottom-2 left-0 w-full h-1.5 bg-[#D5E100]"></span>
+                    </span>
+                  </h3>
+                  
+                  <p className="text-[#5B6E99] font-semibold text-lg lg:text-xl leading-relaxed max-w-md mb-8">
+                    Every 10th case of a complex package, you can get a <br className="hidden lg:block" />
+                    <span className="relative inline-block text-[#1A56DB] font-extrabold">
+                      Thailand tour package
+                      <span className="absolute -bottom-1 left-0 w-full h-[3px] bg-[#D5E100]"></span>
+                    </span> free.
+                  </p>
+                  
+                  <a href="https://haloaligner-smart-dental-aligner-po.vercel.app/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-center text-sm font-bold transition-all bg-[#1A56DB] text-white shadow-[0_8px_25px_rgba(26,86,219,0.3)] hover:bg-[#2563EB] hover:-translate-y-0.5">
+                    Claim Your Bonus <ChevronRight size={18} />
+                  </a>
                 </div>
               </div>
             )}
@@ -430,7 +311,6 @@ export default function Pricing() {
             </div>
           </div>
         </div>
-
       </div>
     </section>
   );

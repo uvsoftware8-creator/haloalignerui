@@ -26,7 +26,7 @@ export default function CTA() {
             </div>
             <div className="text-center">
               <div className="text-[#D5E100] font-syne text-3xl font-extrabold mb-1">100%</div>
-              <div className="text-white text-[0.65rem] uppercase font-bold tracking-widest opacity-60">Ortho Dentist Directed</div>
+              <div className="text-white text-[0.65rem] uppercase font-bold tracking-widest opacity-60">Orthodontist Directed</div>
             </div>
           </div>
 
