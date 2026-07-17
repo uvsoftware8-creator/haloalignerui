@@ -13,7 +13,7 @@ export default function Footer() {
             Making perfect smiles accessible, affordable, and effortless for everyone, everywhere.
           </p>
         </div>
-        
+
         <div className="footer-col">
           <h4 className="font-syne text-[0.8rem] font-extrabold tracking-[1.5px] uppercase text-[#2563EB] mb-4.5">Product</h4>
           <ul className="list-none flex flex-col gap-2.5">
@@ -23,7 +23,7 @@ export default function Footer() {
             <li><Link to="/before-after" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">Before & After</Link></li>
           </ul>
         </div>
-        
+
         <div className="footer-col">
           <h4 className="font-syne text-[0.8rem] font-extrabold tracking-[1.5px] uppercase text-[#2563EB] mb-4.5">Company</h4>
           <ul className="list-none flex flex-col gap-2.5">
@@ -31,7 +31,7 @@ export default function Footer() {
             <li><Link to="/blog" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">Blog</Link></li>
           </ul>
         </div>
-        
+
         <div className="footer-col">
           <h4 className="font-syne text-[0.8rem] font-extrabold tracking-[1.5px] uppercase text-[#2563EB] mb-4.5">Support</h4>
           <ul className="list-none flex flex-col gap-2.5">
@@ -39,11 +39,11 @@ export default function Footer() {
             <li><a href="tel:09827274882" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">09827274882</a></li>
             <li><a href="mailto:customercare@haloaligner.com" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">customercare@haloaligner.com</a></li>
             <li><a href="#" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">Privacy Policy</a></li>
-            <li><a href="#" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">Terms</a></li>
+            <li><a href="#" className="text-[#5B6E99] text-[0.87rem] font-medium transition-colors hover:text-[#1A56DB]">Terms & Conditions</a></li>
           </ul>
         </div>
       </div>
-      
+
       <div className="border-t border-[rgba(26,86,219,0.12)] pt-6.5 flex flex-col sm:flex-row justify-between items-center gap-4">
         <p className="text-[#8EA0C0] text-[0.82rem]">© 2026 Halodentist India Pvt. Ltd. All rights reserved.</p>
         <div className="flex gap-2.5">
@@ -52,8 +52,8 @@ export default function Footer() {
             { name: 'tw', href: '#' },
             { name: 'ig', href: 'https://www.instagram.com/dentovilla_dental/', target: '_blank', rel: 'noopener noreferrer' },
           ].map((social) => (
-            <a 
-              key={social.name} 
+            <a
+              key={social.name}
               href={social.href}
               target={social.target}
               rel={social.rel}
