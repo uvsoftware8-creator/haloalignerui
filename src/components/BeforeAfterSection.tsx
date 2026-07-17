@@ -99,11 +99,11 @@ export default function BeforeAfterSection() {
 
       </div>
 
-      {/* ---- ROW 2: 4 Details strip + Yellow CTA Card ---- */}
+      {/* ---- ROW 2: 4 Details strip ---- */}
       <div className="max-w-7xl mx-auto grid grid-cols-12 gap-4 lg:gap-6 items-stretch">
 
         {/* Left Column: 4 Feature highlights */}
-        <div className="col-span-12 lg:col-span-9 flex items-center bg-white border border-white shadow-[0_4px_25px_rgba(0,0,0,0.015)] rounded-2xl p-4 lg:p-5">
+        <div className="col-span-12 flex items-center bg-white border border-white shadow-[0_4px_25px_rgba(0,0,0,0.015)] rounded-2xl p-4 lg:p-5">
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-left">
 
             {/* Item 1 */}
@@ -162,39 +162,6 @@ export default function BeforeAfterSection() {
               </div>
             </div>
 
-          </div>
-        </div>
-
-        {/* Right Column: Yellow CTA Card (Same height as details strip card on desktop) */}
-        <div className="col-span-12 lg:col-span-3">
-          <div className="bg-[#D5E100] rounded-2xl p-4 h-full flex flex-col justify-between relative overflow-hidden shadow-md border border-white/20 group min-h-[90px]">
-            {/* Background Aligner Tray Graphic */}
-            <img
-              src={alignerTray}
-              alt="Clear aligner graphic"
-              className="absolute -right-6 top-1/2 -translate-y-1/2 w-[120px] opacity-35 mix-blend-multiply pointer-events-none group-hover:scale-105 transition-transform duration-700 rotate-[35deg]"
-            />
-
-            <div className="relative z-10 pr-12 text-left">
-              <h3 className="font-syne font-extrabold text-[#1A56DB] text-[0.8rem] sm:text-[0.85rem] leading-[1.2] mb-1.5">
-                Ready to Transform<br />Your Smile?
-              </h3>
-              <p className="text-[#1a3a6e] text-[0.58rem] sm:text-[0.62rem] font-semibold leading-tight">
-                <a href='https://haloaligner-smart-dental-aligner-po.vercel.app/' target="_blank" rel="noopener noreferrer" className='text-[#1a3a6e] text-[0.58rem] sm:text-[0.62rem] font-semibold leading-tight hover:underline'>Book Your Order today !!</a>
-              </p>
-            </div>
-
-            <div className="relative z-10 text-left mt-3">
-              <a
-                href="https://haloaligner-smart-dental-aligner-po.vercel.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-1 bg-[#1A56DB] text-white rounded-full font-bold hover:bg-[#2563EB] transition-colors text-[0.6rem] uppercase tracking-wider px-2.5 py-1.5 shadow-sm cursor-pointer"
-              >
-                Login/Signup
-                <span className="font-extrabold">&rarr;</span>
-              </a>
-            </div>
           </div>
         </div>
 
