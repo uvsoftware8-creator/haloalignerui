@@ -12,7 +12,7 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('sending');
-    
+
     try {
       await new Promise(resolve => setTimeout(resolve, 1500));
       console.log('Form submitted to customercare@haloaligner.com:', formData);
@@ -28,17 +28,17 @@ export default function ContactPage() {
       {/* Background Glows */}
       <div className="absolute w-[650px] h-[650px] bg-[rgba(255,255,255,0.55)] rounded-full blur-[70px] -top-[180px] -right-[120px] animate-g1 pointer-events-none" />
       <div className="absolute w-[380px] h-[380px] bg-[rgba(184,201,0,0.45)] rounded-full blur-[70px] -bottom-[80px] left-[80px] animate-g2 pointer-events-none" />
-      
+
       {/* Grid Overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(26,86,219,0.07)_1px,transparent_1px),linear-gradient(90deg,rgba(26,86,219,0.07)_1px,transparent_1px)] bg-[length:48px_48px] pointer-events-none" />
 
       <Navbar />
-      
+
       <main className="relative z-10 pt-24 pb-20 px-6 md:px-15">
         <div className="max-w-7xl mx-auto">
           {/* Back Button */}
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="inline-flex items-center gap-2 text-[#1A56DB] font-bold text-xs uppercase tracking-wider mb-8 hover:opacity-70 transition-opacity"
           >
             <ArrowLeft size={16} /> Back to Home
@@ -52,7 +52,7 @@ export default function ContactPage() {
               transition={{ duration: 0.6 }}
             >
               <span className="section-tag bg-[rgba(255,255,255,0.55)] border-[rgba(255,255,255,0.65)]">Contact Us</span>
-              <h1 className="section-title text-[clamp(2.4rem,5vw,4.5rem)] mb-6">Let's start your<br/><span className="text-[#3B82F6]">smile journey</span> today.</h1>
+              <h1 className="section-title text-[clamp(2.4rem,5vw,4.5rem)] mb-6">Let's start your<br /><span className="text-[#3B82F6]">smile journey</span> today.</h1>
               <p className="section-sub mx-auto max-w-2xl text-[#5B6E99]">Reach out via form, email, or phone.</p>
             </motion.div>
           </div>
@@ -67,7 +67,7 @@ export default function ContactPage() {
             >
               <div className="bg-[rgba(255,255,255,0.85)] border border-[rgba(255,255,255,0.65)] backdrop-blur-xl rounded-[32px] p-10 shadow-[0_24px_48px_rgba(26,86,219,0.1)]">
                 <h2 className="font-syne text-2xl font-extrabold text-[#1A56DB] mb-8">Contact Information</h2>
-                
+
                 <div className="space-y-8">
                   <div className="flex items-start gap-6">
                     <div className="w-14 h-14 bg-[#1A56DB] rounded-2xl flex items-center justify-center text-[#D5E100] shrink-0 shadow-[0_8px_20px_rgba(26,86,219,0.2)]">
@@ -97,10 +97,10 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <div className="text-[0.7rem] font-bold text-[#5B6E99] uppercase tracking-wider mb-1">Instagram</div>
-                      <a 
-                        href="https://www.instagram.com/dentovilla_dental/" 
-                        target="_blank" 
-                        rel="noopener noreferrer" 
+                      <a
+                        href="https://www.instagram.com/dentovilla_dental/"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-lg font-extrabold text-[#1A56DB] hover:underline break-all"
                       >
                         @dentovilla_dental
@@ -116,10 +116,10 @@ export default function ContactPage() {
                     <div>
                       <div className="text-[0.7rem] font-bold text-[#5B6E99] uppercase tracking-wider mb-1">Our Location</div>
                       <div className="text-sm font-extrabold text-[#1A56DB] leading-relaxed">
-                        2nd Floor, N4/262, in front of Azad Hind Club,<br />
-                        near Laxmi Mandir, Indradhanu Market,<br />
-                        Block N4, IRC Village, Nayapalli,<br />
-                        Bhubaneswar, Odisha – 751015
+                        2nd Floor, N4/262,<br />
+                        near Indradhanu Market,<br />
+                        IRC Village, Nayapalli,<br />
+                        Bhubaneswar–751015, India
                       </div>
                     </div>
                   </div>
@@ -148,8 +148,8 @@ export default function ContactPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-[0.7rem] font-bold text-[#5B6E99] uppercase tracking-wider mb-2 ml-1">Full Name</label>
-                      <input 
-                        type="text" 
+                      <input
+                        type="text"
                         required
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -159,8 +159,8 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <label className="block text-[0.7rem] font-bold text-[#5B6E99] uppercase tracking-wider mb-2 ml-1">Email Address</label>
-                      <input 
-                        type="email" 
+                      <input
+                        type="email"
                         required
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -169,11 +169,11 @@ export default function ContactPage() {
                       />
                     </div>
                   </div>
-                  
+
                   <div>
                     <label className="block text-[0.7rem] font-bold text-[#5B6E99] uppercase tracking-wider mb-2 ml-1">Phone Number</label>
-                    <input 
-                      type="tel" 
+                    <input
+                      type="tel"
                       required
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
@@ -184,7 +184,7 @@ export default function ContactPage() {
 
                   <div>
                     <label className="block text-[0.7rem] font-bold text-[#5B6E99] uppercase tracking-wider mb-2 ml-1">Message</label>
-                    <textarea 
+                    <textarea
                       required
                       rows={5}
                       value={formData.message}
@@ -193,8 +193,8 @@ export default function ContactPage() {
                       placeholder="Tell us about your smile goals..."
                     />
                   </div>
-                  
-                  <button 
+
+                  <button
                     type="submit"
                     disabled={status === 'sending'}
                     className="w-full bg-[#1A56DB] text-[#D5E100] py-5 rounded-2xl font-bold text-lg shadow-[0_12px_24px_rgba(213,225,0,0.3)] transition-all hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(213,225,0,0.4)] flex items-center justify-center gap-2 disabled:opacity-70"
