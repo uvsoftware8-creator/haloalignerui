@@ -6,9 +6,13 @@ export default function Footer() {
     <footer className="bg-[#EFF6FF] border-t border-[rgba(26,86,219,0.12)] py-18 px-6 md:px-15 pb-10">
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-15 mb-15">
         <div className="footer-brand">
-          <div className="font-syne font-bold text-xl sm:text-2xl tracking-widest uppercase inline-block select-none logo-cement">
-            HALOALIGNER
-          </div>
+          <a
+            href="/"
+            className="font-syne font-extrabold text-xl sm:text-2xl tracking-widest uppercase inline-block select-none"
+            style={{ color: '#D5E100' }}
+          >
+            HALOALIGNER<sup className="text-[10px] sm:text-xs ml-0.5 font-bold uppercase">TM</sup>
+          </a>
           <p className="text-[#5B6E99] text-[0.87rem] leading-[1.75] mt-3 max-w-[240px]">
             Making perfect smiles accessible, affordable, and effortless for everyone, everywhere.
           </p>
